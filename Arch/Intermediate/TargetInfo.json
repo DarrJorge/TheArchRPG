@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Arch",
+			"Path": "../Source/Arch.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ArchEditor",
+			"Path": "../Source/ArchEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
