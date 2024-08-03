@@ -1,4 +1,12 @@
-/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Characters/ArchBaseCharacter.h
+/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/ArchAbilitySystemComponent.h
 /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchGameModeBase.h
-/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Characters/ArchHeroCharacter.h
+/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/ArchAttributeSet.h
+/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/Input/ArchInputComponent.h
+/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/DataAssets/Input/DataAsset_InputConfig.h
+/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Animations/ArchCharacterAnimInstance.h
+/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Animations/Hero/ArchHeroLinkedAnimLayer.h
+/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Animations/Hero/ArchHeroAnimInstance.h
 /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Player/ArchPlayerController.h
+/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Animations/ArchBaseAnimInstance.h
+/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Characters/ArchBaseCharacter.h
+/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Characters/ArchHeroCharacter.h
