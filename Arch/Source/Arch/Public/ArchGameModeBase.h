@@ -6,9 +6,7 @@
 #include "GameFramework/GameModeBase.h"
 #include "ArchGameModeBase.generated.h"
 
-/**
- * 
- */
+
 UCLASS()
 class ARCH_API AArchGameModeBase : public AGameModeBase
 {

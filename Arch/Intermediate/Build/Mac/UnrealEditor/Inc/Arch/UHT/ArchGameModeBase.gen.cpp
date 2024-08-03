@@ -38,9 +38,6 @@ void EmptyLinkFunctionForGeneratedCodeArchGameModeBase() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AArchGameModeBase_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArchGameModeBase_Statics::Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering HLOD WorldPartition DataLayers Transformation" },
 		{ "IncludePath", "ArchGameModeBase.h" },
 		{ "ModuleRelativePath", "Public/ArchGameModeBase.h" },
@@ -85,9 +82,9 @@ void EmptyLinkFunctionForGeneratedCodeArchGameModeBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchGameModeBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AArchGameModeBase, AArchGameModeBase::StaticClass, TEXT("AArchGameModeBase"), &Z_Registration_Info_UClass_AArchGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchGameModeBase), 1543260685U) },
+		{ Z_Construct_UClass_AArchGameModeBase, AArchGameModeBase::StaticClass, TEXT("AArchGameModeBase"), &Z_Registration_Info_UClass_AArchGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchGameModeBase), 3161956861U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchGameModeBase_h_167007175(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchGameModeBase_h_182413227(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchGameModeBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchGameModeBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
