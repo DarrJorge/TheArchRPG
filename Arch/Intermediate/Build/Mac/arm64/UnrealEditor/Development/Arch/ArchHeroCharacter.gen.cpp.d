@@ -3891,4 +3891,12 @@
   Runtime/CoreUObject/Public/UObject/Interface.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemInterface.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchBaseCharacter.generated.h \
+  Runtime/GameplayTags/Classes/GameplayTagContainer.h \
+  Runtime/Core/Public/Stats/Stats.h \
+  Runtime/Core/Public/Misc/ComparisonUtility.h \
+  Runtime/Core/Public/Containers/StringFwd.h \
+  Runtime/Core/Public/Containers/StringView.h \
+  Runtime/Core/Public/HAL/Platform.h \
+  Runtime/Core/Public/UObject/NameTypes.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagContainer.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroCharacter.generated.h

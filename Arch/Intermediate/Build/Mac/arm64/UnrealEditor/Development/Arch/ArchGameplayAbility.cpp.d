@@ -3956,4 +3956,10 @@
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilityRepAnimMontage.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemReplicationProxyInterface.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemReplicationProxyInterface.generated.h \
-  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemComponent.generated.h
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemComponent.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/ArchAbilitySystemComponent.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchAbilitySystemComponent.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/Combat/CombatComponentBase.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/PawnExtensionComponentBase.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnExtensionComponentBase.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/CombatComponentBase.generated.h

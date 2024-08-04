@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroCharacter() {}
 	ARCH_API UClass* Z_Construct_UClass_AArchHeroCharacter();
 	ARCH_API UClass* Z_Construct_UClass_AArchHeroCharacter_NoRegister();
 	ARCH_API UClass* Z_Construct_UClass_UDataAsset_InputConfig_NoRegister();
+	ARCH_API UClass* Z_Construct_UClass_UHeroCombatComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Arch();
@@ -39,6 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Camera_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_HeroCombatComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_HeroCombatComponent;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_InputConfigDataAsset_MetaData[];
 #endif
@@ -76,6 +81,14 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroCharacter() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchHeroCharacter, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_Camera_MetaData), Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_Camera_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_HeroCombatComponent_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Characters/ArchHeroCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_HeroCombatComponent = { "HeroCombatComponent", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchHeroCharacter, HeroCombatComponent), Z_Construct_UClass_UHeroCombatComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_HeroCombatComponent_MetaData), Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_HeroCombatComponent_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_InputConfigDataAsset_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
@@ -86,6 +99,7 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroCharacter() {}
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AArchHeroCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_CameraBoom,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_Camera,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_HeroCombatComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_InputConfigDataAsset,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AArchHeroCharacter_Statics::StaticCppClassTypeInfo = {
@@ -126,9 +140,9 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchHeroCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AArchHeroCharacter, AArchHeroCharacter::StaticClass, TEXT("AArchHeroCharacter"), &Z_Registration_Info_UClass_AArchHeroCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchHeroCharacter), 2525822809U) },
+		{ Z_Construct_UClass_AArchHeroCharacter, AArchHeroCharacter::StaticClass, TEXT("AArchHeroCharacter"), &Z_Registration_Info_UClass_AArchHeroCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchHeroCharacter), 1077047262U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchHeroCharacter_h_1665504955(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchHeroCharacter_h_3118401948(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchHeroCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchHeroCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -38,9 +38,6 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UArchAbilitySystemComponent_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UArchAbilitySystemComponent_Statics::Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "HideCategories", "Object LOD Lighting Transform Sockets TextureStreaming Object LOD Lighting Transform Sockets TextureStreaming" },
 		{ "IncludePath", "AbilitySystem/ArchAbilitySystemComponent.h" },
 		{ "ModuleRelativePath", "Public/AbilitySystem/ArchAbilitySystemComponent.h" },
@@ -84,9 +81,9 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UArchAbilitySystemComponent, UArchAbilitySystemComponent::StaticClass, TEXT("UArchAbilitySystemComponent"), &Z_Registration_Info_UClass_UArchAbilitySystemComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchAbilitySystemComponent), 414317747U) },
+		{ Z_Construct_UClass_UArchAbilitySystemComponent, UArchAbilitySystemComponent::StaticClass, TEXT("UArchAbilitySystemComponent"), &Z_Registration_Info_UClass_UArchAbilitySystemComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchAbilitySystemComponent), 2200874976U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_1979894181(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_2324628482(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

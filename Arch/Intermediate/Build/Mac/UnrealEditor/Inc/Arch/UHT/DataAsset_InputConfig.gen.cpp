@@ -123,6 +123,11 @@ template<> ARCH_API UScriptStruct* StaticStruct<FArchInputActionConfig>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_NativeInputActions_MetaData[];
 #endif
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_NativeInputActions;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_AbilityInputActions_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_AbilityInputActions_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_AbilityInputActions;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -154,10 +159,21 @@ template<> ARCH_API UScriptStruct* StaticStruct<FArchInputActionConfig>()
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_NativeInputActions = { "NativeInputActions", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDataAsset_InputConfig, NativeInputActions), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_NativeInputActions_MetaData), Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_NativeInputActions_MetaData) }; // 1479321524
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_AbilityInputActions_Inner = { "AbilityInputActions", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FArchInputActionConfig, METADATA_PARAMS(0, nullptr) }; // 1479321524
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_AbilityInputActions_MetaData[] = {
+		{ "Category", "DataAsset_InputConfig" },
+		{ "ModuleRelativePath", "Public/DataAssets/Input/DataAsset_InputConfig.h" },
+		{ "TitleProperty", "InputTag" },
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_AbilityInputActions = { "AbilityInputActions", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDataAsset_InputConfig, AbilityInputActions), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_AbilityInputActions_MetaData), Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_AbilityInputActions_MetaData) }; // 1479321524
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UDataAsset_InputConfig_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_DefaultMappingContext,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_NativeInputActions_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_NativeInputActions,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_AbilityInputActions_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDataAsset_InputConfig_Statics::NewProp_AbilityInputActions,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UDataAsset_InputConfig_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UDataAsset_InputConfig>::IsAbstract,
@@ -202,9 +218,9 @@ template<> ARCH_API UScriptStruct* StaticStruct<FArchInputActionConfig>()
 		{ FArchInputActionConfig::StaticStruct, Z_Construct_UScriptStruct_FArchInputActionConfig_Statics::NewStructOps, TEXT("ArchInputActionConfig"), &Z_Registration_Info_UScriptStruct_ArchInputActionConfig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FArchInputActionConfig), 1479321524U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_DataAssets_Input_DataAsset_InputConfig_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UDataAsset_InputConfig, UDataAsset_InputConfig::StaticClass, TEXT("UDataAsset_InputConfig"), &Z_Registration_Info_UClass_UDataAsset_InputConfig, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDataAsset_InputConfig), 3725766996U) },
+		{ Z_Construct_UClass_UDataAsset_InputConfig, UDataAsset_InputConfig::StaticClass, TEXT("UDataAsset_InputConfig"), &Z_Registration_Info_UClass_UDataAsset_InputConfig, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDataAsset_InputConfig), 2498807947U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_DataAssets_Input_DataAsset_InputConfig_h_3368336746(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_DataAssets_Input_DataAsset_InputConfig_h_3612731601(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_DataAssets_Input_DataAsset_InputConfig_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_DataAssets_Input_DataAsset_InputConfig_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_DataAssets_Input_DataAsset_InputConfig_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_DataAssets_Input_DataAsset_InputConfig_h_Statics::ScriptStructInfo),
 		nullptr, 0);

@@ -9,8 +9,10 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeArchGameplayAbility() {}
 // Cross Module References
+	ARCH_API UClass* Z_Construct_UClass_UArchAbilitySystemComponent_NoRegister();
 	ARCH_API UClass* Z_Construct_UClass_UArchGameplayAbility();
 	ARCH_API UClass* Z_Construct_UClass_UArchGameplayAbility_NoRegister();
+	ARCH_API UClass* Z_Construct_UClass_UCombatComponentBase_NoRegister();
 	ARCH_API UEnum* Z_Construct_UEnum_Arch_EArchAbilityActivationPolicy();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayAbility();
 	UPackage* Z_Construct_UPackage__Script_Arch();
@@ -68,8 +70,114 @@ void EmptyLinkFunctionForGeneratedCodeArchGameplayAbility() {}
 		}
 		return Z_Registration_Info_UEnum_EArchAbilityActivationPolicy.InnerSingleton;
 	}
+	DEFINE_FUNCTION(UArchGameplayAbility::execGetArchAbilitySystemComponentFromActorInfo)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UArchAbilitySystemComponent**)Z_Param__Result=P_THIS->GetArchAbilitySystemComponentFromActorInfo();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UArchGameplayAbility::execGetCombatComponentBaseFromActorInfo)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UCombatComponentBase**)Z_Param__Result=P_THIS->GetCombatComponentBaseFromActorInfo();
+		P_NATIVE_END;
+	}
 	void UArchGameplayAbility::StaticRegisterNativesUArchGameplayAbility()
 	{
+		UClass* Class = UArchGameplayAbility::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "GetArchAbilitySystemComponentFromActorInfo", &UArchGameplayAbility::execGetArchAbilitySystemComponentFromActorInfo },
+			{ "GetCombatComponentBaseFromActorInfo", &UArchGameplayAbility::execGetCombatComponentBaseFromActorInfo },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics
+	{
+		struct ArchGameplayAbility_eventGetArchAbilitySystemComponentFromActorInfo_Parms
+		{
+			UArchAbilitySystemComponent* ReturnValue;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchGameplayAbility_eventGetArchAbilitySystemComponentFromActorInfo_Parms, ReturnValue), Z_Construct_UClass_UArchAbilitySystemComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::NewProp_ReturnValue_MetaData), Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::NewProp_ReturnValue_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Arch|Ability" },
+		{ "ModuleRelativePath", "Public/AbilitySystem/Abilities/ArchGameplayAbility.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UArchGameplayAbility, nullptr, "GetArchAbilitySystemComponentFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::ArchGameplayAbility_eventGetArchAbilitySystemComponentFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::ArchGameplayAbility_eventGetArchAbilitySystemComponentFromActorInfo_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics
+	{
+		struct ArchGameplayAbility_eventGetCombatComponentBaseFromActorInfo_Parms
+		{
+			UCombatComponentBase* ReturnValue;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchGameplayAbility_eventGetCombatComponentBaseFromActorInfo_Parms, ReturnValue), Z_Construct_UClass_UCombatComponentBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::NewProp_ReturnValue_MetaData), Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::NewProp_ReturnValue_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Arch|Ability" },
+		{ "ModuleRelativePath", "Public/AbilitySystem/Abilities/ArchGameplayAbility.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UArchGameplayAbility, nullptr, "GetCombatComponentBaseFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::ArchGameplayAbility_eventGetCombatComponentBaseFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::ArchGameplayAbility_eventGetCombatComponentBaseFromActorInfo_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UArchGameplayAbility);
 	UClass* Z_Construct_UClass_UArchGameplayAbility_NoRegister()
@@ -79,6 +187,7 @@ void EmptyLinkFunctionForGeneratedCodeArchGameplayAbility() {}
 	struct Z_Construct_UClass_UArchGameplayAbility_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -96,6 +205,11 @@ void EmptyLinkFunctionForGeneratedCodeArchGameplayAbility() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Arch,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UArchGameplayAbility_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_UArchGameplayAbility_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo, "GetArchAbilitySystemComponentFromActorInfo" }, // 4274797000
+		{ &Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo, "GetCombatComponentBaseFromActorInfo" }, // 1824281351
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UArchGameplayAbility_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UArchGameplayAbility_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "AbilitySystem/Abilities/ArchGameplayAbility.h" },
@@ -105,7 +219,7 @@ void EmptyLinkFunctionForGeneratedCodeArchGameplayAbility() {}
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UArchGameplayAbility_Statics::NewProp_AbilityActivationPolicy_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UArchGameplayAbility_Statics::NewProp_AbilityActivationPolicy_MetaData[] = {
-		{ "Category", "ArchAbility" },
+		{ "Category", "Arch|Ability" },
 		{ "ModuleRelativePath", "Public/AbilitySystem/Abilities/ArchGameplayAbility.h" },
 	};
 #endif
@@ -122,11 +236,11 @@ void EmptyLinkFunctionForGeneratedCodeArchGameplayAbility() {}
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_UArchGameplayAbility_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_UArchGameplayAbility_Statics::PropPointers),
 		0,
 		0x001000A0u,
@@ -157,9 +271,9 @@ void EmptyLinkFunctionForGeneratedCodeArchGameplayAbility() {}
 		{ EArchAbilityActivationPolicy_StaticEnum, TEXT("EArchAbilityActivationPolicy"), &Z_Registration_Info_UEnum_EArchAbilityActivationPolicy, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4013725859U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UArchGameplayAbility, UArchGameplayAbility::StaticClass, TEXT("UArchGameplayAbility"), &Z_Registration_Info_UClass_UArchGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchGameplayAbility), 4028838364U) },
+		{ Z_Construct_UClass_UArchGameplayAbility, UArchGameplayAbility::StaticClass, TEXT("UArchGameplayAbility"), &Z_Registration_Info_UClass_UArchGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchGameplayAbility), 570502031U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_979819659(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_1114548309(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_Statics::EnumInfo));

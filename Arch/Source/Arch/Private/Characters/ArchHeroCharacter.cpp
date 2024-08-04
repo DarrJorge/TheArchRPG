@@ -12,7 +12,9 @@
 #include "DataAssets/Input/DataAsset_InputConfig.h"
 #include "Components/Input/ArchInputComponent.h"
 #include "InputActionValue.h"
+#include "AbilitySystem/ArchAbilitySystemComponent.h"
 #include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
+#include "Components/Combat/HeroCombatComponent.h"
 
 #include "Debug/ArchDebugHelper.h"
 
@@ -39,6 +41,8 @@ AArchHeroCharacter::AArchHeroCharacter()
 	GetCharacterMovement()->RotationRate = FRotator(0.f, 500.f, 0.f);
 	GetCharacterMovement()->MaxWalkSpeed = 400.f;
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
+
+	HeroCombatComponent = CreateDefaultSubobject<UHeroCombatComponent>("HeroCombatComponent");
 }
 
 void AArchHeroCharacter::BeginPlay()
@@ -62,6 +66,9 @@ void AArchHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 
 			ArchInputComponent->BindNativeInputAction(InputConfigDataAsset, ArchGameplayTags::InputTag_Look,
 				ETriggerEvent::Triggered, this, &AArchHeroCharacter::InputLook);
+
+			ArchInputComponent->BindAbilityInputAction(InputConfigDataAsset, this,
+				&AArchHeroCharacter::InputAbilityInputPressed, &AArchHeroCharacter::InputAbilityInputReleased);
 		}
 	}
 }
@@ -103,4 +110,14 @@ void AArchHeroCharacter::InputLook(const FInputActionValue& Value)
 
 	if (LookVector.X != 0) AddControllerYawInput(LookVector.X);
 	if (LookVector.Y != 0) AddControllerPitchInput(LookVector.Y);
+}
+
+void AArchHeroCharacter::InputAbilityInputPressed(FGameplayTag InInputTag)
+{
+	ArchAbilitySystemComponent->OnAbilityInputPressed(InInputTag);
+}
+
+void AArchHeroCharacter::InputAbilityInputReleased(FGameplayTag InInputTag)
+{
+	ArchAbilitySystemComponent->OnAbilityInputReleased(InInputTag);
 }
