@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeArchBaseCharacter() {}
 	ARCH_API UClass* Z_Construct_UClass_AArchBaseCharacter_NoRegister();
 	ARCH_API UClass* Z_Construct_UClass_UArchAbilitySystemComponent_NoRegister();
 	ARCH_API UClass* Z_Construct_UClass_UArchAttributeSet_NoRegister();
+	ARCH_API UClass* Z_Construct_UClass_UDataAsset_StartUpDataBase_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Arch();
@@ -39,6 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeArchBaseCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_ArchAttributeSet_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_ArchAttributeSet;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_CharacterStartUpData_MetaData[];
+#endif
+		static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_CharacterStartUpData;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -72,9 +77,17 @@ void EmptyLinkFunctionForGeneratedCodeArchBaseCharacter() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AArchBaseCharacter_Statics::NewProp_ArchAttributeSet = { "ArchAttributeSet", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchBaseCharacter, ArchAttributeSet), Z_Construct_UClass_UArchAttributeSet_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchBaseCharacter_Statics::NewProp_ArchAttributeSet_MetaData), Z_Construct_UClass_AArchBaseCharacter_Statics::NewProp_ArchAttributeSet_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArchBaseCharacter_Statics::NewProp_CharacterStartUpData_MetaData[] = {
+		{ "Category", "CharacterData" },
+		{ "ModuleRelativePath", "Public/Characters/ArchBaseCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_AArchBaseCharacter_Statics::NewProp_CharacterStartUpData = { "CharacterStartUpData", nullptr, (EPropertyFlags)0x0024080000010015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchBaseCharacter, CharacterStartUpData), Z_Construct_UClass_UDataAsset_StartUpDataBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchBaseCharacter_Statics::NewProp_CharacterStartUpData_MetaData), Z_Construct_UClass_AArchBaseCharacter_Statics::NewProp_CharacterStartUpData_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AArchBaseCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchBaseCharacter_Statics::NewProp_ArchAbilitySystemComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchBaseCharacter_Statics::NewProp_ArchAttributeSet,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchBaseCharacter_Statics::NewProp_CharacterStartUpData,
 	};
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AArchBaseCharacter_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UAbilitySystemInterface_NoRegister, (int32)VTABLE_OFFSET(AArchBaseCharacter, IAbilitySystemInterface), false },  // 3195502011
@@ -118,9 +131,9 @@ void EmptyLinkFunctionForGeneratedCodeArchBaseCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchBaseCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AArchBaseCharacter, AArchBaseCharacter::StaticClass, TEXT("AArchBaseCharacter"), &Z_Registration_Info_UClass_AArchBaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchBaseCharacter), 3073927859U) },
+		{ Z_Construct_UClass_AArchBaseCharacter, AArchBaseCharacter::StaticClass, TEXT("AArchBaseCharacter"), &Z_Registration_Info_UClass_AArchBaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchBaseCharacter), 644191559U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchBaseCharacter_h_4051795962(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchBaseCharacter_h_1780961859(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchBaseCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchBaseCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

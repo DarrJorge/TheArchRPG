@@ -3984,4 +3984,8 @@
   Runtime/Engine/Classes/Components/InputComponent.h \
   ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedInputComponent.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchInputComponent.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/DataAssets/StartUpData/DataAsset_HeroStartUpData.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/DataAssets/StartUpData/DataAsset_StartUpDataBase.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/DataAsset_StartUpDataBase.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/DataAsset_HeroStartUpData.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Debug/ArchDebugHelper.h

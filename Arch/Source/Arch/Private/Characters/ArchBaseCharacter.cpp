@@ -22,6 +22,8 @@ void AArchBaseCharacter::PossessedBy(AController* NewController)
 	if (ArchAbilitySystemComponent)
 	{
 		ArchAbilitySystemComponent->InitAbilityActorInfo(this, this);
+		
+		ensureMsgf(!CharacterStartUpData.IsNull(), TEXT("Forgot to assign start up data to %s"), *GetName());
 	}
 }
 

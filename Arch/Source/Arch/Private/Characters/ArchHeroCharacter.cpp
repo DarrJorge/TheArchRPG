@@ -12,6 +12,7 @@
 #include "DataAssets/Input/DataAsset_InputConfig.h"
 #include "Components/Input/ArchInputComponent.h"
 #include "InputActionValue.h"
+#include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
 
 #include "Debug/ArchDebugHelper.h"
 
@@ -61,6 +62,19 @@ void AArchHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 
 			ArchInputComponent->BindNativeInputAction(InputConfigDataAsset, ArchGameplayTags::InputTag_Look,
 				ETriggerEvent::Triggered, this, &AArchHeroCharacter::InputLook);
+		}
+	}
+}
+
+void AArchHeroCharacter::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+
+	if (!CharacterStartUpData.IsNull())
+	{
+		if (UDataAsset_StartUpDataBase* LoadedStartUpData = CharacterStartUpData.LoadSynchronous())
+		{
+			LoadedStartUpData->GiveToAbilitySystemComponent(ArchAbilitySystemComponent);
 		}
 	}
 }

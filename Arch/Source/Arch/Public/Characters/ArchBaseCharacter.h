@@ -7,6 +7,7 @@
 #include "AbilitySystemInterface.h"
 #include "ArchBaseCharacter.generated.h"
 
+class UDataAsset_StartUpDataBase;
 class UArchAttributeSet;
 class UArchAbilitySystemComponent;
 
@@ -27,6 +28,10 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="AbilitySystem")
 	UArchAttributeSet* ArchAttributeSet;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="CharacterData")
+	TSoftObjectPtr<UDataAsset_StartUpDataBase> CharacterStartUpData;
+	
 
 	virtual void PossessedBy(AController* NewController) override;
 
