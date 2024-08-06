@@ -6,11 +6,13 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Arch/Public/Items/Weapons/ArchWeaponBase.h"
+#include "Arch/Public/ArchTypes/ArchStructTypes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeArchWeaponBase() {}
 // Cross Module References
 	ARCH_API UClass* Z_Construct_UClass_AArchWeaponBase();
 	ARCH_API UClass* Z_Construct_UClass_AArchWeaponBase_NoRegister();
+	ARCH_API UScriptStruct* Z_Construct_UScriptStruct_FArchWeaponData();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
@@ -30,6 +32,10 @@ void EmptyLinkFunctionForGeneratedCodeArchWeaponBase() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_WeaponData_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_WeaponData;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_WeaponMesh_MetaData[];
 #endif
@@ -54,8 +60,15 @@ void EmptyLinkFunctionForGeneratedCodeArchWeaponBase() {}
 	};
 #endif
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponData_MetaData[] = {
+		{ "Category", "Arch|WeaponData" },
+		{ "ModuleRelativePath", "Public/Items/Weapons/ArchWeaponBase.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponData = { "WeaponData", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchWeaponBase, WeaponData), Z_Construct_UScriptStruct_FArchWeaponData, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponData_MetaData), Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponData_MetaData) }; // 4114042320
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponMesh_MetaData[] = {
-		{ "Category", "Weapon" },
+		{ "Category", "Arch|Weapon" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Items/Weapons/ArchWeaponBase.h" },
 	};
@@ -63,13 +76,14 @@ void EmptyLinkFunctionForGeneratedCodeArchWeaponBase() {}
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponMesh = { "WeaponMesh", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchWeaponBase, WeaponMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponMesh_MetaData), Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponMesh_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponCollisionBox_MetaData[] = {
-		{ "Category", "Weapon" },
+		{ "Category", "Arch|Weapon" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Items/Weapons/ArchWeaponBase.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponCollisionBox = { "WeaponCollisionBox", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchWeaponBase, WeaponCollisionBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponCollisionBox_MetaData), Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponCollisionBox_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AArchWeaponBase_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponData,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponCollisionBox,
 	};
@@ -111,9 +125,9 @@ void EmptyLinkFunctionForGeneratedCodeArchWeaponBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchWeaponBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AArchWeaponBase, AArchWeaponBase::StaticClass, TEXT("AArchWeaponBase"), &Z_Registration_Info_UClass_AArchWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchWeaponBase), 4142020237U) },
+		{ Z_Construct_UClass_AArchWeaponBase, AArchWeaponBase::StaticClass, TEXT("AArchWeaponBase"), &Z_Registration_Info_UClass_AArchWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchWeaponBase), 3402950576U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchWeaponBase_h_2208426210(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchWeaponBase_h_1678515017(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchWeaponBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchWeaponBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

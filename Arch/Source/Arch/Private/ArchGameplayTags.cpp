@@ -10,12 +10,20 @@ namespace ArchGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(InputTag_Look, "InputTag.Look");
 	UE_DEFINE_GAMEPLAY_TAG(InputTag_Equip_Weapon, "InputTag.Equip.Weapon");
 	UE_DEFINE_GAMEPLAY_TAG(InputTag_Unequip_Weapon, "InputTag.Unequip.Weapon");
+	UE_DEFINE_GAMEPLAY_TAG(InputTag_LightAttack, "InputTag.LightAttack");
+	UE_DEFINE_GAMEPLAY_TAG(InputTag_HeavyAttack, "InputTag.HeavyAttack");
 
 	/** Items Tags **/
 	UE_DEFINE_GAMEPLAY_TAG(Item_Weapon_Axe, "Item.Weapon.Axe");
 
-	/** Montages Tags **/
-	UE_DEFINE_GAMEPLAY_TAG(Montage_Event_EquipWeapon, "Montage.Event.EquipWeapon");
-	UE_DEFINE_GAMEPLAY_TAG(Montage_Event_UnequipWeapon, "Montage.Event.UnequipWeapon");
+	/** Ability Tags **/
+	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_Equip_Axe, "Player.Ability.Equip.Axe");
+	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_Unequip_Axe, "Player.Ability.Unequip.Axe");
+	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_Attack_Light_Axe, "Player.Ability.Attack.Light.Axe");
+	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_Attack_Heavy_Axe, "Player.Ability.Attack.Heavy.Axe");
+
+	/** Game Events Tags **/
+	UE_DEFINE_GAMEPLAY_TAG(Event_Montage_Equip_Axe, "Event.Montage.Equip.Axe");
+	UE_DEFINE_GAMEPLAY_TAG(Event_Montage_Unequip_Axe, "Event.Montage.Unequip.Axe");
 	
 }

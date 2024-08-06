@@ -11,12 +11,21 @@ namespace ArchGameplayTags
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_Look);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_Equip_Weapon);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_Unequip_Weapon);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_LightAttack);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_HeavyAttack);
 
 	/** Items Tags **/
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Item_Weapon_Axe);
 
-	/** Montages Tags **/
-	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Montage_Event_EquipWeapon);
-	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Montage_Event_UnequipWeapon);
+	/** Ability Tags **/
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Equip_Axe);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Unequip_Axe);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Attack_Light_Axe);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Attack_Heavy_Axe);
+	
+	/** Game Events Tags **/
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Montage_Equip_Axe);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Montage_Unequip_Axe);
+
 	
 }
