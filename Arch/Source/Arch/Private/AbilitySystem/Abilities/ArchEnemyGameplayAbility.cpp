@@ -9,15 +9,12 @@ AArchEnemyCharacter* UArchEnemyGameplayAbility::GetEnemyCharacterFromActorInfo()
 {
 	if (!CachedEnemyCharacter.IsValid())
 	{
-		CachedEnemyCharacter = Cast<AArchEnemyCharacter>(CurrentActorInfo->AvatarActor);
+		CachedEnemyCharacter = CastChecked<AArchEnemyCharacter>(CurrentActorInfo->AvatarActor);
 	}
 	return CachedEnemyCharacter.IsValid() ? CachedEnemyCharacter.Get() : nullptr;
 }
 
 UEnemyCombatComponent* UArchEnemyGameplayAbility::GetEnemyCombatComponentFromActorInfo()
 {
-	if (GetEnemyCharacterFromActorInfo() != nullptr)
-		return GetEnemyCharacterFromActorInfo()->GetEnemyCombatComponent();
-
-	return nullptr;
+	return GetEnemyCharacterFromActorInfo()->GetEnemyCombatComponent();
 }

@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeDataAsset_StartUpDataBase() {}
 	ARCH_API UClass* Z_Construct_UClass_UDataAsset_StartUpDataBase_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_UDataAsset();
+	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Arch();
 // End Cross Module References
 	void UDataAsset_StartUpDataBase::StaticRegisterNativesUDataAsset_StartUpDataBase()
@@ -40,6 +41,11 @@ void EmptyLinkFunctionForGeneratedCodeDataAsset_StartUpDataBase() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReactiveAbilities_MetaData[];
 #endif
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_ReactiveAbilities;
+		static const UECodeGen_Private::FClassPropertyParams NewProp_StartUpGameplayEffects_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_StartUpGameplayEffects_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_StartUpGameplayEffects;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -58,7 +64,7 @@ void EmptyLinkFunctionForGeneratedCodeDataAsset_StartUpDataBase() {}
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_ActivateOnGivenAbilities_Inner = { "ActivateOnGivenAbilities", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UClass, Z_Construct_UClass_UArchGameplayAbility_NoRegister, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_ActivateOnGivenAbilities_MetaData[] = {
-		{ "Category", "StartUpData" },
+		{ "Category", "StartUpData|Abilities" },
 		{ "ModuleRelativePath", "Public/DataAssets/StartUpData/DataAsset_StartUpDataBase.h" },
 	};
 #endif
@@ -66,16 +72,26 @@ void EmptyLinkFunctionForGeneratedCodeDataAsset_StartUpDataBase() {}
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_ReactiveAbilities_Inner = { "ReactiveAbilities", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UClass, Z_Construct_UClass_UArchGameplayAbility_NoRegister, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_ReactiveAbilities_MetaData[] = {
-		{ "Category", "StartUpData" },
+		{ "Category", "StartUpData|Abilities" },
 		{ "ModuleRelativePath", "Public/DataAssets/StartUpData/DataAsset_StartUpDataBase.h" },
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_ReactiveAbilities = { "ReactiveAbilities", nullptr, (EPropertyFlags)0x0024080000010001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDataAsset_StartUpDataBase, ReactiveAbilities), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_ReactiveAbilities_MetaData), Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_ReactiveAbilities_MetaData) };
+	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_StartUpGameplayEffects_Inner = { "StartUpGameplayEffects", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UClass, Z_Construct_UClass_UGameplayEffect_NoRegister, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_StartUpGameplayEffects_MetaData[] = {
+		{ "Category", "StartUpData|Effects" },
+		{ "ModuleRelativePath", "Public/DataAssets/StartUpData/DataAsset_StartUpDataBase.h" },
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_StartUpGameplayEffects = { "StartUpGameplayEffects", nullptr, (EPropertyFlags)0x0024080000010001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDataAsset_StartUpDataBase, StartUpGameplayEffects), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_StartUpGameplayEffects_MetaData), Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_StartUpGameplayEffects_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_ActivateOnGivenAbilities_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_ActivateOnGivenAbilities,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_ReactiveAbilities_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_ReactiveAbilities,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_StartUpGameplayEffects_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::NewProp_StartUpGameplayEffects,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UDataAsset_StartUpDataBase>::IsAbstract,
@@ -116,9 +132,9 @@ void EmptyLinkFunctionForGeneratedCodeDataAsset_StartUpDataBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UDataAsset_StartUpDataBase, UDataAsset_StartUpDataBase::StaticClass, TEXT("UDataAsset_StartUpDataBase"), &Z_Registration_Info_UClass_UDataAsset_StartUpDataBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDataAsset_StartUpDataBase), 2702230961U) },
+		{ Z_Construct_UClass_UDataAsset_StartUpDataBase, UDataAsset_StartUpDataBase::StaticClass, TEXT("UDataAsset_StartUpDataBase"), &Z_Registration_Info_UClass_UDataAsset_StartUpDataBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDataAsset_StartUpDataBase), 449549140U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_1724043840(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_3957043999(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

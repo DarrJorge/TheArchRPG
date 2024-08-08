@@ -8,6 +8,7 @@
 
 class UArchGameplayAbility;
 class UArchAbilitySystemComponent;
+class UGameplayEffect;
 
 UCLASS()
 class ARCH_API UDataAsset_StartUpDataBase : public UDataAsset
@@ -18,11 +19,14 @@ public:
 	virtual void GiveToAbilitySystemComponent(UArchAbilitySystemComponent* InASCToGive, int32 ApplyLevel = 1);
 
 protected:
-	UPROPERTY(EditDefaultsOnly, Category="StartUpData")
+	UPROPERTY(EditDefaultsOnly, Category="StartUpData|Abilities")
 	TArray<TSubclassOf<UArchGameplayAbility>> ActivateOnGivenAbilities;
 
-	UPROPERTY(EditDefaultsOnly, Category="StartUpData")
+	UPROPERTY(EditDefaultsOnly, Category="StartUpData|Abilities")
 	TArray<TSubclassOf<UArchGameplayAbility>> ReactiveAbilities;
+
+	UPROPERTY(EditDefaultsOnly, Category="StartUpData|Effects")
+	TArray<TSubclassOf<UGameplayEffect>> StartUpGameplayEffects;
 	
 
 	void GrantAbilities(const TArray<TSubclassOf<UArchGameplayAbility>>& InAbilitiesToGive,

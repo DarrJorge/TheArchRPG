@@ -16,6 +16,7 @@ namespace ArchGameplayTags
 
 	/** Items Tags **/
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Item_Weapon_Axe);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Item_Weapon_GuardianWeapon);
 
 	/** Ability Tags **/
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Equip_Axe);

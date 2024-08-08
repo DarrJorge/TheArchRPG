@@ -17,7 +17,7 @@ public:
 	virtual void GiveToAbilitySystemComponent(UArchAbilitySystemComponent* InASCToGive, int32 ApplyLevel = 1) override;
 
 private:
-	UPROPERTY(EditDefaultsOnly, Category="Arch|StartUpData", meta=(TitleProperty="InputTag"))
+	UPROPERTY(EditDefaultsOnly, Category="StartUpData|Abilities", meta=(TitleProperty="InputTag"))
 	TArray<FArchHeroAbilitySet> HeroStartUpAbilitySets;
 	
 };

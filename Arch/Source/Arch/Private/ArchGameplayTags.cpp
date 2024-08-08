@@ -15,6 +15,7 @@ namespace ArchGameplayTags
 
 	/** Items Tags **/
 	UE_DEFINE_GAMEPLAY_TAG(Item_Weapon_Axe, "Item.Weapon.Axe");
+	UE_DEFINE_GAMEPLAY_TAG(Item_Weapon_GuardianWeapon, "Item.Weapon.GuardianWeapon");
 
 	/** Ability Tags **/
 	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_Equip_Axe, "Player.Ability.Equip.Axe");
