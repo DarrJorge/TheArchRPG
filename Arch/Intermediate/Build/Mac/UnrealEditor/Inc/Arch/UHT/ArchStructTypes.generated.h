@@ -14,14 +14,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ARCH_ArchStructTypes_generated_h
 
-#define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchTypes_ArchStructTypes_h_15_GENERATED_BODY \
+#define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchTypes_ArchStructTypes_h_16_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FArchHeroAbilitySet_Statics; \
 	ARCH_API static class UScriptStruct* StaticStruct();
 
 
 template<> ARCH_API UScriptStruct* StaticStruct<struct FArchHeroAbilitySet>();
 
-#define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchTypes_ArchStructTypes_h_29_GENERATED_BODY \
+#define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchTypes_ArchStructTypes_h_31_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FArchWeaponData_Statics; \
 	ARCH_API static class UScriptStruct* StaticStruct();
 

@@ -3875,6 +3875,11 @@
   Runtime/Core/Public/UObject/NameTypes.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagContainer.generated.h \
   Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/ScalableFloat.h \
+  Runtime/Engine/Classes/Engine/CurveTable.h \
+  ../Plugins/Runtime/DataRegistry/Source/DataRegistry/Public/DataRegistryId.h \
+  ../Plugins/Runtime/DataRegistry/Intermediate/Build/Mac/UnrealEditor/Inc/DataRegistry/UHT/DataRegistryId.generated.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/ScalableFloat.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchStructTypes.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchWeaponBase.generated.h \
   Runtime/Engine/Classes/Components/BoxComponent.h \
@@ -3882,4 +3887,5 @@
   Runtime/CoreUObject/Public/Templates/SubclassOf.h \
   Runtime/Engine/Classes/Components/PrimitiveComponent.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/ShapeComponent.generated.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/BoxComponent.generated.h
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/BoxComponent.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Debug/ArchDebugHelper.h

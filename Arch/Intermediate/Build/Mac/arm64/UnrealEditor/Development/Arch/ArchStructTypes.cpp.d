@@ -3872,6 +3872,11 @@
   Runtime/Core/Public/UObject/NameTypes.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagContainer.generated.h \
   Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/ScalableFloat.h \
+  Runtime/Engine/Classes/Engine/CurveTable.h \
+  ../Plugins/Runtime/DataRegistry/Source/DataRegistry/Public/DataRegistryId.h \
+  ../Plugins/Runtime/DataRegistry/Intermediate/Build/Mac/UnrealEditor/Inc/DataRegistry/UHT/DataRegistryId.generated.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/ScalableFloat.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchStructTypes.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/Abilities/ArchGameplayAbility.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/GameplayAbility.h \
@@ -3911,11 +3916,6 @@
   Runtime/Core/Public/Templates/EnableIf.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/NetCore/UHT/FastArraySerializer.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayPrediction.generated.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/ScalableFloat.h \
-  Runtime/Engine/Classes/Engine/CurveTable.h \
-  ../Plugins/Runtime/DataRegistry/Source/DataRegistry/Public/DataRegistryId.h \
-  ../Plugins/Runtime/DataRegistry/Intermediate/Build/Mac/UnrealEditor/Inc/DataRegistry/UHT/DataRegistryId.generated.h \
-  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/ScalableFloat.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilitySpec.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayEffect.h \
   Runtime/Engine/Classes/Engine/EngineTypes.h \
@@ -3937,4 +3937,5 @@
   Runtime/CoreUObject/Public/Templates/Casts.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTasks/UHT/GameplayTaskOwnerInterface.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbility.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchTypes/ArchEnumTypes.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchGameplayAbility.generated.h

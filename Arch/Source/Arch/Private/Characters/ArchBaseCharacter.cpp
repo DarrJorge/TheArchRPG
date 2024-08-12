@@ -31,3 +31,8 @@ UAbilitySystemComponent* AArchBaseCharacter::GetAbilitySystemComponent() const
 {
 	return GetArchAbilitySystemComponent();
 }
+
+UCombatComponentBase* AArchBaseCharacter::GetPawnCombatComponent() const
+{
+	return nullptr;
+}

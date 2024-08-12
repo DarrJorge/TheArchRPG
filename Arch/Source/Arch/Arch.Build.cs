@@ -14,9 +14,10 @@ public class Arch : ModuleRules
 			"CoreUObject", 
 			"Engine", 
 			"InputCore",
-			"GameplayTags",
 			"EnhancedInput",
-			"GameplayTasks"
+			"GameplayTasks",
+			"GameplayTags",
+			"GameplayAbilities"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

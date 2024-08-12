@@ -11,7 +11,10 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AArchHeroCharacter;
 class AArchPlayerController;
+class UGameplayEffect;
 class UHeroCombatComponent;
+struct FGameplayEffectSpecHandle;
+struct FGameplayTag;
 #ifdef ARCH_ArchHeroGameplayAbility_generated_h
 #error "ArchHeroGameplayAbility.generated.h already included, missing '#pragma once' in ArchHeroGameplayAbility.h"
 #endif
@@ -22,6 +25,7 @@ class UHeroCombatComponent;
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_16_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execMakeDamageEffectSpecHandle); \
 	DECLARE_FUNCTION(execGetHeroCombatComponentFromActorInfo); \
 	DECLARE_FUNCTION(execGetHeroControllerFromActorInfo); \
 	DECLARE_FUNCTION(execGetHeroCharacterFromActorInfo);

@@ -3873,4 +3873,9 @@
   Runtime/Core/Public/UObject/NameTypes.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagContainer.generated.h \
   Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/ScalableFloat.h \
+  Runtime/Engine/Classes/Engine/CurveTable.h \
+  ../Plugins/Runtime/DataRegistry/Source/DataRegistry/Public/DataRegistryId.h \
+  ../Plugins/Runtime/DataRegistry/Intermediate/Build/Mac/UnrealEditor/Inc/DataRegistry/UHT/DataRegistryId.generated.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/ScalableFloat.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchStructTypes.generated.h

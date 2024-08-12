@@ -17,5 +17,8 @@ class ARCH_API UHeroCombatComponent : public UCombatComponentBase
 public:
 	//UFUNCTION(BlueprintCallable, Category="Arch|Combat")
 	//AArchHeroWeapon* GetHeroCarriedWeaponByTag(FGameplayTag InWeaponTag) ;
+
+	virtual void OnHitTargetActor(AActor* HitActor) override;
+	virtual void OnWeaponPulledFromTargetActor(AActor* InteractedActor) override;
 	
 };

@@ -98,9 +98,9 @@ void EmptyLinkFunctionForGeneratedCodeArchEnemyCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchEnemyCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AArchEnemyCharacter, AArchEnemyCharacter::StaticClass, TEXT("AArchEnemyCharacter"), &Z_Registration_Info_UClass_AArchEnemyCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchEnemyCharacter), 1050462960U) },
+		{ Z_Construct_UClass_AArchEnemyCharacter, AArchEnemyCharacter::StaticClass, TEXT("AArchEnemyCharacter"), &Z_Registration_Info_UClass_AArchEnemyCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchEnemyCharacter), 2866480063U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchEnemyCharacter_h_2805752928(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchEnemyCharacter_h_3617919296(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchEnemyCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchEnemyCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

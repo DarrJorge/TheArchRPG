@@ -3,6 +3,7 @@
 
 #include "AbilitySystem/Abilities/ArchGameplayAbility.h"
 #include "AbilitySystemComponent.h"
+#include "AbilitySystemBlueprintLibrary.h"
 #include "AbilitySystem/ArchAbilitySystemComponent.h"
 #include "Components/Combat/CombatComponentBase.h"
 
@@ -42,4 +43,23 @@ UCombatComponentBase* UArchGameplayAbility::GetCombatComponentBaseFromActorInfo(
 UArchAbilitySystemComponent* UArchGameplayAbility::GetArchAbilitySystemComponentFromActorInfo() const
 {
 	return Cast<UArchAbilitySystemComponent>(CurrentActorInfo->AbilitySystemComponent);
+}
+
+FActiveGameplayEffectHandle UArchGameplayAbility::NativeApplyEffectSpecHandleToTarget(AActor* TargetActor,
+	const FGameplayEffectSpecHandle& SpecHandle) const
+{
+	UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(TargetActor);
+	
+	check(TargetASC && SpecHandle.IsValid());
+	
+	return GetArchAbilitySystemComponentFromActorInfo()->
+		ApplyGameplayEffectSpecToTarget(*SpecHandle.Data, TargetASC);
+}
+
+FActiveGameplayEffectHandle UArchGameplayAbility::BP_ApplyEffectSpecHandleToTarget(AActor* TargetActor,
+	const FGameplayEffectSpecHandle& SpecHandle, EArchSuccessType& OutSuccessType)
+{
+	const FActiveGameplayEffectHandle ActiveEffectHandle = NativeApplyEffectSpecHandleToTarget(TargetActor, SpecHandle);
+	OutSuccessType = ActiveEffectHandle.WasSuccessfullyApplied() ? EArchSuccessType::Successful : EArchSuccessType::Failed;
+	return ActiveEffectHandle;
 }

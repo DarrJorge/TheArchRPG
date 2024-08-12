@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h"
+#include "Interfaces/PawnCombatInterface.h"
 #include "ArchBaseCharacter.generated.h"
 
 class UDataAsset_StartUpDataBase;
@@ -12,7 +13,7 @@ class UArchAttributeSet;
 class UArchAbilitySystemComponent;
 
 UCLASS()
-class ARCH_API AArchBaseCharacter : public ACharacter, public IAbilitySystemInterface
+class ARCH_API AArchBaseCharacter : public ACharacter, public IAbilitySystemInterface, public IPawnCombatInterface
 {
 	GENERATED_BODY()
 
@@ -37,5 +38,6 @@ protected:
 
 public:
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
+	virtual UCombatComponentBase* GetPawnCombatComponent() const override;
 
 };

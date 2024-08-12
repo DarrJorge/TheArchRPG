@@ -9,6 +9,14 @@
 
 class AArchWeaponBase;
 
+UENUM(BlueprintType)
+enum class EToggleDamageType : uint8
+{
+	EquippedWeapon,
+	LeftHand,
+	RightHand
+};
+
 UCLASS()
 class ARCH_API UCombatComponentBase : public UPawnExtensionComponentBase
 {
@@ -24,8 +32,23 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Arch|Combat")
 	AArchWeaponBase* GetCharacterCurrentEquippedWeapon() const;
 
+	UFUNCTION(BlueprintCallable, Category="Arch|Combat")
+	void ToggleWeaponCollision(bool bShouldEnable, EToggleDamageType ToggleDamageType = EToggleDamageType::EquippedWeapon);
+	
+
+	UFUNCTION(BlueprintCallable, Category="Arch|Combat")
+	float GetCurrentEquippedWeaponDamageAtLevel(float InLevel) const;
+	
+
 	UPROPERTY(BlueprintReadWrite, Category="Arch|Combat")
 	FGameplayTag CurrentEquippedWeaponTag;
+
+
+	virtual void OnHitTargetActor(AActor* HitActor);
+	virtual void OnWeaponPulledFromTargetActor(AActor* InteractedActor);
+
+protected:
+	TArray<AActor*> OverlappedActors;
 	
 private:
 	TMap<FGameplayTag, AArchWeaponBase*> CharacterCarriedWeaponMap;

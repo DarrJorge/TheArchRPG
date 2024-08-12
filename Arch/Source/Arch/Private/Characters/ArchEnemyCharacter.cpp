@@ -7,8 +7,6 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Engine/AssetManager.h"
 
-#include "Debug/ArchDebugHelper.h"
-
 AArchEnemyCharacter::AArchEnemyCharacter()
 {
 	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
@@ -44,9 +42,12 @@ void AArchEnemyCharacter::InitStartUpData()
 				if (UDataAsset_StartUpDataBase* AsyncLoadedData = CharacterStartUpData.Get())
 				{
 					AsyncLoadedData->GiveToAbilitySystemComponent(ArchAbilitySystemComponent);
-
-					Debug::Print(TEXT("Enemy startUp data Loaded."), FColor::Green);
 				}
 			})
 	);
+}
+
+UCombatComponentBase* AArchEnemyCharacter::GetPawnCombatComponent() const
+{
+	return EnemyCombatComponent;
 }

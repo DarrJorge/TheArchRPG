@@ -2,6 +2,7 @@
 
 
 #include "Components/Combat/CombatComponentBase.h"
+#include "Components/BoxComponent.h"
 #include "Items/Weapons/ArchWeaponBase.h"
 
 #include "Debug/ArchDebugHelper.h"
@@ -13,14 +14,14 @@ void UCombatComponentBase::RegisterWeapon(FGameplayTag InWeaponTag, AArchWeaponB
 	check(InWeapon);
 
 	CharacterCarriedWeaponMap.Emplace(InWeaponTag, InWeapon);
+
+	InWeapon->OnWeaponHitTarget.BindUObject(this, &UCombatComponentBase::OnHitTargetActor);
+	InWeapon->OnWeaponPulledFromTarget.BindUObject(this, &UCombatComponentBase::OnWeaponPulledFromTargetActor);
+	
 	if (bRegisterAsEquippedWeapon)
 	{
 		CurrentEquippedWeaponTag = InWeaponTag;
 	}
-
-	const FString WeaponStr = FString::Printf(TEXT("Weapon named: %s has been registered using the tag %s"),
-		*InWeapon->GetName(), *InWeaponTag.ToString());
-	Debug::Print(WeaponStr);
 }
 
 AArchWeaponBase* UCombatComponentBase::GetCharacterCarriedWeaponByTag(FGameplayTag InWeaponTag) const
@@ -42,4 +43,38 @@ AArchWeaponBase* UCombatComponentBase::GetCharacterCurrentEquippedWeapon() const
 		return nullptr;
 	}
 	return GetCharacterCarriedWeaponByTag(CurrentEquippedWeaponTag);
+}
+
+void UCombatComponentBase::ToggleWeaponCollision(bool bShouldEnable, EToggleDamageType ToggleDamageType)
+{
+	if (ToggleDamageType == EToggleDamageType::EquippedWeapon)
+	{
+		AArchWeaponBase* WeaponToToggle = GetCharacterCurrentEquippedWeapon();
+		check(WeaponToToggle);
+
+		if (bShouldEnable)
+		{
+			WeaponToToggle->GetWeaponCollisionBox()->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+		}
+		else
+		{
+			WeaponToToggle->GetWeaponCollisionBox()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			OverlappedActors.Empty();
+		}
+	}
+
+	// TODO: Handle body collision boxes
+}
+
+float UCombatComponentBase::GetCurrentEquippedWeaponDamageAtLevel(float InLevel) const
+{
+	return GetCharacterCurrentEquippedWeapon()->WeaponData.WeaponBaseDamage.GetValueAtLevel(InLevel);
+}
+
+void UCombatComponentBase::OnHitTargetActor(AActor* HitActor)
+{
+}
+
+void UCombatComponentBase::OnWeaponPulledFromTargetActor(AActor* InteractedActor)
+{
 }

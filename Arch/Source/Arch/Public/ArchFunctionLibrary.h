@@ -5,15 +5,10 @@
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "ArchTypes/ArchEnumTypes.h"
 #include "ArchFunctionLibrary.generated.h"
 
-UENUM()
-enum class EArchConfirmType : uint8
-{
-	Yes,
-	No
-};
-
+class UCombatComponentBase;
 class UArchAbilitySystemComponent;
 
 UCLASS()
@@ -34,4 +29,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category="Arch|BlueprintFunctionLibrary", meta=(DisplayName="Does Actor Have Tag", ExpandEnumAsExecs="OutConfirmType"))
 	static void BP_DoesActorHaveTag(AActor* InActor, FGameplayTag TagToCheck, EArchConfirmType& OutConfirmType);
+
+	static UCombatComponentBase* NativeGetPawnCombatComponentFromActorInfo(AActor* InActor);
+
+	UFUNCTION(BlueprintCallable, Category="Arch|BlueprintFunctionLibrary", meta=(DisplayName="Get Pawn Combat Component From Actor", ExpandEnumAsExecs="OutValidType"))
+	static UCombatComponentBase* BP_GetPawnCombatComponentFromActorInfo(AActor* InActor, EArchValidType& OutValidType);
 };

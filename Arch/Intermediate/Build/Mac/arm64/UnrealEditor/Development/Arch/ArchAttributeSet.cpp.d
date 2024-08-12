@@ -3956,4 +3956,15 @@
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemReplicationProxyInterface.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemReplicationProxyInterface.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemComponent.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchAttributeSet.generated.h
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchAttributeSet.generated.h \
+  Runtime/Net/Core/Public/Net/Core/PushModel/PushModelMacros.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayEffectExtension.h \
+  Runtime/Engine/Public/Net/UnrealNetwork.h \
+  Runtime/Engine/Public/EngineLogs.h \
+  Runtime/Engine/Classes/Engine/EngineBaseTypes.h \
+  Runtime/Net/Core/Public/Net/Core/Connection/NetResult.h \
+  Runtime/Net/Core/Public/Net/Core/PropertyConditions/PropertyConditions.h \
+  Runtime/Core/Public/Delegates/IDelegateInstance.h \
+  Runtime/Core/Public/Templates/SharedPointer.h \
+  Runtime/Engine/Public/Net/ReplayResult.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Debug/ArchDebugHelper.h

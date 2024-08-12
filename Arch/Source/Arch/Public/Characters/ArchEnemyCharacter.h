@@ -28,5 +28,7 @@ private:
 
 public:
 	FORCEINLINE UEnemyCombatComponent* GetEnemyCombatComponent() const { return EnemyCombatComponent; }
+
+	virtual UCombatComponentBase* GetPawnCombatComponent() const override;
 	
 };

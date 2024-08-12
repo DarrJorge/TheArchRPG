@@ -86,6 +86,11 @@ void AArchHeroCharacter::PossessedBy(AController* NewController)
 	}
 }
 
+UCombatComponentBase* AArchHeroCharacter::GetPawnCombatComponent() const
+{
+	return HeroCombatComponent;
+}
+
 void AArchHeroCharacter::InputMove(const FInputActionValue& Value)
 {
 	const FVector2D MovementVector = Value.Get<FVector2D>();

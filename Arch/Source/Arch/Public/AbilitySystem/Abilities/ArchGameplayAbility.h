@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Abilities/GameplayAbility.h"
+#include "ArchTypes/ArchEnumTypes.h"
 #include "ArchGameplayAbility.generated.h"
 
 class UCombatComponentBase;
@@ -35,4 +36,10 @@ protected:
 
 	UFUNCTION(BlueprintPure, Category="Arch|Ability")
 	UArchAbilitySystemComponent* GetArchAbilitySystemComponentFromActorInfo() const;
+
+	FActiveGameplayEffectHandle NativeApplyEffectSpecHandleToTarget(AActor* TargetActor, const FGameplayEffectSpecHandle& SpecHandle) const;
+
+	UFUNCTION(BlueprintCallable, Category="Arch|Ability", meta=(DisplayName="Apply Gameplay Effect Spec To Target Actor", ExpandEnumAsExecs="OutSuccessType"))
+	FActiveGameplayEffectHandle BP_ApplyEffectSpecHandleToTarget(AActor* TargetActor, const FGameplayEffectSpecHandle& SpecHandle,
+		EArchSuccessType& OutSuccessType);
 };

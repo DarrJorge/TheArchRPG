@@ -3,6 +3,7 @@
 #pragma once
 
 #include "GameplayTagContainer.h"
+#include "ScalableFloat.h"
 #include "ArchStructTypes.generated.h"
 
 class UInputMappingContext;
@@ -23,6 +24,7 @@ struct FArchHeroAbilitySet
 	bool IsValid() const;
 };
 
+
 USTRUCT(BlueprintType)
 struct FArchWeaponData
 {
@@ -36,6 +38,9 @@ struct FArchWeaponData
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta=(TitleProperty="InputTag"))
 	TArray<FArchHeroAbilitySet> DefaultWeaponAbilities;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FScalableFloat WeaponBaseDamage;
 	
 };
 
