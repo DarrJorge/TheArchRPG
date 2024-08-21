@@ -12,7 +12,9 @@ void EmptyLinkFunctionForGeneratedCodeArchEnemyCharacter() {}
 	ARCH_API UClass* Z_Construct_UClass_AArchBaseCharacter();
 	ARCH_API UClass* Z_Construct_UClass_AArchEnemyCharacter();
 	ARCH_API UClass* Z_Construct_UClass_AArchEnemyCharacter_NoRegister();
+	ARCH_API UClass* Z_Construct_UClass_UArchEnemyUIComponent_NoRegister();
 	ARCH_API UClass* Z_Construct_UClass_UEnemyCombatComponent_NoRegister();
+	UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Arch();
 // End Cross Module References
 	void AArchEnemyCharacter::StaticRegisterNativesAArchEnemyCharacter()
@@ -33,6 +35,14 @@ void EmptyLinkFunctionForGeneratedCodeArchEnemyCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_EnemyCombatComponent_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_EnemyCombatComponent;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_EnemyUIComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_EnemyUIComponent;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_HealthWidgetComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_HealthWidgetComponent;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -51,14 +61,32 @@ void EmptyLinkFunctionForGeneratedCodeArchEnemyCharacter() {}
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_EnemyCombatComponent_MetaData[] = {
-		{ "Category", "Arch|Combat" },
+		{ "Category", "Arch|Combat|Components" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Characters/ArchEnemyCharacter.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_EnemyCombatComponent = { "EnemyCombatComponent", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchEnemyCharacter, EnemyCombatComponent), Z_Construct_UClass_UEnemyCombatComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_EnemyCombatComponent_MetaData), Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_EnemyCombatComponent_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_EnemyUIComponent_MetaData[] = {
+		{ "Category", "Arch|UI|Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Characters/ArchEnemyCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_EnemyUIComponent = { "EnemyUIComponent", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchEnemyCharacter, EnemyUIComponent), Z_Construct_UClass_UArchEnemyUIComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_EnemyUIComponent_MetaData), Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_EnemyUIComponent_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_HealthWidgetComponent_MetaData[] = {
+		{ "Category", "Arch|UI|Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Characters/ArchEnemyCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_HealthWidgetComponent = { "HealthWidgetComponent", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchEnemyCharacter, HealthWidgetComponent), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_HealthWidgetComponent_MetaData), Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_HealthWidgetComponent_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AArchEnemyCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_EnemyCombatComponent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_EnemyUIComponent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchEnemyCharacter_Statics::NewProp_HealthWidgetComponent,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AArchEnemyCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AArchEnemyCharacter>::IsAbstract,
@@ -98,9 +126,9 @@ void EmptyLinkFunctionForGeneratedCodeArchEnemyCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchEnemyCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AArchEnemyCharacter, AArchEnemyCharacter::StaticClass, TEXT("AArchEnemyCharacter"), &Z_Registration_Info_UClass_AArchEnemyCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchEnemyCharacter), 2866480063U) },
+		{ Z_Construct_UClass_AArchEnemyCharacter, AArchEnemyCharacter::StaticClass, TEXT("AArchEnemyCharacter"), &Z_Registration_Info_UClass_AArchEnemyCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchEnemyCharacter), 3276822262U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchEnemyCharacter_h_3617919296(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchEnemyCharacter_h_1067127847(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchEnemyCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchEnemyCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

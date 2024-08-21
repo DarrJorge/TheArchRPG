@@ -250,7 +250,7 @@ void EmptyLinkFunctionForGeneratedCodeArchWeaponBase() {}
 		{ "ModuleRelativePath", "Public/Items/Weapons/ArchWeaponBase.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponData = { "WeaponData", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchWeaponBase, WeaponData), Z_Construct_UScriptStruct_FArchWeaponData, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponData_MetaData), Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponData_MetaData) }; // 2741338032
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponData = { "WeaponData", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchWeaponBase, WeaponData), Z_Construct_UScriptStruct_FArchWeaponData, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponData_MetaData), Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponData_MetaData) }; // 2679449712
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArchWeaponBase_Statics::NewProp_WeaponMesh_MetaData[] = {
 		{ "Category", "Arch|Weapon" },
@@ -310,9 +310,9 @@ void EmptyLinkFunctionForGeneratedCodeArchWeaponBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchWeaponBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AArchWeaponBase, AArchWeaponBase::StaticClass, TEXT("AArchWeaponBase"), &Z_Registration_Info_UClass_AArchWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchWeaponBase), 2949284417U) },
+		{ Z_Construct_UClass_AArchWeaponBase, AArchWeaponBase::StaticClass, TEXT("AArchWeaponBase"), &Z_Registration_Info_UClass_AArchWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchWeaponBase), 483155475U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchWeaponBase_h_1517110808(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchWeaponBase_h_2437676853(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchWeaponBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchWeaponBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

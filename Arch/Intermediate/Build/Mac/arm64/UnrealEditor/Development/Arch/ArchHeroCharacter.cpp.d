@@ -3890,7 +3890,90 @@
   Runtime/CoreUObject/Public/UObject/Interface.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemInterface.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Interfaces/PawnCombatInterface.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraSystem.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraDataSetCompiledData.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Public/NiagaraCommon.h \
+  Runtime/Engine/Classes/Engine/EngineBaseTypes.h \
+  Runtime/Engine/Classes/Particles/ParticlePerfStats.h \
+  Runtime/Core/Public/Templates/Atomic.h Runtime/Core/Public/CoreTypes.h \
+  Runtime/Core/Public/HAL/PlatformTime.h \
+  Runtime/Core/Public/Containers/Array.h \
+  Runtime/Core/Public/ProfilingDebugging/CsvProfiler.h \
+  Runtime/CoreUObject/Public/UObject/ObjectKey.h \
+  Runtime/CoreUObject/Public/UObject/WeakFieldPtr.h \
+  Runtime/Core/Public/UObject/WeakObjectPtrTemplates.h \
+  Runtime/CoreUObject/Public/UObject/WeakObjectPtr.h \
+  Runtime/CoreUObject/Public/UObject/FieldPath.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Public/NiagaraComponentPoolMethodEnum.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraComponentPoolMethodEnum.generated.h \
+  Runtime/CoreUObject/Public/Templates/IsUEnumClass.h \
+  Runtime/CoreUObject/Public/UObject/ReflectedTypeAccessors.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Public/NiagaraDefines.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Public/NiagaraScalabilityState.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraScalabilityState.generated.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Public/NiagaraTickBehaviorEnum.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraTickBehaviorEnum.generated.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Public/NiagaraTypes.h \
+  Runtime/Engine/Classes/Engine/UserDefinedStruct.h \
+  Runtime/Core/Public/Misc/Guid.h \
+  Runtime/CoreUObject/Public/UObject/StructOnScope.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/UserDefinedStruct.generated.h \
+  Runtime/Core/Public/Misc/SecureHash.h \
+  Runtime/CoreUObject/Public/UObject/GCObject.h \
+  Runtime/CoreUObject/Public/UObject/UnrealType.h \
+  ../Plugins/FX/Niagara/Source/NiagaraCore/Public/NiagaraCore.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/NiagaraCore/UHT/NiagaraCore.generated.h \
+  Runtime/Core/Public/Math/UnitConversion.h \
+  Runtime/Core/Public/Containers/UnrealString.h \
+  Runtime/Core/Public/Delegates/Delegate.h \
+  Runtime/Core/Public/Internationalization/Text.h \
+  Runtime/Core/Public/Misc/Optional.h \
+  Runtime/Core/Public/Templates/ValueOrError.h \
+  Runtime/Core/Public/Math/UnitConversion.inl \
+  Runtime/Core/Public/CoreFwd.h Runtime/Core/Public/Misc/OptionalFwd.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraTypes.generated.h \
+  Runtime/Core/Public/Templates/RefCounting.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraCommon.generated.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraDataSetCompiledData.generated.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraDataSetAccessor.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraEffectType.h \
+  Runtime/Engine/Public/InGamePerformanceTracker.h \
+  Runtime/RenderCore/Public/RenderCommandFence.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraPlatformSet.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraPlatformSet.generated.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraPerfBaseline.h \
+  Runtime/Engine/Classes/Particles/ParticlePerfStatsManager.h \
+  Runtime/RenderCore/Public/RenderingThread.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraPerfBaseline.generated.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraValidationRule.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraValidationRule.generated.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraValidationRuleSet.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraValidationRuleSet.generated.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraEffectType.generated.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraEmitterHandle.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraEmitterHandle.generated.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Public/NiagaraMessageStore.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraMessageStore.generated.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraParameterCollection.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Public/NiagaraParameterStore.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraParameterStore.generated.h \
+  ../Plugins/FX/Niagara/Source/NiagaraCore/Public/NiagaraCompileHash.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/NiagaraCore/UHT/NiagaraCompileHash.generated.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraParameterCollection.generated.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraParameterDefinitionsSubscriber.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Public/NiagaraParameterDefinitionsDelegates.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraParameterDefinitionsSubscriber.generated.h \
+  ../Plugins/FX/Niagara/Source/Niagara/Public/NiagaraUserRedirectionParameterStore.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraUserRedirectionParameterStore.generated.h \
+  Runtime/Engine/Classes/Particles/ParticleSystem.h \
+  Runtime/Core/Public/Async/TaskGraphInterfaces.h \
+  Runtime/RHI/Public/RHIDefinitions.h \
+  Runtime/Engine/Public/PSOPrecache.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/ParticleSystem.generated.h \
+  ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraSystem.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnCombatInterface.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Interfaces/PawnUIInterface.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnUIInterface.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchBaseCharacter.generated.h \
   Runtime/GameplayTags/Classes/GameplayTagContainer.h \
   Runtime/Core/Public/Stats/Stats.h \
@@ -3904,8 +3987,6 @@
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchGameplayTags.h \
   Runtime/GameplayTags/Public/NativeGameplayTags.h \
   Runtime/Core/Public/Containers/Set.h \
-  Runtime/Core/Public/Containers/UnrealString.h \
-  Runtime/Core/Public/CoreTypes.h \
   Runtime/GameplayTags/Classes/GameplayTagsManager.h \
   Runtime/Engine/Classes/Engine/DataTable.h \
   Runtime/Core/Public/Templates/UniquePtr.h \
@@ -3925,7 +4006,6 @@
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CapsuleComponent.generated.h \
   Runtime/Engine/Classes/GameFramework/CharacterMovementComponent.h \
   Runtime/Core/Public/Math/RandomStream.h \
-  Runtime/Engine/Classes/Engine/EngineBaseTypes.h \
   Runtime/Engine/Public/WorldCollision.h \
   Runtime/Engine/Classes/AI/Navigation/NavigationTypes.h \
   Runtime/Engine/Classes/Animation/AnimMontage.h \
@@ -3990,7 +4070,6 @@
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemComponent.h \
   Runtime/Engine/Classes/Engine/TimerHandle.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AttributeSet.h \
-  Runtime/CoreUObject/Public/UObject/UnrealType.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AttributeSet.generated.h \
   Runtime/Engine/Public/EngineDefines.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayPrediction.h \
@@ -3999,12 +4078,9 @@
   Runtime/Core/Public/Misc/NetworkGuid.h \
   Runtime/Core/Public/Containers/ArrayView.h \
   Runtime/Net/Core/Public/Net/Core/Misc/GuidReferences.h \
-  Runtime/Core/Public/Containers/Array.h \
   Runtime/Core/Public/Containers/Map.h \
   Runtime/Core/Public/Templates/Tuple.h \
   Runtime/Net/Core/Public/Net/Core/PushModel/PushModel.h \
-  Runtime/Core/Public/Delegates/Delegate.h \
-  Runtime/CoreUObject/Public/UObject/ObjectKey.h \
   Runtime/Net/Core/Public/Net/Core/NetCoreModule.h \
   Runtime/Core/Public/Templates/EnableIf.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/NetCore/UHT/FastArraySerializer.generated.h \
@@ -4036,7 +4112,6 @@
   Runtime/GameplayTasks/Classes/GameplayTasksComponent.h \
   Runtime/GameplayTasks/Classes/GameplayTaskOwnerInterface.h \
   Runtime/GameplayTasks/Public/GameplayTaskTypes.h \
-  Runtime/CoreUObject/Public/UObject/WeakObjectPtr.h \
   Runtime/CoreUObject/Public/Templates/Casts.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTasks/UHT/GameplayTaskOwnerInterface.generated.h \
   Runtime/GameplayTasks/Classes/GameplayTask.h \
@@ -4072,4 +4147,8 @@
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnExtensionComponentBase.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/CombatComponentBase.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/HeroCombatComponent.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/UI/ArchHeroUIComponent.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/UI/ArchUIComponentBase.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchUIComponentBase.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroUIComponent.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Debug/ArchDebugHelper.h

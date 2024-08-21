@@ -5,6 +5,11 @@
 #include "AbilitySystemComponent.h"
 #include "GameplayEffectExtension.h"
 #include "Net/UnrealNetwork.h"
+#include "ArchFunctionLibrary.h"
+#include "ArchGameplayTags.h"
+#include "Components/UI/ArchHeroUIComponent.h"
+#include "Components/UI/ArchUIComponentBase.h"
+#include "Interfaces/PawnUIInterface.h"
 
 #include "Debug/ArchDebugHelper.h"
 
@@ -33,36 +38,51 @@ void UArchAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
 
 void UArchAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data)
 {
+	if (!CachedPawnUIInterface.IsValid())
+	{
+		CachedPawnUIInterface = TWeakInterfacePtr<IPawnUIInterface>(Data.Target.GetAvatarActor());
+	}
+
+	checkf(CachedPawnUIInterface.IsValid(), TEXT("%s didn't implement IPawnInterface"), *Data.Target.GetAvatarActor()->GetActorNameOrLabel());
+	UArchUIComponentBase* BaseUIComponent = CachedPawnUIInterface->GetUIComponentBase();
+	checkf(BaseUIComponent, TEXT("Couldn't extract a UIComponentBase from %s"), *Data.Target.GetAvatarActor()->GetActorNameOrLabel());
+	
 	if (Data.EvaluatedData.Attribute == GetHealthAttribute())
 	{
 		const float NewHealth = FMath::Clamp(GetHealth(), 0.f, GetMaxHealth());
 		SetHealth(NewHealth);
+		BaseUIComponent->OnHealthChanged.Broadcast(GetHealth()/GetMaxHealth());
 	}
 
 	if (Data.EvaluatedData.Attribute == GetRageAttribute())
 	{
 		const float NewRage = FMath::Clamp(GetRage(), 0.f, GetMaxRage());
 		SetRage(NewRage);
+
+		if (UArchHeroUIComponent* HeroUIComponent = Cast<UArchHeroUIComponent>(BaseUIComponent))
+		{
+			HeroUIComponent->OnRageChanged.Broadcast(GetRage()/GetMaxRage());
+		}
 	}
 
 	if (Data.EvaluatedData.Attribute == GetDamageTakenAttribute())
 	{
-		const float OldHealth = GetHealth();
-		const float DamageDone = GetDamageTaken();
-		const float NewHealth = FMath::Clamp(OldHealth- DamageDone, 0.f, GetMaxHealth());
+		const float NewHealth = FMath::Clamp(GetHealth()-GetDamageTaken(), 0.f, GetMaxHealth());
+		
 		SetHealth(NewHealth);
 		SetDamageTaken(0.f);
 
-		const FString bugString = FString::Printf(TEXT("OldHealth: %f, DamageDone: %f, NewHealth: %f"),
-			OldHealth, DamageDone, NewHealth);
+		//const FString bugString = FString::Printf(TEXT("OldHealth: %f, DamageDone: %f, NewHealth: %f"),
+		//	OldHealth, DamageDone, NewHealth);
+		//Debug::Print(bugString);
 
-		Debug::Print(bugString);
-
-		// TODO: notify UI
+		// notify UI about change health value
+		BaseUIComponent->OnHealthChanged.Broadcast(GetHealth()/GetMaxHealth());
 		
-		// TODO: Handle character death
-		if (NewHealth == 0.f)
+		if (GetHealth() == 0.f)
 		{
+			UArchFunctionLibrary::AddGameplayTagToActorIfNone(Data.Target.GetAvatarActor(),
+				ArchGameplayTags::Shared_Status_Dead);
 		}
 	}
 }

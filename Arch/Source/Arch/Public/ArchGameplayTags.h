@@ -23,6 +23,7 @@ namespace ArchGameplayTags
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Unequip_Axe);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Attack_Light_Axe);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Attack_Heavy_Axe);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_HitPause);
 
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Status_JumpToFinisher);
 	
@@ -37,12 +38,18 @@ namespace ArchGameplayTags
 	/** Game Events Tags **/
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Montage_Equip_Axe);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Montage_Unequip_Axe);
+	
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Combat_MeleeHit);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Combat_HitPause);
+	
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Effect_HitReact);
 
 	/** Shared Tags **/
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_SetByCaller_BaseDamage);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Ability_Effect_HitReact);
+	
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Ability_Death);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Status_Dead);
 
 	
 }

@@ -2,10 +2,14 @@
 
 
 #include "Characters/ArchEnemyCharacter.h"
+
+#include "Components/WidgetComponent.h"
 #include "Components/Combat/EnemyCombatComponent.h"
+#include "Components/UI/ArchEnemyUIComponent.h"
 #include "DataAssets/StartUpData/DataAsset_StartUpDataBase.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Engine/AssetManager.h"
+#include "UI/Widgets/EnemyUIWidget.h"
 
 AArchEnemyCharacter::AArchEnemyCharacter()
 {
@@ -22,6 +26,20 @@ AArchEnemyCharacter::AArchEnemyCharacter()
 	GetCharacterMovement()->BrakingDecelerationWalking = 1000.f;
 
 	EnemyCombatComponent = CreateDefaultSubobject<UEnemyCombatComponent>("EnemyCombatComponent");
+	EnemyUIComponent = CreateDefaultSubobject<UArchEnemyUIComponent>("EnemyUIComponent");
+	
+	HealthWidgetComponent = CreateDefaultSubobject<UWidgetComponent>("HealthWidgetComponent");
+	HealthWidgetComponent->SetupAttachment(GetMesh());
+}
+
+void AArchEnemyCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	
+	if (UEnemyUIWidget* HealthWidget = Cast<UEnemyUIWidget>(HealthWidgetComponent->GetUserWidgetObject()))
+	{
+		HealthWidget->InitEnemyCreatedWidget(this);
+	}
 }
 
 void AArchEnemyCharacter::PossessedBy(AController* NewController)
@@ -50,4 +68,9 @@ void AArchEnemyCharacter::InitStartUpData()
 UCombatComponentBase* AArchEnemyCharacter::GetPawnCombatComponent() const
 {
 	return EnemyCombatComponent;
+}
+
+UArchUIComponentBase* AArchEnemyCharacter::GetUIComponentBase() const
+{
+	return EnemyUIComponent;
 }

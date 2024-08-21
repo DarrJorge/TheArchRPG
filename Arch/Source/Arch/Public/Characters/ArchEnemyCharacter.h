@@ -8,6 +8,8 @@
 
 
 class UEnemyCombatComponent;
+class UArchEnemyUIComponent;
+class UWidgetComponent;
 
 UCLASS()
 class ARCH_API AArchEnemyCharacter : public AArchBaseCharacter
@@ -18,9 +20,16 @@ public:
 	AArchEnemyCharacter();
 
 protected:
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Arch|Combat")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Arch|Combat|Components")
 	UEnemyCombatComponent* EnemyCombatComponent;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Arch|UI|Components")
+	UArchEnemyUIComponent* EnemyUIComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Arch|UI|Components")
+	UWidgetComponent* HealthWidgetComponent;
+
+	virtual void BeginPlay() override;
 	virtual void PossessedBy(AController* NewController) override;
 
 private:
@@ -29,6 +38,10 @@ private:
 public:
 	FORCEINLINE UEnemyCombatComponent* GetEnemyCombatComponent() const { return EnemyCombatComponent; }
 
+	//~ Begin IPawnCombatInterface Interface
 	virtual UCombatComponentBase* GetPawnCombatComponent() const override;
+
+	//~ Begin IPawnUIInterface Interface
+	virtual UArchUIComponentBase* GetUIComponentBase() const override;
 	
 };

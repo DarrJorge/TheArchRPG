@@ -36,3 +36,8 @@ UCombatComponentBase* AArchBaseCharacter::GetPawnCombatComponent() const
 {
 	return nullptr;
 }
+
+UArchUIComponentBase* AArchBaseCharacter::GetUIComponentBase() const
+{
+	return nullptr;
+}

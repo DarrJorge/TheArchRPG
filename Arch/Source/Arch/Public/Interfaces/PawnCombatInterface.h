@@ -4,13 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
+#include "NiagaraSystem.h"
 #include "PawnCombatInterface.generated.h"
 
 class UCombatComponentBase;
 
 
 // This class does not need to be modified.
-UINTERFACE(MinimalAPI)
+UINTERFACE(MinimalAPI, BlueprintType)
 class UPawnCombatInterface : public UInterface
 {
 	GENERATED_BODY()
@@ -23,4 +24,5 @@ class ARCH_API IPawnCombatInterface
 
 public:
 	virtual UCombatComponentBase* GetPawnCombatComponent() const = 0;
+	
 };

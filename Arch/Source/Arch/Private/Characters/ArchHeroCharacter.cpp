@@ -15,6 +15,7 @@
 #include "AbilitySystem/ArchAbilitySystemComponent.h"
 #include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
 #include "Components/Combat/HeroCombatComponent.h"
+#include "Components/UI/ArchHeroUIComponent.h"
 
 #include "Debug/ArchDebugHelper.h"
 
@@ -43,6 +44,7 @@ AArchHeroCharacter::AArchHeroCharacter()
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
 
 	HeroCombatComponent = CreateDefaultSubobject<UHeroCombatComponent>("HeroCombatComponent");
+	HeroUIComponent = CreateDefaultSubobject<UArchHeroUIComponent>("HeroUIComponent");
 }
 
 void AArchHeroCharacter::BeginPlay()
@@ -89,6 +91,11 @@ void AArchHeroCharacter::PossessedBy(AController* NewController)
 UCombatComponentBase* AArchHeroCharacter::GetPawnCombatComponent() const
 {
 	return HeroCombatComponent;
+}
+
+UArchUIComponentBase* AArchHeroCharacter::GetUIComponentBase() const
+{
+	return HeroUIComponent;
 }
 
 void AArchHeroCharacter::InputMove(const FInputActionValue& Value)

@@ -191,9 +191,9 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroWeapon() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchHeroWeapon_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AArchHeroWeapon, AArchHeroWeapon::StaticClass, TEXT("AArchHeroWeapon"), &Z_Registration_Info_UClass_AArchHeroWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchHeroWeapon), 1915655431U) },
+		{ Z_Construct_UClass_AArchHeroWeapon, AArchHeroWeapon::StaticClass, TEXT("AArchHeroWeapon"), &Z_Registration_Info_UClass_AArchHeroWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchHeroWeapon), 1624426529U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchHeroWeapon_h_1064971236(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchHeroWeapon_h_4029055291(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchHeroWeapon_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Items_Weapons_ArchHeroWeapon_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

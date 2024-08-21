@@ -15,6 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeArchBaseCharacter() {}
 	ARCH_API UClass* Z_Construct_UClass_UArchAttributeSet_NoRegister();
 	ARCH_API UClass* Z_Construct_UClass_UDataAsset_StartUpDataBase_NoRegister();
 	ARCH_API UClass* Z_Construct_UClass_UPawnCombatInterface_NoRegister();
+	ARCH_API UClass* Z_Construct_UClass_UPawnUIInterface_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Arch();
@@ -92,7 +93,8 @@ void EmptyLinkFunctionForGeneratedCodeArchBaseCharacter() {}
 	};
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AArchBaseCharacter_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UAbilitySystemInterface_NoRegister, (int32)VTABLE_OFFSET(AArchBaseCharacter, IAbilitySystemInterface), false },  // 3195502011
-			{ Z_Construct_UClass_UPawnCombatInterface_NoRegister, (int32)VTABLE_OFFSET(AArchBaseCharacter, IPawnCombatInterface), false },  // 1653447823
+			{ Z_Construct_UClass_UPawnCombatInterface_NoRegister, (int32)VTABLE_OFFSET(AArchBaseCharacter, IPawnCombatInterface), false },  // 2158109797
+			{ Z_Construct_UClass_UPawnUIInterface_NoRegister, (int32)VTABLE_OFFSET(AArchBaseCharacter, IPawnUIInterface), false },  // 3605390887
 		};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AArchBaseCharacter_Statics::InterfaceParams) < 64);
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AArchBaseCharacter_Statics::StaticCppClassTypeInfo = {
@@ -133,9 +135,9 @@ void EmptyLinkFunctionForGeneratedCodeArchBaseCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchBaseCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AArchBaseCharacter, AArchBaseCharacter::StaticClass, TEXT("AArchBaseCharacter"), &Z_Registration_Info_UClass_AArchBaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchBaseCharacter), 707310843U) },
+		{ Z_Construct_UClass_AArchBaseCharacter, AArchBaseCharacter::StaticClass, TEXT("AArchBaseCharacter"), &Z_Registration_Info_UClass_AArchBaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchBaseCharacter), 1789241271U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchBaseCharacter_h_145510726(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchBaseCharacter_h_1111952675(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchBaseCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchBaseCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

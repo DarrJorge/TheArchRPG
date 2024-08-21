@@ -17,7 +17,8 @@ public class Arch : ModuleRules
 			"EnhancedInput",
 			"GameplayTasks",
 			"GameplayTags",
-			"GameplayAbilities"
+			"GameplayAbilities",
+			"Niagara"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

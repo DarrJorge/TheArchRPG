@@ -12,6 +12,7 @@ class UDataAsset_InputConfig;
 class UCameraComponent;
 class USpringArmComponent;
 class UHeroCombatComponent;
+class UArchHeroUIComponent;
 struct FInputActionValue;
 
 UCLASS()
@@ -30,8 +31,11 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Camera")
 	UCameraComponent* Camera;
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Arch|Combat|Components")
 	UHeroCombatComponent* HeroCombatComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Arch|UI|Components")
+	UArchHeroUIComponent* HeroUIComponent;
 
 	
 	virtual void BeginPlay() override;
@@ -40,11 +44,15 @@ protected:
 
 public:
 	FORCEINLINE UHeroCombatComponent* GetHeroCombatComponent() const { return HeroCombatComponent; }
-
+	
+	//~ Begin IPawnCombatInterface Interface
 	virtual UCombatComponentBase* GetPawnCombatComponent() const override;
 
+	//~ Begin IPawnUIInterface Interface
+	virtual UArchUIComponentBase* GetUIComponentBase() const override;
+
 private:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Input", meta=(AllowPrivateAccess="true"))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Arch|Input", meta=(AllowPrivateAccess="true"))
 	UDataAsset_InputConfig* InputConfigDataAsset;
 
 	void InputMove(const FInputActionValue& Value);
