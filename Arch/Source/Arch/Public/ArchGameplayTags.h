@@ -34,6 +34,7 @@ namespace ArchGameplayTags
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Unarmed);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Weapon_Melee);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Weapon_Range);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Strafing);
 	
 	/** Game Events Tags **/
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Montage_Equip_Axe);
@@ -50,6 +51,7 @@ namespace ArchGameplayTags
 	
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Ability_Death);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Status_Dead);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Status_DamageTaken);
 
 	
 }

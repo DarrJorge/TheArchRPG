@@ -264,6 +264,9 @@
 -I"../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public"
 -I"../Plugins/Runtime/DataRegistry/Intermediate/Build/Mac/UnrealEditor/Inc/DataRegistry/UHT"
 -I"../Plugins/Runtime/DataRegistry/Source/DataRegistry/Public"
+-I"../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT"
+-I"Runtime/AIModule/Classes"
+-I"Runtime/AIModule/Public"
 -I"/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT"
 -I"/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source"
 -I"/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public"
@@ -278,6 +281,10 @@
 -I"../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/NiagaraShader/UHT"
 -I"../Plugins/FX/Niagara/Source/NiagaraShader/Public"
 -I"../Plugins/FX/Niagara/Source/NiagaraVertexFactories/Public"
+-I"../Intermediate/Build/Mac/UnrealEditor/Inc/AnimGraphRuntime/UHT"
+-I"Runtime/AnimGraphRuntime/Public"
+-I"../Plugins/Animation/MotionWarping/Intermediate/Build/Mac/UnrealEditor/Inc/MotionWarping/UHT"
+-I"../Plugins/Animation/MotionWarping/Source/MotionWarping/Public"
 -isystem"ThirdParty/mimalloc/include"
 -isystem"ThirdParty/LibTiff/Source/Mac"
 -isystem"ThirdParty/LibTiff/Source"
@@ -334,7 +341,7 @@
 -arch arm64
 -isysroot "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
 -mmacosx-version-min=10.15
--include-pch "/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/ArchEditor/DebugGame/Engine/SharedPCH.Engine.NonOptimized.Cpp20.h.gch"
+-include-pch "/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/ArchEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.NonOptimized.Cpp20.h.gch"
 -include "/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/Definitions.Arch.h"
 -x objective-c++
 -std=c++20

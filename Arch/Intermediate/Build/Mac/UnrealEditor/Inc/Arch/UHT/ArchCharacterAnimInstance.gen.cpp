@@ -48,6 +48,10 @@ void EmptyLinkFunctionForGeneratedCodeArchCharacterAnimInstance() {}
 #endif
 		static void NewProp_bHasAcceleration_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_bHasAcceleration;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_LocomotionDirection_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_LocomotionDirection;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -95,11 +99,19 @@ void EmptyLinkFunctionForGeneratedCodeArchCharacterAnimInstance() {}
 		((UArchCharacterAnimInstance*)Obj)->bHasAcceleration = 1;
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_bHasAcceleration = { "bHasAcceleration", nullptr, (EPropertyFlags)0x0020080000030015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UArchCharacterAnimInstance), &Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_bHasAcceleration_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_bHasAcceleration_MetaData), Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_bHasAcceleration_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_LocomotionDirection_MetaData[] = {
+		{ "Category", "AnimData|LocomotionData" },
+		{ "ModuleRelativePath", "Public/Animations/ArchCharacterAnimInstance.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_LocomotionDirection = { "LocomotionDirection", nullptr, (EPropertyFlags)0x0020080000030015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UArchCharacterAnimInstance, LocomotionDirection), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_LocomotionDirection_MetaData), Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_LocomotionDirection_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UArchCharacterAnimInstance_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_OwningCharacter,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_OwningMovementComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_GroundSpeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_bHasAcceleration,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UArchCharacterAnimInstance_Statics::NewProp_LocomotionDirection,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UArchCharacterAnimInstance_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UArchCharacterAnimInstance>::IsAbstract,
@@ -140,9 +152,9 @@ void EmptyLinkFunctionForGeneratedCodeArchCharacterAnimInstance() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Animations_ArchCharacterAnimInstance_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UArchCharacterAnimInstance, UArchCharacterAnimInstance::StaticClass, TEXT("UArchCharacterAnimInstance"), &Z_Registration_Info_UClass_UArchCharacterAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchCharacterAnimInstance), 1091030885U) },
+		{ Z_Construct_UClass_UArchCharacterAnimInstance, UArchCharacterAnimInstance::StaticClass, TEXT("UArchCharacterAnimInstance"), &Z_Registration_Info_UClass_UArchCharacterAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchCharacterAnimInstance), 1349720815U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Animations_ArchCharacterAnimInstance_h_4001068793(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Animations_ArchCharacterAnimInstance_h_1549674046(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Animations_ArchCharacterAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Animations_ArchCharacterAnimInstance_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

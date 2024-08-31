@@ -4,6 +4,7 @@
 #include "AbilitySystem/Abilities/ArchGameplayAbility.h"
 #include "AbilitySystemComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
+#include "ArchGameplayTags.h"
 #include "AbilitySystem/ArchAbilitySystemComponent.h"
 #include "Components/Combat/CombatComponentBase.h"
 
@@ -62,4 +63,23 @@ FActiveGameplayEffectHandle UArchGameplayAbility::BP_ApplyEffectSpecHandleToTarg
 	const FActiveGameplayEffectHandle ActiveEffectHandle = NativeApplyEffectSpecHandleToTarget(TargetActor, SpecHandle);
 	OutSuccessType = ActiveEffectHandle.WasSuccessfullyApplied() ? EArchSuccessType::Successful : EArchSuccessType::Failed;
 	return ActiveEffectHandle;
+}
+
+FGameplayEffectSpecHandle UArchGameplayAbility::ApplySetByCallerMagnitudeByTag(const UGameplayAbility* Ability,
+	TSubclassOf<UGameplayEffect> EffectClass, float Damage)
+{
+	check(EffectClass);
+	
+	const auto ArchASC = GetArchAbilitySystemComponentFromActorInfo();
+	if (!ArchASC) return FGameplayEffectSpecHandle();
+	
+	FGameplayEffectContextHandle ContextHandle = ArchASC->MakeEffectContext();
+	ContextHandle.SetAbility(Ability);
+	ContextHandle.AddSourceObject(GetAvatarActorFromActorInfo());
+	ContextHandle.AddInstigator(GetAvatarActorFromActorInfo(), GetAvatarActorFromActorInfo());
+
+	FGameplayEffectSpecHandle EffectSpecHandle = ArchASC->MakeOutgoingSpec(EffectClass, GetAbilityLevel(),ContextHandle);
+	EffectSpecHandle.Data->SetSetByCallerMagnitude(ArchGameplayTags::Shared_SetByCaller_BaseDamage, Damage);
+
+	return EffectSpecHandle;
 }

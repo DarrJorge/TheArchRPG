@@ -18,7 +18,9 @@ public class Arch : ModuleRules
 			"GameplayTasks",
 			"GameplayTags",
 			"GameplayAbilities",
-			"Niagara"
+			"Niagara",
+			"AnimGraphRuntime",
+			"MotionWarping"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

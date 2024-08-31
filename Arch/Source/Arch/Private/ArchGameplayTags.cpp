@@ -33,6 +33,7 @@ namespace ArchGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(Enemy_Ability_Combat_Unarmed, "Enemy.Ability.Combat.Unarmed");
 	UE_DEFINE_GAMEPLAY_TAG(Enemy_Ability_Combat_Weapon_Melee, "Enemy.Ability.Combat.Weapon.Melee");
 	UE_DEFINE_GAMEPLAY_TAG(Enemy_Ability_Combat_Weapon_Range, "Enemy.Ability.Combat.Weapon.Range");
+	UE_DEFINE_GAMEPLAY_TAG(Enemy_Ability_Combat_Strafing, "Enemy.Ability.Combat.Strafing");
 
 	/** Game Events Tags **/
 	UE_DEFINE_GAMEPLAY_TAG(Event_Montage_Equip_Axe, "Event.Montage.Equip.Axe");
@@ -46,6 +47,7 @@ namespace ArchGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(Shared_Ability_Effect_HitReact, "Shared.Ability.Effect.HitReact");
 	UE_DEFINE_GAMEPLAY_TAG(Shared_Ability_Death, "Shared.Ability.Death");
 	UE_DEFINE_GAMEPLAY_TAG(Shared_Status_Dead, "Shared.Status.Dead");
+	UE_DEFINE_GAMEPLAY_TAG(Shared_Status_DamageTaken, "Shared.Status.DamageTaken");
 	
 	
 }

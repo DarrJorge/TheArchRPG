@@ -12,6 +12,7 @@
 class UDataAsset_StartUpDataBase;
 class UArchAttributeSet;
 class UArchAbilitySystemComponent;
+class UMotionWarpingComponent;
 
 UCLASS()
 class ARCH_API AArchBaseCharacter : public ACharacter, public IAbilitySystemInterface,
@@ -24,6 +25,7 @@ public:
 
 	FORCEINLINE UArchAbilitySystemComponent* GetArchAbilitySystemComponent() const { return ArchAbilitySystemComponent; }
 	FORCEINLINE UArchAttributeSet* GetArchAttributeSet() const { return ArchAttributeSet; }
+	FORCEINLINE UMotionWarpingComponent* GetMotionWarpingComponent() const { return MotionWarpingComponent; }
 	
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="AbilitySystem")
@@ -31,6 +33,9 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="AbilitySystem")
 	UArchAttributeSet* ArchAttributeSet;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="MotionWarping")
+	UMotionWarpingComponent* MotionWarpingComponent;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="CharacterData")
 	TSoftObjectPtr<UDataAsset_StartUpDataBase> CharacterStartUpData;

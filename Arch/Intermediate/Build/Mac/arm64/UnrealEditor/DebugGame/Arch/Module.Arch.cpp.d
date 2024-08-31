@@ -3851,15 +3851,138 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/ArchEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.NonOptimized.Cpp20.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/ArchEditor/DebugGame/UnrealEd/SharedDefinitions.UnrealEd.NonOptimized.Cpp20.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/UnrealEdSharedPCH.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Messaging/Public/IMessageContext.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/CoreUObject/Public/AssetRegistry/ARFilter.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Public/BlueprintNodeSignature.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Classes/K2Node.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Public/BlueprintActionFilter.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Public/BlueprintGraphModule.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Classes/BlueprintNodeBinder.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/CoreUObject/Public/UObject/WeakFieldPtr.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/BlueprintGraph/UHT/K2Node.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Classes/EdGraphSchema_K2.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/BlueprintGraph/UHT/EdGraphSchema_K2.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_EditablePinBase.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/BlueprintGraph/UHT/K2Node_EditablePinBase.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/GameplayTasks/Classes/GameplayTaskOwnerInterface.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/GameplayTasks/Public/GameplayTaskTypes.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTasks/UHT/GameplayTaskOwnerInterface.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/GameplayTasks/Classes/GameplayTask.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/CoreUObject/Public/UObject/WeakInterfacePtr.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTasks/UHT/GameplayTask.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/NavigationSystem/Public/NavFilters/NavigationQueryFilter.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/NavigationSystem/Public/NavAreas/NavArea.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/AI/Navigation/NavAreaBase.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NavAreaBase.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/NavigationSystem/UHT/NavArea.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/NavigationSystem/UHT/NavigationQueryFilter.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/AssetThumbnail.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/TickableEditorObject.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Editor.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Editor/EditorEngine.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/TypedElementFramework/Public/Elements/Framework/TypedElementHandle.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/TypedElementFramework/Public/Elements/Framework/TypedElementData.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/TypedElementFramework/Public/Elements/Framework/TypedElementId.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/TypedElementFramework/Public/Elements/Framework/TypedElementLimits.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/TypedElementFramework/UHT/TypedElementHandle.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/TargetPlatform/Public/Interfaces/ITargetPlatform.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/TargetPlatform/Public/Interfaces/ITargetDevice.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/TargetPlatform/Public/Interfaces/TargetDeviceId.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/TargetPlatform/Public/Interfaces/ITargetDeviceSocket.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/TargetPlatform/Public/Interfaces/ITargetPlatformManagerModule.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/PlayInEditorDataTypes.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/PlayInEditorDataTypes.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/EditorSubsystem/Public/EditorSubsystem.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/EditorSubsystem/UHT/EditorSubsystem.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Editor/AssetReferenceFilter.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/EditorEngine.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Editor/UnrealEdTypes.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/UnrealEdTypes.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Subsystems/ImportSubsystem.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/ImportSubsystem.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/EditorComponents.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/EditorUndoClient.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/EditorViewportClient.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/EditorFramework/Public/UnrealWidgetFwd.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Factories/Factory.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/Factory.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/GraphEditor.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/ScopedTransaction.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Settings/EditorLoadingSavingSettings.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/EditorLoadingSavingSettings.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Settings/LevelEditorPlaySettings.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Settings/LevelEditorPlayNetworkEmulationSettings.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/PropertyEditor/Public/IPropertyTypeCustomization.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/PropertyEditor/Public/PropertyHandle.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/PropertyEditor/Public/PropertyEditorModule.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/PropertyEditor/Public/IDetailsView.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/PropertyEditor/Public/PropertyEditorDelegates.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/PropertyEditor/Public/DetailsViewArgs.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/LevelEditorPlayNetworkEmulationSettings.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuContext.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuContext.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/LevelEditorPlaySettings.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Settings/LevelEditorViewportSettings.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Viewports.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/LevelEditorViewportSettings.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Toolkits/AssetEditorToolkit.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/EditorFramework/Public/Toolkits/IToolkit.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/EditorFramework/Public/Toolkits/IToolkitHost.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Toolkits/BaseToolkit.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/WidgetRegistration/Public/ToolkitBuilder.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/WidgetRegistration/Public/FToolkitWidgetStyle.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/SlateCore/Public/Styling/StyleColors.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/SlateCore/UHT/StyleColors.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/WidgetRegistration/UHT/FToolkitWidgetStyle.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Slate/Public/Framework/MultiBox/SToolBarButtonBlock.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/WidgetRegistration/Public/ToolElementRegistry.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/WidgetRegistration/Public/ToolkitBuilderConfig.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/WidgetRegistration/UHT/ToolkitBuilderConfig.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenus.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/IToolMenusModule.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenu.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuOwner.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuOwner.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuDelegates.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuMisc.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuMisc.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuDelegates.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuSection.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuEntry.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuEntry.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuSection.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Slate/Public/Framework/MultiBox/ToolMenuBase.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Core/Public/Misc/NamePermissionList.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/Slate/UHT/ToolMenuBase.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenu.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuEntryScript.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuEntryScript.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenus.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/EditorFramework/Public/Tools/Modes.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/UnrealEdMisc.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Subsystems/AssetEditorSubsystem.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/AssetTools/Public/AssetTypeActivationOpenedMethod.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/AssetTools/UHT/AssetTypeActivationOpenedMethod.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/MRUFavoritesList.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/MRUList.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/AssetEditorSubsystem.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/Module.Arch.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/Definitions.Arch.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchAbilitySystemComponent.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchAttributeSet.gen.cpp \
   Runtime/CoreUObject/Public/UObject/GeneratedCppIncludes.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/ArchAbilitySystemComponent.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/ArchAttributeSet.h \
   Runtime/Core/Public/CoreMinimal.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemComponent.h \
-  Runtime/CoreUObject/Public/UObject/ObjectMacros.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AttributeSet.h \
   Runtime/CoreUObject/Public/Templates/SubclassOf.h \
+  Runtime/CoreUObject/Public/UObject/UnrealType.h \
+  Runtime/Engine/Classes/Engine/DataTable.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AttributeSet.generated.h \
+  Runtime/CoreUObject/Public/UObject/ObjectMacros.h \
+  Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemComponent.h \
   Runtime/Engine/Classes/Engine/NetSerialization.h \
   Runtime/Engine/Classes/Engine/EngineTypes.h \
   Runtime/Engine/Classes/Engine/TimerHandle.h \
@@ -3873,11 +3996,6 @@
   Runtime/Core/Public/HAL/Platform.h \
   Runtime/Core/Public/UObject/NameTypes.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagContainer.generated.h \
-  Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AttributeSet.h \
-  Runtime/CoreUObject/Public/UObject/UnrealType.h \
-  Runtime/Engine/Classes/Engine/DataTable.h \
-  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AttributeSet.generated.h \
   Runtime/Engine/Public/EngineDefines.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayPrediction.h \
   Runtime/Net/Core/Classes/Net/Serialization/FastArraySerializer.h \
@@ -3928,14 +4046,9 @@
   Runtime/CoreUObject/Public/UObject/ScriptInterface.h \
   Runtime/Engine/Classes/Components/ActorComponent.h \
   Runtime/GameplayTasks/Classes/GameplayTaskOwnerInterface.h \
-  Runtime/GameplayTasks/Public/GameplayTaskTypes.h \
-  Runtime/CoreUObject/Public/UObject/WeakObjectPtr.h \
-  Runtime/CoreUObject/Public/Templates/Casts.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTasks/UHT/GameplayTaskOwnerInterface.generated.h \
   Runtime/GameplayTasks/Classes/GameplayTask.h \
-  Runtime/CoreUObject/Public/UObject/WeakInterfacePtr.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTasks/UHT/GameplayTask.generated.h \
   Runtime/GameplayTasks/Classes/GameplayTaskResource.h \
+  Runtime/GameplayTasks/Public/GameplayTaskTypes.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTasks/UHT/GameplayTaskResource.generated.h \
   Runtime/Engine/Public/VisualLogger/VisualLoggerDebugSnapshotInterface.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/VisualLoggerDebugSnapshotInterface.generated.h \
@@ -3952,32 +4065,25 @@
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemReplicationProxyInterface.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemReplicationProxyInterface.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemComponent.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchTypes/ArchStructTypes.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchStructTypes.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchAbilitySystemComponent.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchAttributeSet.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/ArchAttributeSet.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchAttributeSet.generated.h \
   Runtime/Net/Core/Public/Net/Core/PushModel/PushModelMacros.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchBaseAnimInstance.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Animations/ArchBaseAnimInstance.h \
-  Runtime/Engine/Classes/Animation/AnimInstance.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchBaseAnimInstance.generated.h \
-  ../Shaders/Shared/../../Source/Runtime/Engine/Classes/Components/SkeletalMeshComponent.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchCharacterAnimInstance.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Animations/ArchCharacterAnimInstance.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchCharacterAnimInstance.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchEnemyGameplayAbility.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/Abilities/ArchEnemyGameplayAbility.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/Abilities/ArchGameplayAbility.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchTypes/ArchEnumTypes.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchGameplayAbility.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchEnemyGameplayAbility.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchEnemyUIComponent.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/UI/ArchEnemyUIComponent.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/UI/ArchUIComponentBase.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/PawnExtensionComponentBase.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnExtensionComponentBase.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchUIComponentBase.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchEnemyUIComponent.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchEnumTypes.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchFunctionLibrary.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchFunctionLibrary.h \
-  Runtime/Engine/Classes/Kismet/BlueprintFunctionLibrary.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchFunctionLibrary.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchTypes/ArchEnumTypes.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchGameHUD.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/UI/ArchGameHUD.h \
+  Runtime/Engine/Classes/GameFramework/HUD.h \
+  Runtime/Engine/Classes/GameFramework/HUDHitBox.h \
+  Runtime/Engine/Classes/GameFramework/DebugTextInfo.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/DebugTextInfo.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/HUD.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchGameHUD.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchGameModeBase.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchGameModeBase.h \
   Runtime/Engine/Classes/GameFramework/GameModeBase.h \
@@ -3991,15 +4097,21 @@
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/GameModeBase.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchGameModeBase.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchGameplayAbility.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroAnimInstance.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Animations/Hero/ArchHeroAnimInstance.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroAnimInstance.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/Abilities/ArchGameplayAbility.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchGameplayAbility.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroGameplayAbility.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/Abilities/ArchHeroGameplayAbility.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroGameplayAbility.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroLinkedAnimLayer.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Animations/Hero/ArchHeroLinkedAnimLayer.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroLinkedAnimLayer.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroUIComponent.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/UI/ArchHeroUIComponent.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroUIComponent.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroWeapon.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Items/Weapons/ArchHeroWeapon.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Items/Weapons/ArchWeaponBase.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchTypes/ArchStructTypes.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchStructTypes.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchWeaponBase.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroWeapon.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchInputComponent.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/Input/ArchInputComponent.h \
   ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputComponent.h \
@@ -4018,13 +4130,75 @@
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/DataAssets/Input/DataAsset_InputConfig.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/DataAsset_InputConfig.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchInputComponent.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchPlayerController.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Player/ArchPlayerController.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchPlayerController.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchProgressBarWidget.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/UI/Widgets/ArchProgressBarWidget.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/UI/Widgets/ArchUserWidget.h \
+  Runtime/UMG/Public/Blueprint/UserWidget.h \
+  Runtime/UMG/Public/Blueprint/WidgetChild.h \
+  Runtime/CoreUObject/Public/UObject/WeakObjectPtr.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/WidgetChild.generated.h \
+  Runtime/CoreUObject/Public/UObject/ObjectSaveContext.h \
+  Runtime/Core/Public/Containers/UnrealString.h \
+  Runtime/CoreUObject/Public/UObject/ObjectSaveOverride.h \
+  Runtime/CoreUObject/Public/UObject/FieldPath.h \
+  Runtime/SlateCore/Public/Styling/SlateColor.h \
+  Runtime/SlateCore/Public/Layout/Geometry.h \
+  Runtime/SlateCore/Public/Input/CursorReply.h \
+  Runtime/SlateCore/Public/Input/Events.h \
+  Runtime/SlateCore/Public/Input/Reply.h \
+  Runtime/SlateCore/Public/Widgets/SWidget.h \
+  Runtime/SlateCore/Public/Layout/Margin.h \
+  Runtime/UMG/Public/Components/SlateWrapperTypes.h \
+  Runtime/Core/Public/Misc/Attribute.h \
+  Runtime/Slate/Public/Widgets/Input/IVirtualKeyboardEntry.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/SlateWrapperTypes.generated.h \
+  Runtime/UMG/Public/Components/Widget.h \
+  Runtime/FieldNotification/Public/FieldNotificationDeclaration.h \
+  Runtime/FieldNotification/Public/FieldNotificationId.h \
+  Runtime/FieldNotification/Public/IFieldNotificationClassDescriptor.h \
+  Runtime/FieldNotification/Public/INotifyFieldValueChanged.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/FieldNotification/UHT/INotifyFieldValueChanged.generated.h \
+  Runtime/SlateCore/Public/Layout/Visibility.h \
+  Runtime/SlateCore/Public/Types/SlateStructs.h \
+  Runtime/UMG/Public/Components/Visual.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/Visual.generated.h \
+  Runtime/SlateCore/Public/Styling/SlateBrush.h \
+  Runtime/CoreUObject/Public/UObject/TextProperty.h \
+  Runtime/UMG/Public/Slate/WidgetTransform.h \
+  Runtime/Core/Public/Math/TransformCalculus2D.h \
+  Runtime/SlateCore/Public/Rendering/SlateRenderTransform.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/WidgetTransform.generated.h \
+  Runtime/CoreUObject/Public/UObject/UObjectThreadContext.h \
+  Runtime/UMG/Public/Blueprint/WidgetNavigation.h \
+  Runtime/SlateCore/Public/Types/NavigationMetaData.h \
+  Runtime/SlateCore/Public/Types/SlateEnums.h \
+  Runtime/SlateCore/Public/Input/NavigationReply.h \
+  Runtime/SlateCore/Public/Types/ISlateMetaData.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/WidgetNavigation.generated.h \
+  Runtime/SlateCore/Public/Widgets/WidgetPixelSnapping.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/Widget.generated.h \
+  Runtime/UMG/Public/Components/NamedSlotInterface.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/NamedSlotInterface.generated.h \
+  Runtime/Engine/Classes/Engine/World.h \
+  Runtime/Engine/Classes/Engine/LocalPlayer.h \
+  Runtime/Slate/Public/Widgets/Layout/Anchors.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Slate/UHT/Anchors.generated.h \
+  Runtime/Core/Public/Logging/MessageLog.h \
+  Runtime/Engine/Public/EngineStats.h \
+  Runtime/SlateCore/Public/SlateGlobals.h \
+  Runtime/UMG/Public/Animation/WidgetAnimationEvents.h \
+  Runtime/Core/Public/Delegates/DelegateCombinations.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/WidgetAnimationEvents.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/UserWidget.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchUserWidget.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchProgressBarWidget.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchStructTypes.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchUIComponentBase.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchUserWidget.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchWeaponBase.gen.cpp \
+  ../Shaders/Shared/../../Source/Runtime/Engine/Classes/Engine/HitResult.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/CombatComponentBase.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/Combat/CombatComponentBase.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/PawnExtensionComponentBase.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnExtensionComponentBase.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/CombatComponentBase.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/DataAsset_EnemyStartUpData.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/DataAssets/StartUpData/DataAsset_EnemyStartUpData.h \
@@ -4036,9 +4210,12 @@
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/DataAsset_HeroStartUpData.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/DataAsset_InputConfig.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/DataAsset_StartUpDataBase.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/EnemyCombatComponent.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/Combat/EnemyCombatComponent.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/EnemyCombatComponent.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/EnemyHealthBarWidget.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/UI/Widgets/EnemyHealthBarWidget.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/UI/Widgets/EnemyUIWidget.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/EnemyUIWidget.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/EnemyHealthBarWidget.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/EnemyUIWidget.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ExecCalc_DamageTaken.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/ExecCalc/ExecCalc_DamageTaken.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayEffectExecutionCalculation.h \
@@ -4049,27 +4226,10 @@
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/HeroCombatComponent.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/Combat/HeroCombatComponent.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/HeroCombatComponent.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnExtensionComponentBase.gen.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Arch.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Arch.h \
-  Runtime/Core/Public/Modules/ModuleManager.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/Abilities/ArchEnemyGameplayAbility.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Characters/ArchEnemyCharacter.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Characters/ArchBaseCharacter.h \
-  Runtime/Engine/Classes/GameFramework/Character.h \
-  Runtime/CoreUObject/Public/UObject/UObjectGlobals.h \
-  Runtime/Engine/Classes/GameFramework/CharacterMovementReplication.h \
-  Runtime/Core/Public/Serialization/BitWriter.h \
-  Runtime/Core/Public/Containers/BitArray.h \
-  Runtime/Experimental/Iris/Core/Public/Iris/Serialization/IrisObjectReferencePackageMap.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/IrisCore/UHT/IrisObjectReferencePackageMap.generated.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementReplication.generated.h \
-  Runtime/Engine/Classes/Animation/AnimationAsset.h \
-  Runtime/Engine/Classes/GameFramework/RootMotionSource.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/RootMotionSource.generated.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/Character.generated.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemInterface.h \
-  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemInterface.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/HeroUIWidget.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/UI/Widgets/HeroUIWidget.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/HeroUIWidget.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnCombatInterface.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Interfaces/PawnCombatInterface.h \
   ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraSystem.h \
   ../Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraDataSetCompiledData.h \
@@ -4080,8 +4240,6 @@
   Runtime/Core/Public/HAL/PlatformTime.h \
   Runtime/Core/Public/ProfilingDebugging/CsvProfiler.h \
   Runtime/CoreUObject/Public/UObject/WeakFieldPtr.h \
-  Runtime/Core/Public/UObject/WeakObjectPtrTemplates.h \
-  Runtime/CoreUObject/Public/UObject/FieldPath.h \
   ../Plugins/FX/Niagara/Source/Niagara/Public/NiagaraComponentPoolMethodEnum.h \
   ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraComponentPoolMethodEnum.generated.h \
   Runtime/CoreUObject/Public/Templates/IsUEnumClass.h \
@@ -4100,7 +4258,6 @@
   ../Plugins/FX/Niagara/Source/NiagaraCore/Public/NiagaraCore.h \
   ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/NiagaraCore/UHT/NiagaraCore.generated.h \
   Runtime/Core/Public/Math/UnitConversion.h \
-  Runtime/Core/Public/Containers/UnrealString.h \
   Runtime/Core/Public/Internationalization/Text.h \
   Runtime/Core/Public/Misc/Optional.h \
   Runtime/Core/Public/Templates/ValueOrError.h \
@@ -4147,29 +4304,80 @@
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/ParticleSystem.generated.h \
   ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraSystem.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnCombatInterface.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnExtensionComponentBase.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnUIInterface.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Interfaces/PawnUIInterface.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnUIInterface.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchBaseCharacter.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchEnemyCharacter.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/Abilities/ArchGameplayAbility.cpp \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemBlueprintLibrary.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/GameplayAbilityTargetDataFilter.h \
-  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilityTargetDataFilter.generated.h \
-  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemBlueprintLibrary.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/Abilities/ArchHeroGameplayAbility.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PlayerOverlayWidget.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/UI/Widgets/PlayerOverlayWidget.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PlayerOverlayWidget.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Arch.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Arch.h \
+  Runtime/Core/Public/Modules/ModuleManager.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/ArchAttributeSet.cpp \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayEffectExtension.h \
+  Runtime/Engine/Public/Net/UnrealNetwork.h \
+  Runtime/Engine/Public/EngineLogs.h \
+  Runtime/Net/Core/Public/Net/Core/Connection/NetResult.h \
+  Runtime/Net/Core/Public/Net/Core/PropertyConditions/PropertyConditions.h \
+  Runtime/Core/Public/Delegates/IDelegateInstance.h \
+  Runtime/Core/Public/Templates/SharedPointer.h \
+  Runtime/Engine/Public/Net/ReplayResult.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchFunctionLibrary.h \
+  Runtime/Engine/Classes/Kismet/BlueprintFunctionLibrary.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchFunctionLibrary.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchGameplayTags.h \
   Runtime/GameplayTags/Public/NativeGameplayTags.h \
   Runtime/GameplayTags/Classes/GameplayTagsManager.h \
   Runtime/Core/Public/Templates/UniquePtr.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagsManager.generated.h \
   Runtime/Core/Public/Templates/UnrealTemplate.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Characters/ArchHeroCharacter.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroCharacter.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/ArchAbilitySystemComponent.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/ExecCalc/ExecCalc_DamageTaken.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Debug/ArchDebugHelper.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Animations/ArchBaseAnimInstance.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Animations/ArchCharacterAnimInstance.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/ExecCalc/ExecCalc_DamageTaken.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Animations/Hero/ArchHeroAnimInstance.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Animations/Hero/ArchHeroAnimInstance.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Animations/ArchCharacterAnimInstance.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Animations/ArchBaseAnimInstance.h \
+  Runtime/Engine/Classes/Animation/AnimInstance.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchBaseAnimInstance.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchCharacterAnimInstance.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroAnimInstance.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Characters/ArchHeroCharacter.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Characters/ArchBaseCharacter.h \
+  Runtime/Engine/Classes/GameFramework/Character.h \
+  Runtime/CoreUObject/Public/UObject/UObjectGlobals.h \
+  Runtime/Engine/Classes/GameFramework/CharacterMovementReplication.h \
+  Runtime/Core/Public/Serialization/BitWriter.h \
+  Runtime/Core/Public/Containers/BitArray.h \
+  Runtime/Experimental/Iris/Core/Public/Iris/Serialization/IrisObjectReferencePackageMap.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/IrisCore/UHT/IrisObjectReferencePackageMap.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementReplication.generated.h \
+  Runtime/Engine/Classes/Animation/AnimationAsset.h \
+  Runtime/Engine/Classes/GameFramework/RootMotionSource.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/RootMotionSource.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/Character.generated.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemInterface.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemInterface.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchBaseCharacter.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroCharacter.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Animations/Hero/ArchHeroLinkedAnimLayer.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Animations/Hero/ArchHeroLinkedAnimLayer.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroLinkedAnimLayer.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/ArchGameModeBase.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/ArchTypes/ArchEnumTypes.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/ArchTypes/ArchStructTypes.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Characters/ArchHeroCharacter.cpp \
+  Runtime/Engine/Classes/Camera/CameraComponent.h \
+  Runtime/Engine/Classes/Components/SceneComponent.h \
+  Runtime/Engine/Classes/Engine/BlendableInterface.h \
+  Runtime/Engine/Classes/Engine/Scene.h \
+  Runtime/Engine/Classes/Camera/CameraTypes.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CameraComponent.generated.h \
+  Runtime/Engine/Classes/Components/CapsuleComponent.h \
+  Runtime/Engine/Classes/Components/ShapeComponent.h \
+  Runtime/Engine/Classes/Components/PrimitiveComponent.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/ShapeComponent.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CapsuleComponent.generated.h \
   Runtime/Engine/Classes/GameFramework/CharacterMovementComponent.h \
   Runtime/Core/Public/Math/RandomStream.h \
   Runtime/Engine/Public/WorldCollision.h \
@@ -4186,7 +4394,6 @@
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PathFollowingAgentInterface.generated.h \
   Runtime/Engine/Classes/GameFramework/MovementComponent.h \
   Runtime/PhysicsCore/Public/Chaos/ChaosEngineInterface.h \
-  Runtime/Engine/Classes/Components/SceneComponent.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/MovementComponent.generated.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NavMovementComponent.generated.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PawnMovementComponent.generated.h \
@@ -4199,28 +4406,58 @@
   Runtime/Engine/Public/Engine/OverlapInfo.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementComponentAsync.generated.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementComponent.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Animations/Hero/ArchHeroAnimInstance.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Animations/Hero/ArchHeroLinkedAnimLayer.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/ArchFunctionLibrary.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/ArchGameModeBase.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/ArchTypes/ArchEnumTypes.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Combat/CombatComponentBase.cpp \
-  Runtime/Engine/Classes/Components/BoxComponent.h \
-  Runtime/Engine/Classes/Components/ShapeComponent.h \
-  Runtime/Engine/Classes/Components/PrimitiveComponent.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/ShapeComponent.generated.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/BoxComponent.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Items/Weapons/ArchWeaponBase.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchWeaponBase.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Combat/EnemyCombatComponent.cpp \
+  Runtime/Engine/Classes/GameFramework/SpringArmComponent.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/SpringArmComponent.generated.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputSubsystems.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputSubsystemInterface.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedPlayerInput.h \
+  Runtime/Engine/Classes/GameFramework/PlayerInput.h \
+  Runtime/Slate/Public/Framework/Commands/InputChord.h \
+  Runtime/Engine/Public/GestureRecognizer.h \
+  Runtime/Engine/Public/KeyState.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PlayerInput.generated.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedPlayerInput.generated.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/PlayerMappableKeySlot.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/PlayerMappableKeySlot.generated.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedInputSubsystemInterface.generated.h \
+  Runtime/Engine/Public/Subsystems/LocalPlayerSubsystem.h \
+  Runtime/Engine/Public/Subsystems/WorldSubsystem.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedInputSubsystems.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/ArchAbilitySystemComponent.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchAbilitySystemComponent.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Combat/HeroCombatComponent.cpp \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemBlueprintLibrary.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/GameplayAbilityTargetDataFilter.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilityTargetDataFilter.generated.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemBlueprintLibrary.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Input/ArchInputComponent.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/PawnExtensionComponentBase.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/UI/ArchEnemyUIComponent.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/UI/ArchHeroUIComponent.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/UI/ArchUIComponentBase.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/DataAssets/Input/DataAsset_InputConfig.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/DataAssets/StartUpData/DataAsset_EnemyStartUpData.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/Abilities/ArchEnemyGameplayAbility.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchEnemyGameplayAbility.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/DataAssets/StartUpData/DataAsset_HeroStartUpData.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/DataAssets/StartUpData/DataAsset_StartUpDataBase.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Interfaces/PawnCombatInterface.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Interfaces/PawnUIInterface.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Items/Weapons/ArchHeroWeapon.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Items/Weapons/ArchHeroWeapon.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchHeroWeapon.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Items/Weapons/ArchWeaponBase.cpp \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Player/ArchPlayerController.cpp
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/UI/ArchGameHUD.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/UI/Widgets/ArchProgressBarWidget.cpp \
+  Runtime/UMG/Public/Components/ProgressBar.h \
+  Runtime/SlateCore/Public/Styling/SlateTypes.h \
+  Runtime/Slate/Public/Widgets/Notifications/SProgressBar.h \
+  Runtime/SlateCore/Public/Styling/SlateWidgetStyleAsset.h \
+  Runtime/SlateCore/Public/Widgets/DeclarativeSyntaxSupport.h \
+  Runtime/SlateCore/Public/Widgets/SLeafWidget.h \
+  Runtime/SlateCore/Public/Styling/CoreStyle.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Slate/UHT/SProgressBar.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/ProgressBar.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/UI/Widgets/ArchUserWidget.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/UI/Widgets/EnemyHealthBarWidget.cpp \
+  Runtime/Engine/Public/TimerManager.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/UI/Widgets/EnemyUIWidget.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/UI/Widgets/HeroUIWidget.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/UI/Widgets/PlayerOverlayWidget.cpp

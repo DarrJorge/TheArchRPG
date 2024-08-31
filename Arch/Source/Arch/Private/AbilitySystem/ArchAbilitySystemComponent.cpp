@@ -50,3 +50,18 @@ void UArchAbilitySystemComponent::RemoveGrantedCharacterWeaponAbilities(TArray<F
 	}
 	InGrantedAbilitySpecHandles.Empty();
 }
+
+bool UArchAbilitySystemComponent::TryActivateAbilityByTag(const FGameplayTag& InAbilityTag)
+{
+	check(InAbilityTag.IsValid());
+
+	TArray<FGameplayAbilitySpec*> FoundAbilitySpecs;
+	GetActivatableGameplayAbilitySpecsByAllMatchingTags(InAbilityTag.GetSingleTagContainer(), FoundAbilitySpecs);
+	if (FoundAbilitySpecs.IsEmpty()) return false;
+	
+	const int32 RandomIndex = FMath::RandRange(0, FoundAbilitySpecs.Num() - 1);
+	FGameplayAbilitySpec* AbilitySpec = FoundAbilitySpecs[RandomIndex];
+	if (!AbilitySpec || AbilitySpec->IsActive()) return false;
+
+	return TryActivateAbility(AbilitySpec->Handle);
+}

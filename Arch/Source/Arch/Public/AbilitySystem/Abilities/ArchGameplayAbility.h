@@ -42,4 +42,7 @@ protected:
 	UFUNCTION(BlueprintCallable, Category="Arch|Ability", meta=(DisplayName="Apply Gameplay Effect Spec To Target Actor", ExpandEnumAsExecs="OutSuccessType"))
 	FActiveGameplayEffectHandle BP_ApplyEffectSpecHandleToTarget(AActor* TargetActor, const FGameplayEffectSpecHandle& SpecHandle,
 		EArchSuccessType& OutSuccessType);
+
+	FGameplayEffectSpecHandle ApplySetByCallerMagnitudeByTag(const UGameplayAbility* Ability, TSubclassOf<UGameplayEffect> EffectClass,
+		float Damage);
 };

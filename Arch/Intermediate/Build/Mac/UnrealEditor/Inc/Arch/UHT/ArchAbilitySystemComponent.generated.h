@@ -11,6 +11,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FArchHeroAbilitySet;
 struct FGameplayAbilitySpecHandle;
+struct FGameplayTag;
 #ifdef ARCH_ArchAbilitySystemComponent_generated_h
 #error "ArchAbilitySystemComponent.generated.h already included, missing '#pragma once' in ArchAbilitySystemComponent.h"
 #endif
@@ -21,6 +22,7 @@ struct FGameplayAbilitySpecHandle;
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_13_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execTryActivateAbilityByTag); \
 	DECLARE_FUNCTION(execRemoveGrantedCharacterWeaponAbilities); \
 	DECLARE_FUNCTION(execGrantCharacterWeaponAbilities);
 

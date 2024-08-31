@@ -20,6 +20,10 @@ public:
 
 	UFUNCTION(BlueprintPure, Category="Arch|Ability")
 	UEnemyCombatComponent* GetEnemyCombatComponentFromActorInfo();
+	
+	UFUNCTION(BlueprintPure, Category="Arch|Ability")
+	FGameplayEffectSpecHandle MakeDamageEffectSpecHandle(TSubclassOf<UGameplayEffect> EffectClass,
+		const FScalableFloat& InDamageScalableFloat);
 
 private:
 	TWeakObjectPtr<AArchEnemyCharacter> CachedEnemyCharacter;

@@ -10,6 +10,7 @@
 class UEnemyCombatComponent;
 class UArchEnemyUIComponent;
 class UWidgetComponent;
+class UBehaviorTree;
 
 UCLASS()
 class ARCH_API AArchEnemyCharacter : public AArchBaseCharacter
@@ -18,6 +19,9 @@ class ARCH_API AArchEnemyCharacter : public AArchBaseCharacter
 
 public:
 	AArchEnemyCharacter();
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="AI")
+	UBehaviorTree* BehaviourTreeAsset;
 
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Arch|Combat|Components")

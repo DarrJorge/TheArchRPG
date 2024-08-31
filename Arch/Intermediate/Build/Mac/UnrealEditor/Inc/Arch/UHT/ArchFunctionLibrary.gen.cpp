@@ -16,10 +16,20 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 	ARCH_API UEnum* Z_Construct_UEnum_Arch_EArchConfirmType();
 	ARCH_API UEnum* Z_Construct_UEnum_Arch_EArchValidType();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
 	GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 	UPackage* Z_Construct_UPackage__Script_Arch();
 // End Cross Module References
+	DEFINE_FUNCTION(UArchFunctionLibrary::execIsTargetPawnHostile)
+	{
+		P_GET_OBJECT(APawn,Z_Param_InstigatorPawn);
+		P_GET_OBJECT(APawn,Z_Param_TargetPawn);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UArchFunctionLibrary::IsTargetPawnHostile(Z_Param_InstigatorPawn,Z_Param_TargetPawn);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UArchFunctionLibrary::execBP_GetPawnCombatComponentFromActorInfo)
 	{
 		P_GET_OBJECT(AActor,Z_Param_InActor);
@@ -64,6 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 			{ "AddGameplayTagToActorIfNone", &UArchFunctionLibrary::execAddGameplayTagToActorIfNone },
 			{ "BP_DoesActorHaveTag", &UArchFunctionLibrary::execBP_DoesActorHaveTag },
 			{ "BP_GetPawnCombatComponentFromActorInfo", &UArchFunctionLibrary::execBP_GetPawnCombatComponentFromActorInfo },
+			{ "IsTargetPawnHostile", &UArchFunctionLibrary::execIsTargetPawnHostile },
 			{ "RemoveGameplayTagFromActorIfFound", &UArchFunctionLibrary::execRemoveGameplayTagFromActorIfFound },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -211,6 +222,54 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics
+	{
+		struct ArchFunctionLibrary_eventIsTargetPawnHostile_Parms
+		{
+			APawn* InstigatorPawn;
+			APawn* TargetPawn;
+			bool ReturnValue;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_InstigatorPawn;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_TargetPawn;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::NewProp_InstigatorPawn = { "InstigatorPawn", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventIsTargetPawnHostile_Parms, InstigatorPawn), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::NewProp_TargetPawn = { "TargetPawn", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventIsTargetPawnHostile_Parms, TargetPawn), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(0, nullptr) };
+	void Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((ArchFunctionLibrary_eventIsTargetPawnHostile_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ArchFunctionLibrary_eventIsTargetPawnHostile_Parms), &Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::NewProp_InstigatorPawn,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::NewProp_TargetPawn,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Arch|BlueprintFunctionLibrary" },
+		{ "ModuleRelativePath", "Public/ArchFunctionLibrary.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UArchFunctionLibrary, nullptr, "IsTargetPawnHostile", nullptr, nullptr, Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::PropPointers), sizeof(Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::ArchFunctionLibrary_eventIsTargetPawnHostile_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::Function_MetaDataParams), Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::ArchFunctionLibrary_eventIsTargetPawnHostile_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagFromActorIfFound_Statics
 	{
 		struct ArchFunctionLibrary_eventRemoveGameplayTagFromActorIfFound_Parms
@@ -274,6 +333,7 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_AddGameplayTagToActorIfNone, "AddGameplayTagToActorIfNone" }, // 2167640235
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_BP_DoesActorHaveTag, "BP_DoesActorHaveTag" }, // 3648760990
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_BP_GetPawnCombatComponentFromActorInfo, "BP_GetPawnCombatComponentFromActorInfo" }, // 2941388908
+		{ &Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile, "IsTargetPawnHostile" }, // 2736353021
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagFromActorIfFound, "RemoveGameplayTagFromActorIfFound" }, // 436120141
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UArchFunctionLibrary_Statics::FuncInfo) < 2048);
@@ -321,9 +381,9 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UArchFunctionLibrary, UArchFunctionLibrary::StaticClass, TEXT("UArchFunctionLibrary"), &Z_Registration_Info_UClass_UArchFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchFunctionLibrary), 95171977U) },
+		{ Z_Construct_UClass_UArchFunctionLibrary, UArchFunctionLibrary::StaticClass, TEXT("UArchFunctionLibrary"), &Z_Registration_Info_UClass_UArchFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchFunctionLibrary), 3378274161U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_895058880(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_2195607463(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

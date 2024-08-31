@@ -8,6 +8,7 @@
 #include "Arch/Public/AbilitySystem/ArchAbilitySystemComponent.h"
 #include "Arch/Public/ArchTypes/ArchStructTypes.h"
 #include "GameplayAbilitySpecHandle.h"
+#include "GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 // Cross Module References
@@ -16,8 +17,17 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 	ARCH_API UScriptStruct* Z_Construct_UScriptStruct_FArchHeroAbilitySet();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent();
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayAbilitySpecHandle();
+	GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 	UPackage* Z_Construct_UPackage__Script_Arch();
 // End Cross Module References
+	DEFINE_FUNCTION(UArchAbilitySystemComponent::execTryActivateAbilityByTag)
+	{
+		P_GET_STRUCT_REF(FGameplayTag,Z_Param_Out_InAbilityTag);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->TryActivateAbilityByTag(Z_Param_Out_InAbilityTag);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UArchAbilitySystemComponent::execRemoveGrantedCharacterWeaponAbilities)
 	{
 		P_GET_TARRAY_REF(FGameplayAbilitySpecHandle,Z_Param_Out_InGrantedAbilitySpecHandles);
@@ -42,6 +52,7 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GrantCharacterWeaponAbilities", &UArchAbilitySystemComponent::execGrantCharacterWeaponAbilities },
 			{ "RemoveGrantedCharacterWeaponAbilities", &UArchAbilitySystemComponent::execRemoveGrantedCharacterWeaponAbilities },
+			{ "TryActivateAbilityByTag", &UArchAbilitySystemComponent::execTryActivateAbilityByTag },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -141,6 +152,58 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics
+	{
+		struct ArchAbilitySystemComponent_eventTryActivateAbilityByTag_Parms
+		{
+			FGameplayTag InAbilityTag;
+			bool ReturnValue;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_InAbilityTag_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_InAbilityTag;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::NewProp_InAbilityTag_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::NewProp_InAbilityTag = { "InAbilityTag", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchAbilitySystemComponent_eventTryActivateAbilityByTag_Parms, InAbilityTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::NewProp_InAbilityTag_MetaData), Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::NewProp_InAbilityTag_MetaData) }; // 2083603574
+	void Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((ArchAbilitySystemComponent_eventTryActivateAbilityByTag_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ArchAbilitySystemComponent_eventTryActivateAbilityByTag_Parms), &Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::NewProp_InAbilityTag,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Arch|Ability" },
+		{ "ModuleRelativePath", "Public/AbilitySystem/ArchAbilitySystemComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UArchAbilitySystemComponent, nullptr, "TryActivateAbilityByTag", nullptr, nullptr, Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::PropPointers), sizeof(Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::ArchAbilitySystemComponent_eventTryActivateAbilityByTag_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::Function_MetaDataParams), Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::ArchAbilitySystemComponent_eventTryActivateAbilityByTag_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UArchAbilitySystemComponent);
 	UClass* Z_Construct_UClass_UArchAbilitySystemComponent_NoRegister()
 	{
@@ -164,6 +227,7 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_UArchAbilitySystemComponent_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities, "GrantCharacterWeaponAbilities" }, // 3649410399
 		{ &Z_Construct_UFunction_UArchAbilitySystemComponent_RemoveGrantedCharacterWeaponAbilities, "RemoveGrantedCharacterWeaponAbilities" }, // 3011072408
+		{ &Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag, "TryActivateAbilityByTag" }, // 689944091
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UArchAbilitySystemComponent_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -211,9 +275,9 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UArchAbilitySystemComponent, UArchAbilitySystemComponent::StaticClass, TEXT("UArchAbilitySystemComponent"), &Z_Registration_Info_UClass_UArchAbilitySystemComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchAbilitySystemComponent), 3016819742U) },
+		{ Z_Construct_UClass_UArchAbilitySystemComponent, UArchAbilitySystemComponent::StaticClass, TEXT("UArchAbilitySystemComponent"), &Z_Registration_Info_UClass_UArchAbilitySystemComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchAbilitySystemComponent), 860642593U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_2958776700(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_1607654946(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

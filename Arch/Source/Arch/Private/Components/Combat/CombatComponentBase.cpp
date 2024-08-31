@@ -49,16 +49,12 @@ void UCombatComponentBase::ToggleWeaponCollision(bool bShouldEnable, EToggleDama
 {
 	if (ToggleDamageType == EToggleDamageType::EquippedWeapon)
 	{
-		AArchWeaponBase* WeaponToToggle = GetCharacterCurrentEquippedWeapon();
-		check(WeaponToToggle);
+		AArchWeaponBase* EquippedWeapon = GetCharacterCurrentEquippedWeapon();
+		check(EquippedWeapon);
 
-		if (bShouldEnable)
+		EquippedWeapon->SetWeaponCollision(bShouldEnable);
+		if (!bShouldEnable)
 		{
-			WeaponToToggle->GetWeaponCollisionBox()->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
-		}
-		else
-		{
-			WeaponToToggle->GetWeaponCollisionBox()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 			OverlappedActors.Empty();
 		}
 	}

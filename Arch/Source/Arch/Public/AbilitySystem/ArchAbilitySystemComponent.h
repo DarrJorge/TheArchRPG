@@ -23,5 +23,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Arch|Ability")
 	void RemoveGrantedCharacterWeaponAbilities(UPARAM(ref) TArray<FGameplayAbilitySpecHandle>& InGrantedAbilitySpecHandles);
 	
-	
+	UFUNCTION(BlueprintCallable, Category="Arch|Ability")
+	bool TryActivateAbilityByTag(const FGameplayTag& InAbilityTag);
 };

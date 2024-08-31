@@ -5,6 +5,7 @@
 #include "AbilitySystemBlueprintLibrary.h"
 #include "AbilitySystem/ArchAbilitySystemComponent.h"
 #include "Interfaces/PawnCombatInterface.h"
+#include "GenericTeamAgentInterface.h"
 
 UArchAbilitySystemComponent* UArchFunctionLibrary::NativeGetArchASCFromActor(AActor* InActor)
 {
@@ -60,4 +61,15 @@ UCombatComponentBase* UArchFunctionLibrary::BP_GetPawnCombatComponentFromActorIn
 	UCombatComponentBase* CombatComponent = NativeGetPawnCombatComponentFromActorInfo(InActor);
 	OutValidType = CombatComponent ? EArchValidType::Valid : EArchValidType::Invalid;
 	return CombatComponent;
+}
+
+bool UArchFunctionLibrary::IsTargetPawnHostile(APawn* InstigatorPawn, APawn* TargetPawn)
+{
+	check(InstigatorPawn && TargetPawn);
+	
+	const auto InstigatorTeamAgent = Cast<IGenericTeamAgentInterface>(InstigatorPawn->Controller);
+	const auto TargetTeamAgent = Cast<IGenericTeamAgentInterface>(TargetPawn->Controller);
+	if (!InstigatorTeamAgent || !TargetTeamAgent) return false;
+	
+	return InstigatorTeamAgent->GetGenericTeamId() != TargetTeamAgent->GetGenericTeamId();
 }

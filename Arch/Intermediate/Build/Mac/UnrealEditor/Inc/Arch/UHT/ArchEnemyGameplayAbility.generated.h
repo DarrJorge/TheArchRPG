@@ -11,6 +11,9 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AArchEnemyCharacter;
 class UEnemyCombatComponent;
+class UGameplayEffect;
+struct FGameplayEffectSpecHandle;
+struct FScalableFloat;
 #ifdef ARCH_ArchEnemyGameplayAbility_generated_h
 #error "ArchEnemyGameplayAbility.generated.h already included, missing '#pragma once' in ArchEnemyGameplayAbility.h"
 #endif
@@ -21,6 +24,7 @@ class UEnemyCombatComponent;
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchEnemyGameplayAbility_h_15_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchEnemyGameplayAbility_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execMakeDamageEffectSpecHandle); \
 	DECLARE_FUNCTION(execGetEnemyCombatComponentFromActorInfo); \
 	DECLARE_FUNCTION(execGetEnemyCharacterFromActorInfo);
 

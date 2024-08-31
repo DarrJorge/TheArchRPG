@@ -44,5 +44,7 @@ protected:
 public:
 	
 	FORCEINLINE UBoxComponent* GetWeaponCollisionBox() const { return WeaponCollisionBox; }
+
+	void SetWeaponCollision(bool bShouldEnable) const;
 	
 };

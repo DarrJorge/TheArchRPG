@@ -4,6 +4,7 @@
 #include "Characters/ArchBaseCharacter.h"
 #include "AbilitySystem/ArchAbilitySystemComponent.h"
 #include "AbilitySystem/ArchAttributeSet.h"
+#include "MotionWarpingComponent.h"
 
 AArchBaseCharacter::AArchBaseCharacter()
 {
@@ -13,6 +14,7 @@ AArchBaseCharacter::AArchBaseCharacter()
 
 	ArchAbilitySystemComponent = CreateDefaultSubobject<UArchAbilitySystemComponent>("ArchAbilitySystemComponent");
 	ArchAttributeSet = CreateDefaultSubobject<UArchAttributeSet>("ArchAttributeSet");
+	MotionWarpingComponent = CreateDefaultSubobject<UMotionWarpingComponent>("MotionWarping");
 }
 
 void AArchBaseCharacter::PossessedBy(AController* NewController)

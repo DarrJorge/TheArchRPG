@@ -34,22 +34,7 @@ UHeroCombatComponent* UArchHeroGameplayAbility::GetHeroCombatComponentFromActorI
 FGameplayEffectSpecHandle UArchHeroGameplayAbility::MakeDamageEffectSpecHandle(TSubclassOf<UGameplayEffect> EffectClass,
 	float WeaponBaseDamage, FGameplayTag AttackTag, int32 UsedComboCount)
 {
-	check(EffectClass);
-
-	FGameplayEffectContextHandle ContextHandle = GetArchAbilitySystemComponentFromActorInfo()->MakeEffectContext();
-	ContextHandle.SetAbility(this);
-	ContextHandle.AddSourceObject(GetAvatarActorFromActorInfo());
-	ContextHandle.AddInstigator(GetAvatarActorFromActorInfo(), GetAvatarActorFromActorInfo());
-
-	FGameplayEffectSpecHandle EffectSpecHandle = GetArchAbilitySystemComponentFromActorInfo()->MakeOutgoingSpec(
-		EffectClass,
-		GetAbilityLevel(),
-		ContextHandle
-	);
-
-	EffectSpecHandle.Data->SetSetByCallerMagnitude(
-		ArchGameplayTags::Shared_SetByCaller_BaseDamage,
-		WeaponBaseDamage);
+	auto EffectSpecHandle = ApplySetByCallerMagnitudeByTag(this, EffectClass, WeaponBaseDamage);
 
 	if (AttackTag.IsValid())
 	{
