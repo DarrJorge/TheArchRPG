@@ -1,6 +1,7 @@
 {
 	"SourceFiles": [
 		"/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Arch.Build.cs",
+		"/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Plugins/ExtendEditorLibrary/Source/ExtendEditorLibrary/ExtendEditorLibrary.Build.cs",
 		"/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch.Target.cs",
 		"/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/ArchEditor.Target.cs"
 	],

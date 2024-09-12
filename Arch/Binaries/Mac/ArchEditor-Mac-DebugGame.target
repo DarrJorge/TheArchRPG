@@ -3388,6 +3388,14 @@
 		{
 			"Path": "$(ProjectDir)/Binaries/Mac/UnrealEditor-Mac-DebugGame.modules",
 			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/ExtendEditorLibrary/Binaries/Mac/UnrealEditor-ExtendEditorLibrary-Mac-DebugGame.dylib",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/ExtendEditorLibrary/Binaries/Mac/UnrealEditor-Mac-DebugGame.modules",
+			"Type": "RequiredResource"
 		}
 	],
 	"RuntimeDependencies": [
@@ -20989,6 +20997,10 @@
 		},
 		{
 			"Path": "$(ProjectDir)/Arch.uproject",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/ExtendEditorLibrary/ExtendEditorLibrary.uplugin",
 			"Type": "UFS"
 		}
 	],

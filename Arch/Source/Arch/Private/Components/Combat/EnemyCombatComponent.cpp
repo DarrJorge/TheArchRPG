@@ -3,6 +3,7 @@
 
 #include "Components/Combat/EnemyCombatComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
+#include "ArchFunctionLibrary.h"
 #include "ArchGameplayTags.h"
 
 #include "Debug/ArchDebugHelper.h"
@@ -15,27 +16,25 @@ void UEnemyCombatComponent::OnHitTargetActor(AActor* HitActor)
 
 	// TODO:: make later
 	bool bIsValidBlock = false;
-	bool bIsPlayerBlocking = false;
-	bool bIsMyAttackUnblockable = false;
+	const bool bIsPlayerBlocking = UArchFunctionLibrary::NativeActorHasTag(HitActor, ArchGameplayTags::Player_Status_Blocking);
+	const bool bIsMyAttackUnblockable = false;
 
 	if (bIsPlayerBlocking && !bIsMyAttackUnblockable)
 	{
-		// TODO:: check if the block is valid
+		bIsValidBlock = UArchFunctionLibrary::IsValidBlock(GetOwningPawn(), HitActor);
 	}
 
-	if (bIsValidBlock)
-	{
-		// TODO:: Handle succesful block
-	}
-	else
-	{
-		FGameplayEventData PayloadData;
-		PayloadData.Instigator = GetOwningPawn();
-		PayloadData.Target = HitActor;
-		
-		UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
-			GetOwningPawn(),
-			ArchGameplayTags::Event_Combat_MeleeHit,
-			PayloadData);
-	}
+	FGameplayEventData PayloadData;
+	PayloadData.Instigator = GetOwningPawn();
+	PayloadData.Target = HitActor;
+
+	AActor* TargetActor = bIsValidBlock ? HitActor : GetOwningPawn();
+	const FGameplayTag EventTag = bIsValidBlock
+		? ArchGameplayTags::Event_Combat_SuccessfulBlock
+		: ArchGameplayTags::Event_Combat_MeleeHit;
+
+	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
+		TargetActor,
+		EventTag,
+		PayloadData);
 }

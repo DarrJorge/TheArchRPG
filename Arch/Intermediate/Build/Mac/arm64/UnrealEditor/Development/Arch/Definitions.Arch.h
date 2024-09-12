@@ -1,4 +1,4 @@
-#include "/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/ArchEditor/Development/Engine/SharedDefinitions.Engine.Cpp20.h"
+#include "/Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/ArchEditor/Development/UnrealEd/SharedDefinitions.UnrealEd.Cpp20.h"
 #undef UE_IS_ENGINE_MODULE
 #undef DEPRECATED_FORGAME
 #define DEPRECATED_FORGAME DEPRECATED
@@ -27,6 +27,10 @@
 #define WITH_GAMEPLAY_DEBUGGER_MENU 1
 #define GAMEPLAYABILITIES_API DLLIMPORT
 #define DATAREGISTRY_API DLLIMPORT
+#define WITH_GAMEPLAY_DEBUGGER_CORE 1
+#define WITH_GAMEPLAY_DEBUGGER 1
+#define WITH_GAMEPLAY_DEBUGGER_MENU 1
+#define AIMODULE_API DLLIMPORT
 #define ARCH_API DLLEXPORT
 #define VECTORVM_SUPPORTS_EXPERIMENTAL 1
 #define VECTORVM_SUPPORTS_LEGACY 1
@@ -37,3 +41,5 @@
 #define VECTORVM_API DLLIMPORT
 #define NIAGARASHADER_API DLLIMPORT
 #define NIAGARAVERTEXFACTORIES_API DLLIMPORT
+#define ANIMGRAPHRUNTIME_API DLLIMPORT
+#define MOTIONWARPING_API DLLIMPORT

@@ -4066,6 +4066,13 @@
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchTypes/ArchStructTypes.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchStructTypes.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchAbilitySystemComponent.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchGameplayTags.h \
+  Runtime/GameplayTags/Public/NativeGameplayTags.h \
+  Runtime/Core/Public/Containers/UnrealString.h \
+  Runtime/GameplayTags/Classes/GameplayTagsManager.h \
+  Runtime/Core/Public/Templates/UniquePtr.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagsManager.generated.h \
+  Runtime/Core/Public/Templates/UnrealTemplate.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/Abilities/ArchGameplayAbility.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchTypes/ArchEnumTypes.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchGameplayAbility.generated.h

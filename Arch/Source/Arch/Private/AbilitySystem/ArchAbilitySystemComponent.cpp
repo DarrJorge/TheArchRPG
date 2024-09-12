@@ -2,6 +2,7 @@
 
 
 #include "AbilitySystem/ArchAbilitySystemComponent.h"
+#include "ArchGameplayTags.h"
 #include "AbilitySystem/Abilities/ArchGameplayAbility.h"
 
 void UArchAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag& InInputTag)
@@ -17,6 +18,18 @@ void UArchAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag& InIn
 
 void UArchAbilitySystemComponent::OnAbilityInputReleased(const FGameplayTag& InInputTag)
 {
+	if (!InInputTag.IsValid() || !InInputTag.MatchesTag(ArchGameplayTags::InputTag_KeyMustBeHeld))
+	{
+		return;
+	}
+
+	for (const FGameplayAbilitySpec& AbilitySpec : GetActivatableAbilities())
+	{
+		if (AbilitySpec.DynamicAbilityTags.HasTagExact(InInputTag) && AbilitySpec.IsActive())
+		{
+			CancelAbilityHandle(AbilitySpec.Handle);
+		}
+	}
 }
 
 void UArchAbilitySystemComponent::GrantCharacterWeaponAbilities(const TArray<FArchHeroAbilitySet>& InDefaultWeaponAbilities,

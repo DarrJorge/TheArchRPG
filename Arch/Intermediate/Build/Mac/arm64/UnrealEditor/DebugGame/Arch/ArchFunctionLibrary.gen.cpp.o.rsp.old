@@ -283,6 +283,8 @@
 -I"../Plugins/FX/Niagara/Source/NiagaraVertexFactories/Public"
 -I"../Intermediate/Build/Mac/UnrealEditor/Inc/AnimGraphRuntime/UHT"
 -I"Runtime/AnimGraphRuntime/Public"
+-I"../Plugins/Animation/MotionWarping/Intermediate/Build/Mac/UnrealEditor/Inc/MotionWarping/UHT"
+-I"../Plugins/Animation/MotionWarping/Source/MotionWarping/Public"
 -isystem"ThirdParty/mimalloc/include"
 -isystem"ThirdParty/LibTiff/Source/Mac"
 -isystem"ThirdParty/LibTiff/Source"

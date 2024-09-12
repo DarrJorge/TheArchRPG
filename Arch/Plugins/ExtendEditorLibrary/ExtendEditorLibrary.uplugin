@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "ExtendEditorLibrary",
+	"Description": "Extended api for editor",
+	"Category": "Other",
+	"CreatedBy": "DarrJorge",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "ExtendEditorLibrary",
+			"Type": "Editor",
+			"LoadingPhase": "PreDefault"
+		}
+	]
+}

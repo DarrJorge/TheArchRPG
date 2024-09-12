@@ -20,7 +20,8 @@ public class Arch : ModuleRules
 			"GameplayAbilities",
 			"Niagara",
 			"AnimGraphRuntime",
-			"MotionWarping"
+			"MotionWarping",
+			"ExtendEditorLibrary"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

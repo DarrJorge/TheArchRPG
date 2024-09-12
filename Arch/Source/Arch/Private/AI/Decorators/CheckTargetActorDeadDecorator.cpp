@@ -15,9 +15,8 @@ UCheckTargetActorDeadDecorator::UCheckTargetActorDeadDecorator()
 bool UCheckTargetActorDeadDecorator::CalculateRawConditionValue(UBehaviorTreeComponent& OwnerComp,
 	uint8* NodeMemory) const
 {
-	const auto Controller = OwnerComp.GetAIOwner();
 	const auto Blackboard = OwnerComp.GetBlackboardComponent();
-	if (!Controller || !Blackboard) return false;
+	if (!OwnerComp.GetAIOwner() || !Blackboard) return false;
 
 	const auto TargetObject = Blackboard->GetValueAsObject(TargetActorKey.SelectedKeyName);
 	const auto TargetActor = Cast<AActor>(TargetObject);
@@ -25,7 +24,7 @@ bool UCheckTargetActorDeadDecorator::CalculateRawConditionValue(UBehaviorTreeCom
 	if (!TargetActor) return false;
 
 	const bool bTargetDead = UArchFunctionLibrary::NativeActorHasTag(TargetActor, ArchGameplayTags::Shared_Status_Dead);
-	const bool bOwningDead = UArchFunctionLibrary::NativeActorHasTag(Controller->GetPawn(), ArchGameplayTags::Shared_Status_Dead);
+	const bool bOwningDead = UArchFunctionLibrary::NativeActorHasTag(OwnerComp.GetAIOwner()->GetPawn(), ArchGameplayTags::Shared_Status_Dead);
 	
 	return bTargetDead || bOwningDead;
 }

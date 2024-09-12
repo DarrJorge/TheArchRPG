@@ -4044,6 +4044,13 @@
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/GameplayAbilityTargetDataFilter.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilityTargetDataFilter.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemBlueprintLibrary.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchGameplayTags.h \
+  Runtime/GameplayTags/Public/NativeGameplayTags.h \
+  Runtime/Core/Public/Containers/UnrealString.h \
+  Runtime/GameplayTags/Classes/GameplayTagsManager.h \
+  Runtime/Core/Public/Templates/UniquePtr.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagsManager.generated.h \
+  Runtime/Core/Public/Templates/UnrealTemplate.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/ArchAbilitySystemComponent.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemComponent.h \
   Runtime/Engine/Classes/Engine/TimerHandle.h \
@@ -4104,7 +4111,6 @@
   ../Plugins/FX/Niagara/Source/NiagaraCore/Public/NiagaraCore.h \
   ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/NiagaraCore/UHT/NiagaraCore.generated.h \
   Runtime/Core/Public/Math/UnitConversion.h \
-  Runtime/Core/Public/Containers/UnrealString.h \
   Runtime/Core/Public/Internationalization/Text.h \
   Runtime/Core/Public/Misc/Optional.h \
   Runtime/Core/Public/Templates/ValueOrError.h \
@@ -4152,4 +4158,12 @@
   ../Plugins/FX/Niagara/Intermediate/Build/Mac/UnrealEditor/Inc/Niagara/UHT/NiagaraSystem.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/PawnCombatInterface.generated.h \
   Runtime/AIModule/Classes/GenericTeamAgentInterface.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/GenericTeamAgentInterface.generated.h
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/GenericTeamAgentInterface.generated.h \
+  Runtime/Engine/Classes/Kismet/KismetMathLibrary.h \
+  Runtime/CoreUObject/Public/UObject/Script.h \
+  Runtime/Core/Public/Math/RandomStream.h \
+  Runtime/CoreUObject/Public/UObject/Stack.h \
+  Runtime/Core/Public/Misc/QualifiedFrameTime.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/KismetMathLibrary.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Kismet/KismetMathLibrary.inl \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Debug/ArchDebugHelper.h
