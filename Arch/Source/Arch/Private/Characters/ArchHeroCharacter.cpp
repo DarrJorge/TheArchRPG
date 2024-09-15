@@ -3,6 +3,7 @@
 
 #include "Characters/ArchHeroCharacter.h"
 
+#include "AbilitySystemBlueprintLibrary.h"
 #include "ArchGameplayTags.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -16,8 +17,6 @@
 #include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
 #include "Components/Combat/HeroCombatComponent.h"
 #include "Components/UI/ArchHeroUIComponent.h"
-
-#include "Debug/ArchDebugHelper.h"
 
 
 AArchHeroCharacter::AArchHeroCharacter()
@@ -71,6 +70,12 @@ void AArchHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 
 			ArchInputComponent->BindAbilityInputAction(InputConfigDataAsset, this,
 				&AArchHeroCharacter::InputAbilityInputPressed, &AArchHeroCharacter::InputAbilityInputReleased);
+
+			ArchInputComponent->BindNativeInputAction(InputConfigDataAsset, ArchGameplayTags::InputTag_SwitchTarget,
+				ETriggerEvent::Triggered, this, &AArchHeroCharacter::InputSwitchTargetTriggered);
+
+			ArchInputComponent->BindNativeInputAction(InputConfigDataAsset, ArchGameplayTags::InputTag_SwitchTarget,
+				ETriggerEvent::Completed, this, &AArchHeroCharacter::InputSwitchTargetCompleted);
 		}
 	}
 }
@@ -132,4 +137,18 @@ void AArchHeroCharacter::InputAbilityInputPressed(FGameplayTag InInputTag)
 void AArchHeroCharacter::InputAbilityInputReleased(FGameplayTag InInputTag)
 {
 	ArchAbilitySystemComponent->OnAbilityInputReleased(InInputTag);
+}
+
+void AArchHeroCharacter::InputSwitchTargetTriggered(const FInputActionValue& Value)
+{
+	SwitchDirection = Value.Get<FVector2D>();
+}
+
+void AArchHeroCharacter::InputSwitchTargetCompleted(const FInputActionValue& Value)
+{
+	const FGameplayTag EventTag = SwitchDirection.X > 0.f
+		? ArchGameplayTags::Event_Combat_SwitchTarget_Right
+		: ArchGameplayTags::Event_Combat_SwitchTarget_Left;
+	
+	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(this, EventTag, FGameplayEventData());
 }

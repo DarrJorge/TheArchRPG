@@ -13,9 +13,13 @@ namespace ArchGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(InputTag_LightAttack, "InputTag.LightAttack");
 	UE_DEFINE_GAMEPLAY_TAG(InputTag_HeavyAttack, "InputTag.HeavyAttack");
 	UE_DEFINE_GAMEPLAY_TAG(InputTag_Roll, "InputTag.Roll");
+	UE_DEFINE_GAMEPLAY_TAG(InputTag_SwitchTarget, "InputTag.SwitchTarget");
 	
 	UE_DEFINE_GAMEPLAY_TAG(InputTag_KeyMustBeHeld, "InputTag.KeyMustBeHeld");
 	UE_DEFINE_GAMEPLAY_TAG(InputTag_KeyMustBeHeld_Block, "InputTag.KeyMustBeHeld.Block");
+	
+	UE_DEFINE_GAMEPLAY_TAG(InputTag_Toggleable, "InputTag.Toggleable");
+	UE_DEFINE_GAMEPLAY_TAG(InputTag_Toggleable_TargetLock, "InputTag.Toggleable.TargetLock");
 
 	/** Items Tags **/
 	UE_DEFINE_GAMEPLAY_TAG(Item_Weapon_Axe, "Item.Weapon.Axe");
@@ -29,10 +33,12 @@ namespace ArchGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_HitPause, "Player.Ability.HitPause");
 	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_Roll, "Player.Ability.Roll");
 	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_Block, "Player.Ability.Block");
+	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_TargetLock, "Player.Ability.TargetLock");
 	
 	UE_DEFINE_GAMEPLAY_TAG(Player_Status_JumpToFinisher, "Player.Status.JumpToFinisher");
 	UE_DEFINE_GAMEPLAY_TAG(Player_Status_Rolling, "Player.Status.Rolling");
 	UE_DEFINE_GAMEPLAY_TAG(Player_Status_Blocking, "Player.Status.Blocking");
+	UE_DEFINE_GAMEPLAY_TAG(Player_Status_TargetLock, "Player.Status.TargetLock");
 	
 	UE_DEFINE_GAMEPLAY_TAG(Player_SetByCaller_AttackType_Light, "Player.SetByCaller.AttackType.Light");
 	UE_DEFINE_GAMEPLAY_TAG(Player_SetByCaller_AttackType_Heavy, "Player.SetByCaller.AttackType.Heavy");
@@ -49,6 +55,10 @@ namespace ArchGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(Event_Combat_MeleeHit, "Event.Combat.MeleeHit");
 	UE_DEFINE_GAMEPLAY_TAG(Event_Combat_HitPause, "Event.Combat.HitPause");
 	UE_DEFINE_GAMEPLAY_TAG(Event_Combat_SuccessfulBlock, "Event.Combat.SuccessfulBlock");
+	UE_DEFINE_GAMEPLAY_TAG(Event_Combat_SwitchTarget_Left, "Event.Combat.SwitchTarget.Left");
+	UE_DEFINE_GAMEPLAY_TAG(Event_Combat_SwitchTarget_Right, "Event.Combat.SwitchTarget.Right");
+
+	
 	UE_DEFINE_GAMEPLAY_TAG(Event_Effect_HitReact, "Event.Effect.HitReact");
 
 	/** Shared Tags **/

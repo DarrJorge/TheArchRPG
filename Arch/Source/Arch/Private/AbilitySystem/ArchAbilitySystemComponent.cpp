@@ -12,6 +12,15 @@ void UArchAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag& InIn
 	for (const FGameplayAbilitySpec& AbilitySpec : GetActivatableAbilities())
 	{
 		if (!AbilitySpec.DynamicAbilityTags.HasTagExact(InInputTag)) continue;
+
+		if (InInputTag.MatchesTag(ArchGameplayTags::InputTag_Toggleable))
+		{
+			if (AbilitySpec.IsActive())
+			{
+				CancelAbilityHandle(AbilitySpec.Handle);
+				continue;
+			}
+		}
 		TryActivateAbility(AbilitySpec.Handle);
 	}
 }

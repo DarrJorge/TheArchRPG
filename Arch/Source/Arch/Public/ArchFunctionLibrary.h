@@ -8,6 +8,11 @@
 #include "ArchTypes/ArchEnumTypes.h"
 #include "ArchFunctionLibrary.generated.h"
 
+namespace EDrawDebugTrace
+{
+	enum Type : int;
+}
+
 class UCombatComponentBase;
 class UArchAbilitySystemComponent;
 struct FScalableFloat;
@@ -51,6 +56,10 @@ public:
 
 	UFUNCTION(BlueprintPure, Category="Arch|BlueprintFunctionLibrary")
 	static bool IsValidBlock(AActor* Attacker, AActor* Victim);
+
+	static void GetActorsFromTraceMultiBox(const UObject* WorldContextObject, const FVector& Start, const FVector& End, const FVector& HalfSize,
+		const FRotator& Orientation, const TArray<TEnumAsByte<EObjectTypeQuery>>& ObjectTypes, bool bTraceComplex, const TArray<AActor*>& ActorsToIgnore,
+		EDrawDebugTrace::Type DrawDebugType, const AActor* SelfActor, TArray<AActor*>& OutAvailableActors);
 
 private:
 	static void ComputeNormalizeAngleBetweenTwoActors(AActor* Source, AActor* Target, float& OutAngleDifference);

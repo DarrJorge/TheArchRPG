@@ -55,8 +55,14 @@ private:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Arch|Input", meta=(AllowPrivateAccess="true"))
 	UDataAsset_InputConfig* InputConfigDataAsset;
 
+	FVector2D SwitchDirection = FVector2D::ZeroVector;
+	
 	void InputMove(const FInputActionValue& Value);
 	void InputLook(const FInputActionValue& Value);
+	
 	void InputAbilityInputPressed(FGameplayTag InInputTag);
 	void InputAbilityInputReleased(FGameplayTag InInputTag);
+	
+	void InputSwitchTargetTriggered(const FInputActionValue& Value);
+	void InputSwitchTargetCompleted(const FInputActionValue& Value);
 };

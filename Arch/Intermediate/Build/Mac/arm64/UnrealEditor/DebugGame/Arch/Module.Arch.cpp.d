@@ -4222,6 +4222,10 @@
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchUIComponentBase.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchEnemyUIComponent.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchEnumTypes.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchFunctionLibrary.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchFunctionLibrary.h \
+  Runtime/Engine/Classes/Kismet/BlueprintFunctionLibrary.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchFunctionLibrary.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchGameHUD.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/UI/ArchGameHUD.h \
   Runtime/Engine/Classes/GameFramework/HUD.h \
@@ -4436,7 +4440,6 @@
   Runtime/Core/Public/Templates/UnrealTemplate.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/Abilities/ArchGameplayAbility.cpp \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemBlueprintLibrary.h \
-  Runtime/Engine/Classes/Kismet/BlueprintFunctionLibrary.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/GameplayAbilityTargetDataFilter.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilityTargetDataFilter.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemBlueprintLibrary.generated.h \
@@ -4450,8 +4453,6 @@
   Runtime/Core/Public/Delegates/IDelegateInstance.h \
   Runtime/Core/Public/Templates/SharedPointer.h \
   Runtime/Engine/Public/Net/ReplayResult.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/ArchFunctionLibrary.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchFunctionLibrary.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Debug/ArchDebugHelper.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/ExecCalc/ExecCalc_DamageTaken.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AI/ArchAIController.cpp \
@@ -4538,6 +4539,7 @@
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/EnvQueryItemType_VectorBase.generated.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/EnvQueryItemType_ActorBase.generated.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/EnvQueryItemType_Actor.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AI/Decorators/CheckTargetActorDeadDecorator.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AI/Services/BTService_OrientToTargetActor.cpp \
   Runtime/Engine/Classes/Kismet/KismetMathLibrary.h \
   Runtime/CoreUObject/Public/UObject/Script.h \
@@ -4601,37 +4603,13 @@
   Runtime/Core/Public/Logging/LogMacros.h \
   /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Engine/ContentEncryptionConfig.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/AssetManager.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Characters/ArchHeroCharacter.cpp \
-  Runtime/Engine/Classes/Camera/CameraComponent.h \
-  Runtime/Engine/Classes/Engine/BlendableInterface.h \
-  Runtime/Engine/Classes/Engine/Scene.h \
-  Runtime/Engine/Classes/Camera/CameraTypes.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CameraComponent.generated.h \
-  Runtime/Engine/Classes/Components/CapsuleComponent.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Combat/CombatComponentBase.cpp \
+  Runtime/Engine/Classes/Components/BoxComponent.h \
   Runtime/Engine/Classes/Components/ShapeComponent.h \
   Runtime/Engine/Classes/Components/PrimitiveComponent.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/ShapeComponent.generated.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CapsuleComponent.generated.h \
-  Runtime/Engine/Classes/GameFramework/SpringArmComponent.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/SpringArmComponent.generated.h \
-  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputSubsystems.h \
-  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputSubsystemInterface.h \
-  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedPlayerInput.h \
-  Runtime/Engine/Classes/GameFramework/PlayerInput.h \
-  Runtime/Slate/Public/Framework/Commands/InputChord.h \
-  Runtime/Engine/Public/GestureRecognizer.h \
-  Runtime/Engine/Public/KeyState.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PlayerInput.generated.h \
-  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedPlayerInput.generated.h \
-  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/PlayerMappableKeySlot.h \
-  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/PlayerMappableKeySlot.generated.h \
-  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedInputSubsystemInterface.generated.h \
-  Runtime/Engine/Public/Subsystems/LocalPlayerSubsystem.h \
-  Runtime/Engine/Public/Subsystems/WorldSubsystem.h \
-  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedInputSubsystems.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Combat/CombatComponentBase.cpp \
-  Runtime/Engine/Classes/Components/BoxComponent.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/BoxComponent.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Combat/EnemyCombatComponent.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Combat/HeroCombatComponent.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Input/ArchInputComponent.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/PawnExtensionComponentBase.cpp \

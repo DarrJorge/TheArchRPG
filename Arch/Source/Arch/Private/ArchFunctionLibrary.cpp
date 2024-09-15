@@ -10,6 +10,7 @@
 #include "Kismet/KismetMathLibrary.h"
 
 #include "Debug/ArchDebugHelper.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 UArchAbilitySystemComponent* UArchFunctionLibrary::NativeGetArchASCFromActor(AActor* InActor)
 {
@@ -127,6 +128,30 @@ bool UArchFunctionLibrary::IsValidBlock(AActor* Attacker, AActor* Victim)
 	float AngleDifference = 0.f;
 	ComputeNormalizeAngleBetweenTwoActors(Attacker, Victim, AngleDifference);
 	return AngleDifference >= -30.f && AngleDifference <= 55.f;
+}
+
+void UArchFunctionLibrary::GetActorsFromTraceMultiBox(const UObject* WorldContextObject, const FVector& Start,
+	const FVector& End, const FVector& HalfSize, const FRotator& Orientation,
+	const TArray<TEnumAsByte<EObjectTypeQuery>>& ObjectTypes, bool bTraceComplex, const TArray<AActor*>& ActorsToIgnore,
+	EDrawDebugTrace::Type DrawDebugType, const AActor* SelfActor, TArray<AActor*>& OutAvailableActors)
+{
+	if (!SelfActor) return;
+	
+	TArray<FHitResult> BoxTraceHits;
+	UKismetSystemLibrary::BoxTraceMultiForObjects(
+		WorldContextObject, Start, End, HalfSize / 2.f, Orientation, ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType,BoxTraceHits,true
+	);
+
+	for (const FHitResult& TraceHit : BoxTraceHits)
+	{
+		if (AActor* HitActor = TraceHit.GetActor())
+		{
+			if (HitActor != SelfActor)
+			{
+				OutAvailableActors.AddUnique(HitActor);
+			}
+		}
+	}
 }
 
 void UArchFunctionLibrary::ComputeNormalizeAngleBetweenTwoActors(AActor* Source, AActor* Target, float& OutAngleDifference)
