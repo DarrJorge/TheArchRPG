@@ -9,20 +9,50 @@
   <component name="ChangeListManager">
     <list default="true" id="54fec878-67d2-4dbd-a63a-c1ac13d6542c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Arch.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Arch.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AI/BB_EnemyBase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/AI/BB_EnemyBase.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ArchAll/AI/BT_EnemyBase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/AI/BT_EnemyBase.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AI/BT_EnemyDummy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/AI/BT_EnemyDummy.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Hero/Data/DA_HeroStartUpData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Hero/Data/DA_HeroStartUpData.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Enemies/Guardian/GameplayAbilities/GA_Guardian_AttackMelee.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Enemies/Guardian/GameplayAbilities/GA_Guardian_AttackMelee.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Enemies/Guardian/GameplayAbilities/GA_Guardian_AttackMelee_2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Enemies/Guardian/GameplayAbilities/GA_Guardian_AttackMelee_2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Enemies/Guardian/GameplayAbilities/GA_Guardian_Death.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Enemies/Guardian/GameplayAbilities/GA_Guardian_Death.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Enemies/Guardian/GameplayAbilities/GA_Guardian_HitReact.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Enemies/Guardian/GameplayAbilities/GA_Guardian_HitReact.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/GameplayCues/GC_Enemy_HitSound_Stick.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/GameplayCues/GC_Guardian_DeathSound.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/GameplayCues/GC_Hero_MagicShield.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/GameplayCues/GC_Hero_PerfectBlock.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/GameplayCues/GC_Hero_SuccessfulBlock.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/GameplayCues/GC_Hero_WeaponHit.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Hero/GameplayAbilities/GA_Hero_Roll.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Hero/GameplayAbilities/GA_Hero_Roll.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Shared/GameplayAbilities/GA_EnemyMeleeAttackBase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/AbilitySystem/Shared/GameplayAbilities/GA_EnemyMeleeAttackBase.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/ABP_Guardian.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/BS_Guardian_Move.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/BS_Guardian_Strafing.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/Montages/Death/AM_ExoGame_Gruntling_Death.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/Montages/Death/AM_ExoGame_Gruntling_Death_Small.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/Montages/Death/AM_ExoGame_Gruntling_Death_Small_03.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/Montages/Death/AM_ExoGame_Gruntling_Death_Small_04.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/Montages/Death/AM_ExoGame_Gruntling_Death_Small_05.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/Montages/Death/AM_ExoGame_Gruntling_Death_Small_Alt.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/Montages/HitReact/AM_ExoGame_Gruntling_React_Light_Front.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/Montages/HitReact/AM_ExoGame_Gruntling_React_Light_Front_Alt.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/Montages/MeleeAttack/AM_GuardiantMeleeAttack_1_Adjusted.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/Animations/Montages/MeleeAttack/AM_GuardiantMeleeAttack_2.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/BP_GruntlingGuardian.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Enemies/Gruntling/BP_GruntlingGuardian.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Hero/Animations/Layers/AnimLayer_Axe.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Hero/Animations/Layers/AnimLayer_Axe.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Hero/Animations/Layers/MasterAnimLayer_Hero.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Hero/Animations/Layers/MasterAnimLayer_Hero.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Hero/Weapons/BP_HeroWeaponAxe.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Hero/Weapons/BP_HeroWeaponAxe.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Input/DA_InputConfig.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/Input/DA_InputConfig.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Input/IMC_WeaponAxe.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/Input/IMC_WeaponAxe.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ArchAll/Maps/DevMap/5/9K/JYWUNCVFW470OYACIZ0HPW.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Hero/BP_ArchHeroCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/Blueprints/Characters/Hero/BP_ArchHeroCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ArchAll/Maps/DevMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ArchAll/Maps/DevMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Glacer/Materials/CharM_Gruntling_Glacer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Glacer/Materials/CharM_Gruntling_Glacer.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Glacer/SK_Gruntling_Glacer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Glacer/SK_Gruntling_Glacer.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Guardian/SK_Gruntling_Guardian_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Guardian/SK_Gruntling_Guardian_Skeleton.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ArchAll/Maps/DevMap/1/K0/Q0JXHZXWCIHCWJZ7VSJVBP.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ArchAll/Maps/DevMap/3/3V/QCODUCBH6IOFEQ1R8TXVMW.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ArchAll/Maps/DevMap/3/3V/QCODUCBH6IOFEQ1R8TXVMW.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ArchAll/Maps/DevMap/3/R8/TQQ3DN4UIHWFZNKJ7HSEX2.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ArchAll/Maps/DevMap/7/YA/SWL935YQAZ4K5IMVLSWY5P.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ArchAll/Maps/DevMap/B/8R/QCCUZ10KNFRCE3ENLGJXKO.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ArchAll/Maps/DevMap/B/8R/QCCUZ10KNFRCE3ENLGJXKO.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ArchAll/Maps/DevMap/D/6Y/5PGGZI4DZCCCEMXWC7932V.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/ActionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/ActionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/ArchEditor/DebugGame/ArchEditor.uhtmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/ArchEditor/DebugGame/ArchEditor.uhtmanifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/Arch.init.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/Arch.init.gen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchFunctionLibrary.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchFunctionLibrary.gen.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchFunctionLibrary.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchFunctionLibrary.generated.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/Timestamp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/Timestamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/ArchEditor/DebugGame/DependencyCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/ArchEditor/DebugGame/DependencyCache.bin" afterDir="false" />
@@ -30,47 +60,78 @@
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/ArchEditor/DebugGame/Metadata-HotReload.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/ArchEditor/DebugGame/Metadata-HotReload.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/ActionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/ActionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/ArchFunctionLibrary.cpp.d" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/ArchFunctionLibrary.cpp.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/ArchHeroCharacter.cpp.d" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/ArchHeroCharacter.cpp.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/ArchHeroCharacter.cpp.o.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/ArchHeroCharacter.cpp.o.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/ArchFunctionLibrary.gen.cpp.d" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/ArchFunctionLibrary.gen.cpp.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/EnemyCombatComponent.cpp.d" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/EnemyCombatComponent.cpp.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/Module.Arch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/Module.Arch.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/Module.Arch.cpp.d" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/Module.Arch.cpp.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/Module.Arch.cpp.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/Module.Arch.cpp.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/.Rider/Mac/DebugGame/Editor/Arch.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/.Rider/Mac/DebugGame/Editor/Arch.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/AutoScreenshot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-0EFBE5D627494DEB2E9967ABE79CFA68/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-1006C7BEF94954DBF3CA02A910339D9C/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-1046DFA11949BA2790C9C790EF6DEF3C/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-1F951C71794B1AA259782ABE082AA372/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-4321F55F414543DEAE1277BE24FBEE33/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-54457365BD4A6570B507D79C13AB09D9/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-55578D48764AE47F445D0683F7E655C5/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-57F7132F1E45F03CD50BD89CC1A15AC4/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-6C35DA628B45002985FD5E9F07A5FF82/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-8DD669911B400E227E7A318B94DE5B7F/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-9108B71DF44FD105FC664894C6F64EB2/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-96B7C261554DDC2EF53D41BA3FB958AC/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-9FD0A625A340CFA3FAAC8DB16ED53450/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-AF6268BDF0441DB9CD6CD6AEF9B19A23/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-AF8E6893BF421E9891A6CAB676E51D3A/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-B7EB6F701C4A4EEA400A61B3969F169C/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-BD8DD6CFF04C1E46C0409FB47C1E97D7/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-C18EBD7D9D45362BADBB0CBA977CD259/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-C30556922941C458880F6AB01CF438D5/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-E4B19A908742A1BA71E2CE8132F92E0F/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-EEFAC6538B4C83DFFF3CF69ADC2D0948/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-F5C414262E4EB2B8AA5920862008B91F/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/Assets/Enemies/Gruntling/Enemy_Gruntling_Guardian/SK_Gruntling_Guardian_Skeleton_Auto1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/Game/Assets/Enemies/Gruntling/Enemy_Gruntling_Guardian/SK_Gruntling_Guardian_Skeleton_Auto1.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-0273499D5945567D4ED62C9493FC1B88/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-0419E8F4C543B092CAD060BBA8819E20/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-0B2BE35EB5477702A17CF3A90BFBF08B/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-0D48906CD143682411F2EDB49134972C/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-14873E57D4410FD021646C87ABD919D3/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-161C7C0912443C57F2323D857D04A97B/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-35CC1C861F42C64EDAFA0586AF3A28C5/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-3A62F64AF3466580F89F5B93535347A2/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-3DF9827FE744475FDFFAAA9A2D610255/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-3E2999666B46C630577F2A88DDE74052/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-43CBF45C4746872E01CB9996A675D8FD/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-4599E3979B4036E593C22FAC985EC096/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-4A0FE6EAA04C7BB6A4F1399486223715/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-4D41567C194A349235ED359623D3D019/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-5067BB3D61487433ED2E21BE8287E8C2/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-524856EAC443287B768A21A35B986B6C/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-5C47D888BE40072F37A59DB550FD0D71/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-5DB128DE1240D8FE025F3498FD40A0F6/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-60271AD06C4B8FEDF51F8296EE5EC0F8/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-687FCD9E9B48B2EF40492186AFA9441D/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-68A96169264244D63B314090D785BC33/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-6D8EC7A0C04AA5437105FFBB9983FE87/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-73C1F189C94BBE61EA32039DA611B3C8/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-82BABDE43A4D75A5F13E52894C70F61F/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-8D8CE6A8314C2CCA25CE04AFF071C435/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-8F8B68D8294097A1544AFAA32835E405/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-90356584CF438494A29A358C7D1A0C0C/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-927FACA84F4E18E9C69A08A24B4E4136/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-987FD342CB49C41BAF1055AA2D981E92/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-A00DC3560E4932D7AB3175B5886B239F/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-A351CCDC234635EC64ACB6ACA637B403/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-A8EA77C6354186A04DF949AD9D02592C/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-AC8813514C4D046060FB06A3DE314285/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-AD1C6FE430427342FACBECB6804E72F6/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-AFEB802BB5460423E34273879C59F223/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-B3BD75CCD64AA789E19425BD9DA694FE/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-B97CF1F1AF45217A2583D8905667811A/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-B9AC110BCD4FA1E47D4A4B8F0C3BD6E4/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-C5E5B5A2EF4939E9F832B7BDE2A51CEA/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-CC767CA1824A350C5F051FBB6BA4AB9F/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-D2DA258A4E42E52D2B478CBED81A4401/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-D85622ACC3426BBADE9E88AC0113EC30/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-D962C8F5384DAC58ABB2EDA0FB9CA344/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-DA695C911B4BE161F52235ACADC244C5/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-DE24FE9F41458D4ADD950CBC2E686E32/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-DEEA969EA748633FB17C3AAF77789705/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-E16D3353FD4ED21C65A2A289DA356374/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-E69DEA91324E29C5C6ADE2BB8F57E5BC/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-E97BBE7FCA453575B8E567A80C9093D4/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-EF8ECB754549F1FF842EE48340158EE9/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-F3DB3BC70147125199590B9781FCA2F7/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Mac-F9974516D34C53FDEC57B18C2792425E/CrashReportClient.ini" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/MacEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/MacEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/MacEditor/Game.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/MacEditor/Game.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/MacEditor/GameplayTagsEditorState.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/MacEditor/GameplayTagsEditorState.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/WorldState/1553893863.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WorldState/1553893863.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Arch/Private/AbilitySystem/ArchAbilitySystemComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Arch/Private/AbilitySystem/ArchAbilitySystemComponent.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Arch/Private/ArchFunctionLibrary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Arch/Private/ArchFunctionLibrary.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Arch/Private/ArchGameplayTags.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Arch/Private/ArchGameplayTags.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Arch/Private/Characters/ArchHeroCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Arch/Private/Characters/ArchHeroCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Arch/Private/Components/Combat/EnemyCombatComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Arch/Private/Components/Combat/EnemyCombatComponent.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Arch/Public/ArchFunctionLibrary.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Arch/Public/ArchFunctionLibrary.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Arch/Public/ArchGameplayTags.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Arch/Public/ArchGameplayTags.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Arch/Public/Characters/ArchHeroCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Arch/Public/Characters/ArchHeroCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +285,12 @@
       <workItem from="1725985708451" duration="2403000" />
       <workItem from="1726069692264" duration="8116000" />
       <workItem from="1726162314009" duration="7521000" />
-      <workItem from="1726261238111" duration="26552000" />
+      <workItem from="1726261238111" duration="30524000" />
+      <workItem from="1726500931457" duration="4370000" />
+      <workItem from="1726594288121" duration="2844000" />
+      <workItem from="1726677732114" duration="6728000" />
+      <workItem from="1726780648412" duration="2236000" />
+      <workItem from="1726860627299" duration="6356000" />
     </task>
     <servers />
   </component>

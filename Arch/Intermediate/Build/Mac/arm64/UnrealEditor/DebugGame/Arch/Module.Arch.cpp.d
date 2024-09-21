@@ -3971,34 +3971,18 @@
   /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/AssetEditorSubsystem.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/Module.Arch.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/Definitions.Arch.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchAbilitySystemComponent.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/AbilityTask_ExecuteTaskOnTick.gen.cpp \
   Runtime/CoreUObject/Public/UObject/GeneratedCppIncludes.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/ArchAbilitySystemComponent.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/AbilityTasks/AbilityTask_ExecuteTaskOnTick.h \
   Runtime/Core/Public/CoreMinimal.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemComponent.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/Tasks/AbilityTask.h \
   Runtime/CoreUObject/Public/UObject/ObjectMacros.h \
   Runtime/CoreUObject/Public/Templates/SubclassOf.h \
-  Runtime/Engine/Classes/Engine/NetSerialization.h \
-  Runtime/Engine/Classes/Engine/EngineTypes.h \
-  Runtime/Engine/Classes/Engine/TimerHandle.h \
-  Runtime/GameplayTags/Classes/GameplayTagContainer.h \
-  Runtime/Core/Public/Stats/Stats.h \
-  Runtime/CoreUObject/Public/UObject/Object.h \
-  Runtime/CoreUObject/Public/UObject/Class.h \
-  Runtime/Core/Public/Misc/ComparisonUtility.h \
-  Runtime/Core/Public/Containers/StringFwd.h \
-  Runtime/Core/Public/Containers/StringView.h \
-  Runtime/Core/Public/HAL/Platform.h \
-  Runtime/Core/Public/UObject/NameTypes.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagContainer.generated.h \
-  Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AttributeSet.h \
-  Runtime/CoreUObject/Public/UObject/UnrealType.h \
-  Runtime/Engine/Classes/Engine/DataTable.h \
-  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AttributeSet.generated.h \
-  Runtime/Engine/Public/EngineDefines.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayPrediction.h \
+  Runtime/Engine/Classes/Engine/NetSerialization.h \
   Runtime/Net/Core/Classes/Net/Serialization/FastArraySerializer.h \
+  Runtime/Core/Public/Stats/Stats.h \
+  Runtime/CoreUObject/Public/UObject/Class.h \
   Runtime/Core/Public/Serialization/BitReader.h \
   Runtime/Core/Public/Misc/NetworkGuid.h \
   Runtime/CoreUObject/Public/UObject/CoreNet.h \
@@ -4015,38 +3999,66 @@
   Runtime/Core/Public/HAL/IConsoleManager.h \
   Runtime/Core/Public/Templates/EnableIf.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/NetCore/UHT/FastArraySerializer.generated.h \
+  Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayPrediction.generated.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayCueInterface.h \
-  Runtime/CoreUObject/Public/UObject/Interface.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayAbilitySpec.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AttributeSet.h \
+  Runtime/CoreUObject/Public/UObject/UnrealType.h \
+  Runtime/Engine/Classes/Engine/DataTable.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AttributeSet.generated.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayAbilitySpecHandle.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilitySpecHandle.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayEffectTypes.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/ActiveGameplayEffectHandle.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/ActiveGameplayEffectHandle.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayEffectAttributeCaptureDefinition.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayEffectAttributeCaptureDefinition.generated.h \
+  Runtime/CoreUObject/Public/UObject/Object.h \
   Runtime/Engine/Classes/GameFramework/Actor.h \
+  Runtime/GameplayTags/Classes/GameplayTagContainer.h \
+  Runtime/Core/Public/Misc/ComparisonUtility.h \
+  Runtime/Core/Public/Containers/StringFwd.h \
+  Runtime/Core/Public/Containers/StringView.h \
+  Runtime/Core/Public/HAL/Platform.h \
+  Runtime/Core/Public/UObject/NameTypes.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagContainer.generated.h \
   Runtime/PhysicsCore/Public/PhysicalMaterials/PhysicalMaterial.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayEffectTypes.generated.h \
-  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayCueInterface.generated.h \
-  Runtime/GameplayTags/Classes/GameplayTagAssetInterface.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagAssetInterface.generated.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayAbilitySpec.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayAbilitySpecHandle.h \
-  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilitySpecHandle.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/ScalableFloat.h \
   Runtime/Engine/Classes/Engine/CurveTable.h \
   ../Plugins/Runtime/DataRegistry/Source/DataRegistry/Public/DataRegistryId.h \
   ../Plugins/Runtime/DataRegistry/Intermediate/Build/Mac/UnrealEditor/Inc/DataRegistry/UHT/DataRegistryId.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/ScalableFloat.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilitySpec.generated.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/GameplayAbilityTypes.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/GameplayAbilityTargetTypes.h \
+  Runtime/Engine/Classes/Engine/HitResult.h \
+  Runtime/Engine/Classes/Engine/EngineTypes.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilityTargetTypes.generated.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilityTypes.generated.h \
+  Runtime/GameplayTasks/Classes/GameplayTask.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/GameplayAbility.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayEffect.h \
+  Runtime/Engine/Public/EngineDefines.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayEffectAggregator.h \
+  Runtime/GameplayTags/Classes/GameplayTagAssetInterface.h \
+  Runtime/CoreUObject/Public/UObject/Interface.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagAssetInterface.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/ActiveGameplayEffectIterator.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayEffect.generated.h \
+  Runtime/GameplayTasks/Classes/GameplayTaskOwnerInterface.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbility.generated.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilityTask.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/AbilityTask_ExecuteTaskOnTick.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchAbilitySystemComponent.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/ArchAbilitySystemComponent.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemComponent.h \
+  Runtime/Engine/Classes/Engine/TimerHandle.h \
+  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayCueInterface.h \
+  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayCueInterface.generated.h \
   Runtime/GameplayTasks/Classes/GameplayTasksComponent.h \
   Runtime/CoreUObject/Public/UObject/ScriptInterface.h \
   Runtime/Engine/Classes/Components/ActorComponent.h \
-  Runtime/GameplayTasks/Classes/GameplayTaskOwnerInterface.h \
-  Runtime/GameplayTasks/Classes/GameplayTask.h \
   Runtime/GameplayTasks/Classes/GameplayTaskResource.h \
   Runtime/GameplayTasks/Public/GameplayTaskTypes.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTasks/UHT/GameplayTaskResource.generated.h \
@@ -4055,13 +4067,6 @@
   ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTasks/UHT/GameplayTasksComponent.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/GameplayAbilityRepAnimMontage.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilityRepAnimMontage.generated.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/GameplayAbilityTargetTypes.h \
-  Runtime/Engine/Classes/Engine/HitResult.h \
-  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilityTargetTypes.generated.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/GameplayAbility.h \
-  ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/Abilities/GameplayAbilityTypes.h \
-  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilityTypes.generated.h \
-  ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbility.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/AbilitySystemReplicationProxyInterface.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemReplicationProxyInterface.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemComponent.generated.h \
@@ -4347,6 +4352,9 @@
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchUserWidget.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchProgressBarWidget.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchStructTypes.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchTargetLockAbility.gen.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/AbilitySystem/Abilities/ArchTargetLockAbility.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchTargetLockAbility.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchUIComponentBase.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchUserWidget.gen.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchWeaponBase.gen.cpp \
@@ -4444,6 +4452,90 @@
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbilityTargetDataFilter.generated.h \
   ../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Mac/UnrealEditor/Inc/GameplayAbilities/UHT/AbilitySystemBlueprintLibrary.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/Abilities/ArchHeroGameplayAbility.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/Abilities/ArchTargetLockAbility.cpp \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputSubsystems.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputSubsystemInterface.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedPlayerInput.h \
+  Runtime/Engine/Classes/GameFramework/PlayerInput.h \
+  Runtime/Slate/Public/Framework/Commands/InputChord.h \
+  Runtime/Engine/Public/GestureRecognizer.h \
+  Runtime/Engine/Public/KeyState.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PlayerInput.generated.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedPlayerInput.generated.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/PlayerMappableKeySlot.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/PlayerMappableKeySlot.generated.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedInputSubsystemInterface.generated.h \
+  Runtime/Engine/Public/Subsystems/LocalPlayerSubsystem.h \
+  Runtime/Engine/Public/Subsystems/WorldSubsystem.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedInputSubsystems.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Debug/ArchDebugHelper.h \
+  Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h \
+  Runtime/CoreUObject/Public/UObject/SoftObjectPtr.h \
+  Runtime/CoreUObject/Public/UObject/PropertyAccessUtil.h \
+  Runtime/Core/Public/CoreGlobals.h \
+  Runtime/Core/Public/Misc/EnumClassFlags.h \
+  Runtime/Core/Public/Templates/Function.h \
+  Runtime/CoreUObject/Public/UObject/TopLevelAssetPath.h \
+  Runtime/Engine/Classes/Engine/LatentActionManager.h \
+  Runtime/Engine/Classes/Engine/CollisionProfile.h \
+  Runtime/CoreUObject/Public/AssetRegistry/ARFilter.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/KismetSystemLibrary.generated.h \
+  Runtime/Engine/Classes/Kismet/GameplayStatics.h \
+  Runtime/Engine/Public/CollisionQueryParams.h \
+  Runtime/Engine/Classes/Sound/DialogueTypes.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/DialogueTypes.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Kismet/GameplayStaticsTypes.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/GameplayStaticsTypes.generated.h \
+  Runtime/Engine/Classes/Particles/WorldPSCPool.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/GameplayStatics.generated.h \
+  Runtime/UMG/Public/Blueprint/WidgetLayoutLibrary.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/WidgetLayoutLibrary.generated.h \
+  Runtime/UMG/Public/Blueprint/WidgetTree.h \
+  Runtime/UMG/Public/Components/PanelWidget.h \
+  Runtime/UMG/Public/Components/PanelSlot.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/PanelSlot.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/PanelWidget.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/WidgetTree.generated.h \
+  Runtime/UMG/Public/Components/SizeBox.h \
+  Runtime/UMG/Public/Components/ContentWidget.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/ContentWidget.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/SizeBox.generated.h \
+  Runtime/Engine/Classes/GameFramework/CharacterMovementComponent.h \
+  Runtime/Core/Public/Math/RandomStream.h \
+  Runtime/Engine/Public/WorldCollision.h \
+  Runtime/Engine/Classes/Animation/AnimMontage.h \
+  Runtime/Engine/Classes/AI/Navigation/NavigationAvoidanceTypes.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NavigationAvoidanceTypes.generated.h \
+  Runtime/Engine/Public/AI/RVOAvoidanceInterface.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/RVOAvoidanceInterface.generated.h \
+  Runtime/Engine/Classes/GameFramework/PawnMovementComponent.h \
+  Runtime/Engine/Classes/GameFramework/NavMovementComponent.h \
+  Runtime/Engine/Classes/AI/Navigation/NavAgentInterface.h \
+  Runtime/Engine/Classes/AI/Navigation/PathFollowingAgentInterface.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PathFollowingAgentInterface.generated.h \
+  Runtime/Engine/Classes/GameFramework/MovementComponent.h \
+  Runtime/PhysicsCore/Public/Chaos/ChaosEngineInterface.h \
+  Runtime/Engine/Classes/Components/SceneComponent.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/MovementComponent.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NavMovementComponent.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PawnMovementComponent.generated.h \
+  Runtime/Engine/Classes/Interfaces/NetworkPredictionInterface.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NetworkPredictionInterface.generated.h \
+  Runtime/Engine/Public/CharacterMovementComponentAsync.h \
+  Runtime/Experimental/Chaos/Public/Chaos/SimCallbackObject.h \
+  Runtime/PhysicsCore/Public/CollisionShape.h \
+  Runtime/Engine/Public/Engine/OverlapInfo.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementComponentAsync.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementComponent.generated.h \
+  Runtime/Engine/Classes/Kismet/KismetMathLibrary.h \
+  Runtime/CoreUObject/Public/UObject/Script.h \
+  Runtime/CoreUObject/Public/UObject/Stack.h \
+  Runtime/Core/Public/Misc/QualifiedFrameTime.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/KismetMathLibrary.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Kismet/KismetMathLibrary.inl \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/AbilityTasks/AbilityTask_ExecuteTaskOnTick.cpp \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/ArchAbilitySystemComponent.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/ArchAttributeSet.cpp \
   ../Plugins/Runtime/GameplayAbilities/Source/GameplayAbilities/Public/GameplayEffectExtension.h \
   Runtime/Engine/Public/Net/UnrealNetwork.h \
@@ -4453,7 +4545,6 @@
   Runtime/Core/Public/Delegates/IDelegateInstance.h \
   Runtime/Core/Public/Templates/SharedPointer.h \
   Runtime/Engine/Public/Net/ReplayResult.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Debug/ArchDebugHelper.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AbilitySystem/ExecCalc/ExecCalc_DamageTaken.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AI/ArchAIController.cpp \
   Runtime/AIModule/Classes/Navigation/CrowdFollowingComponent.h \
@@ -4464,20 +4555,9 @@
   Runtime/Engine/Public/AI/Navigation/NavQueryFilter.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NavigationDataInterface.generated.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/NavigationSystem/UHT/NavigationData.generated.h \
-  Runtime/Engine/Classes/GameFramework/NavMovementComponent.h \
-  Runtime/Engine/Classes/AI/Navigation/NavAgentInterface.h \
-  Runtime/Engine/Classes/AI/Navigation/PathFollowingAgentInterface.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PathFollowingAgentInterface.generated.h \
-  Runtime/Engine/Classes/GameFramework/MovementComponent.h \
-  Runtime/PhysicsCore/Public/Chaos/ChaosEngineInterface.h \
-  Runtime/Engine/Classes/Components/SceneComponent.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/MovementComponent.generated.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NavMovementComponent.generated.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/PathFollowingComponent.generated.h \
   Runtime/AIModule/Classes/Navigation/CrowdAgentInterface.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/CrowdAgentInterface.generated.h \
-  Runtime/Engine/Classes/AI/Navigation/NavigationAvoidanceTypes.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NavigationAvoidanceTypes.generated.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/CrowdFollowingComponent.generated.h \
   Runtime/AIModule/Classes/BehaviorTree/BlackboardComponent.h \
   Runtime/AIModule/Classes/BehaviorTree/Blackboard/BlackboardKeyType.h \
@@ -4489,7 +4569,6 @@
   Runtime/Engine/Classes/AI/AISystemBase.h \
   Runtime/Core/Public/Modules/ModuleInterface.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/AISystemBase.generated.h \
-  Runtime/Core/Public/Math/RandomStream.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/AISystem.generated.h \
   Runtime/AIModule/Classes/BehaviorTree/BlackboardData.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/BlackboardData.generated.h \
@@ -4507,25 +4586,9 @@
   Runtime/AIModule/Classes/Perception/AISenseConfig.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/AISenseConfig.generated.h \
   Runtime/AIModule/Classes/Perception/AISense_Sight.h \
-  Runtime/Engine/Public/WorldCollision.h \
   Runtime/Core/Public/Misc/MTAccessDetector.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/AISense_Sight.generated.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/AISenseConfig_Sight.generated.h \
-  Runtime/Engine/Classes/GameFramework/CharacterMovementComponent.h \
-  Runtime/Engine/Classes/Animation/AnimMontage.h \
-  Runtime/Engine/Public/AI/RVOAvoidanceInterface.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/RVOAvoidanceInterface.generated.h \
-  Runtime/Engine/Classes/GameFramework/PawnMovementComponent.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PawnMovementComponent.generated.h \
-  Runtime/Engine/Classes/Interfaces/NetworkPredictionInterface.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NetworkPredictionInterface.generated.h \
-  Runtime/Engine/Public/CharacterMovementComponentAsync.h \
-  Runtime/Experimental/Chaos/Public/Chaos/SimCallbackObject.h \
-  Runtime/Engine/Public/CollisionQueryParams.h \
-  Runtime/PhysicsCore/Public/CollisionShape.h \
-  Runtime/Engine/Public/Engine/OverlapInfo.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementComponentAsync.generated.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementComponent.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AI/ArchEnemyEnvQueryContext.cpp \
   Runtime/AIModule/Classes/Blueprint/AIBlueprintHelperLibrary.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/AIBlueprintHelperLibrary.generated.h \
@@ -4541,12 +4604,6 @@
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AIModule/UHT/EnvQueryItemType_Actor.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AI/Decorators/CheckTargetActorDeadDecorator.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AI/Services/BTService_OrientToTargetActor.cpp \
-  Runtime/Engine/Classes/Kismet/KismetMathLibrary.h \
-  Runtime/CoreUObject/Public/UObject/Script.h \
-  Runtime/CoreUObject/Public/UObject/Stack.h \
-  Runtime/Core/Public/Misc/QualifiedFrameTime.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/KismetMathLibrary.generated.h \
-  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Kismet/KismetMathLibrary.inl \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/AI/Services/UpdateMotionWarpToTargetService.cpp \
   ../Plugins/Animation/MotionWarping/Source/MotionWarping/Public/MotionWarpingComponent.h \
   ../Plugins/Animation/MotionWarping/Source/MotionWarping/Public/RootMotionModifier.h \
@@ -4578,36 +4635,41 @@
   Runtime/Engine/Classes/Engine/AssetManager.h \
   /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Engine/AssetManagerTypes.h \
   Runtime/CoreUObject/Public/AssetRegistry/AssetIdentifier.h \
-  Runtime/Core/Public/Misc/EnumClassFlags.h \
   Runtime/CoreUObject/Public/UObject/ObjectPtr.h \
   Runtime/CoreUObject/Public/UObject/PrimaryAssetId.h \
-  Runtime/CoreUObject/Public/UObject/SoftObjectPtr.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/AssetManagerTypes.generated.h \
   Runtime/CoreUObject/Public/Misc/AssetRegistryInterface.h \
   Runtime/Core/Public/Containers/ContainersFwd.h \
-  Runtime/CoreUObject/Public/UObject/TopLevelAssetPath.h \
   /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Engine/StreamableManager.h \
   Runtime/Core/Public/Math/NumericLimits.h \
   Runtime/CoreUObject/Public/Misc/PackageAccessTracking.h \
   Runtime/CoreUObject/Public/Misc/PackageName.h \
   Runtime/CoreUObject/Public/UObject/ObjectHandle.h \
   Runtime/CoreUObject/Public/Templates/Casts.h \
-  Runtime/Core/Public/Templates/Function.h \
   Runtime/CoreUObject/Public/AssetRegistry/AssetBundleData.h \
   Runtime/AssetRegistry/Public/AssetRegistry/AssetRegistryModule.h \
   Runtime/AssetRegistry/Public/AssetRegistry/IAssetRegistry.h \
-  Runtime/CoreUObject/Public/AssetRegistry/ARFilter.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/AssetRegistry/UHT/IAssetRegistry.generated.h \
   Runtime/Core/Public/GenericPlatform/GenericPlatformChunkInstall.h \
   Runtime/Core/Public/HAL/PlatformCrt.h \
   Runtime/Core/Public/Logging/LogMacros.h \
   /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Engine/ContentEncryptionConfig.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/AssetManager.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Combat/CombatComponentBase.cpp \
-  Runtime/Engine/Classes/Components/BoxComponent.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Characters/ArchHeroCharacter.cpp \
+  Runtime/Engine/Classes/Camera/CameraComponent.h \
+  Runtime/Engine/Classes/Engine/BlendableInterface.h \
+  Runtime/Engine/Classes/Engine/Scene.h \
+  Runtime/Engine/Classes/Camera/CameraTypes.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CameraComponent.generated.h \
+  Runtime/Engine/Classes/Components/CapsuleComponent.h \
   Runtime/Engine/Classes/Components/ShapeComponent.h \
   Runtime/Engine/Classes/Components/PrimitiveComponent.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/ShapeComponent.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CapsuleComponent.generated.h \
+  Runtime/Engine/Classes/GameFramework/SpringArmComponent.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/SpringArmComponent.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Combat/CombatComponentBase.cpp \
+  Runtime/Engine/Classes/Components/BoxComponent.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/BoxComponent.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Combat/EnemyCombatComponent.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/Combat/HeroCombatComponent.cpp \

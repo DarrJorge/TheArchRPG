@@ -8,9 +8,9 @@
 #include "Interfaces/PawnCombatInterface.h"
 #include "GenericTeamAgentInterface.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 #include "Debug/ArchDebugHelper.h"
-#include "Kismet/KismetSystemLibrary.h"
 
 UArchAbilitySystemComponent* UArchFunctionLibrary::NativeGetArchASCFromActor(AActor* InActor)
 {
@@ -97,7 +97,7 @@ FVector UArchFunctionLibrary::GetRollingLocation(AActor* SourceActor, const FVec
 	FHitResult OutResult;
 	SourceActor->GetWorld()->LineTraceSingleByObjectType(OutResult, Start, End, QueryParams);
 
-	return OutResult.bBlockingHit ? OutResult.ImpactPoint : FVector();
+	return OutResult.bBlockingHit ? OutResult.ImpactPoint : SourceActor->GetActorLocation();
 }
 
 FGameplayTag UArchFunctionLibrary::ComputeHitReactDirectionTag(AActor* Attacker, AActor* Victim, float& OutAngleDifference)
@@ -127,7 +127,7 @@ bool UArchFunctionLibrary::IsValidBlock(AActor* Attacker, AActor* Victim)
 {
 	float AngleDifference = 0.f;
 	ComputeNormalizeAngleBetweenTwoActors(Attacker, Victim, AngleDifference);
-	return AngleDifference >= -30.f && AngleDifference <= 55.f;
+	return AngleDifference >= -42.f && AngleDifference <= 55.f;
 }
 
 void UArchFunctionLibrary::GetActorsFromTraceMultiBox(const UObject* WorldContextObject, const FVector& Start,
@@ -138,8 +138,8 @@ void UArchFunctionLibrary::GetActorsFromTraceMultiBox(const UObject* WorldContex
 	if (!SelfActor) return;
 	
 	TArray<FHitResult> BoxTraceHits;
-	UKismetSystemLibrary::BoxTraceMultiForObjects(
-		WorldContextObject, Start, End, HalfSize / 2.f, Orientation, ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType,BoxTraceHits,true
+	UKismetSystemLibrary::BoxTraceMultiForObjects(WorldContextObject, Start, End, HalfSize / 2.f,
+		Orientation, ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType,BoxTraceHits,true
 	);
 
 	for (const FHitResult& TraceHit : BoxTraceHits)
@@ -169,4 +169,13 @@ void UArchFunctionLibrary::ComputeNormalizeAngleBetweenTwoActors(AActor* Source,
 	{
 		OutAngleDifference *= -1;
 	}
+}
+
+bool UArchFunctionLibrary::ApplyGameplayEffectSpecHandleToTarget(AActor* InInstigator, AActor* InTargetActor,
+	const FGameplayEffectSpecHandle& InSpecHandle)
+{
+	UArchAbilitySystemComponent* SourceASC = NativeGetArchASCFromActor(InInstigator);
+	UArchAbilitySystemComponent* TargetASC = NativeGetArchASCFromActor(InTargetActor);
+	const FActiveGameplayEffectHandle ActiveEffectHandle = SourceASC->ApplyGameplayEffectSpecToTarget(*InSpecHandle.Data, TargetASC);
+	return ActiveEffectHandle.WasSuccessfullyApplied();
 }

@@ -4057,5 +4057,4 @@
   Runtime/GameplayTags/Classes/GameplayTagsManager.h \
   Runtime/Core/Public/Templates/UniquePtr.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTags/UHT/GameplayTagsManager.generated.h \
-  Runtime/Core/Public/Templates/UnrealTemplate.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Debug/ArchDebugHelper.h
+  Runtime/Core/Public/Templates/UnrealTemplate.h

@@ -6,18 +6,15 @@
 #include "ArchFunctionLibrary.h"
 #include "ArchGameplayTags.h"
 
-#include "Debug/ArchDebugHelper.h"
-
 void UEnemyCombatComponent::OnHitTargetActor(AActor* HitActor)
 {
 	if (OverlappedActors.Contains(HitActor)) return;
 
 	OverlappedActors.AddUnique(HitActor);
-
-	// TODO:: make later
+	
 	bool bIsValidBlock = false;
 	const bool bIsPlayerBlocking = UArchFunctionLibrary::NativeActorHasTag(HitActor, ArchGameplayTags::Player_Status_Blocking);
-	const bool bIsMyAttackUnblockable = false;
+	const bool bIsMyAttackUnblockable = UArchFunctionLibrary::NativeActorHasTag(GetOwningPawn(), ArchGameplayTags::Enemy_Status_Unblockable);
 
 	if (bIsPlayerBlocking && !bIsMyAttackUnblockable)
 	{

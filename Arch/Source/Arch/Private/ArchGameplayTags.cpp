@@ -48,6 +48,8 @@ namespace ArchGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(Enemy_Ability_Combat_Weapon_Melee, "Enemy.Ability.Combat.Weapon.Melee");
 	UE_DEFINE_GAMEPLAY_TAG(Enemy_Ability_Combat_Weapon_Range, "Enemy.Ability.Combat.Weapon.Range");
 	UE_DEFINE_GAMEPLAY_TAG(Enemy_Ability_Combat_Strafing, "Enemy.Ability.Combat.Strafing");
+	
+	UE_DEFINE_GAMEPLAY_TAG(Enemy_Status_Unblockable, "Enemy.Status.Unblockable");
 
 	/** Game Events Tags **/
 	UE_DEFINE_GAMEPLAY_TAG(Event_Montage_Equip_Axe, "Event.Montage.Equip.Axe");
@@ -57,6 +59,7 @@ namespace ArchGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(Event_Combat_SuccessfulBlock, "Event.Combat.SuccessfulBlock");
 	UE_DEFINE_GAMEPLAY_TAG(Event_Combat_SwitchTarget_Left, "Event.Combat.SwitchTarget.Left");
 	UE_DEFINE_GAMEPLAY_TAG(Event_Combat_SwitchTarget_Right, "Event.Combat.SwitchTarget.Right");
+	UE_DEFINE_GAMEPLAY_TAG(Event_Combat_SpawnProjectile, "Event.Combat.SpawnProjectile");
 
 	
 	UE_DEFINE_GAMEPLAY_TAG(Event_Effect_HitReact, "Event.Effect.HitReact");

@@ -49,6 +49,8 @@ namespace ArchGameplayTags
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Weapon_Melee);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Weapon_Range);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Strafing);
+
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Status_Unblockable);
 	
 	/** Game Events Tags **/
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Montage_Equip_Axe);
@@ -59,6 +61,7 @@ namespace ArchGameplayTags
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Combat_SuccessfulBlock);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Combat_SwitchTarget_Left);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Combat_SwitchTarget_Right);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Combat_SpawnProjectile);
 	
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Effect_HitReact);
 

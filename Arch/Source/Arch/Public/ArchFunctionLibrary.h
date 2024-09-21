@@ -8,6 +8,8 @@
 #include "ArchTypes/ArchEnumTypes.h"
 #include "ArchFunctionLibrary.generated.h"
 
+struct FGameplayEffectSpecHandle;
+
 namespace EDrawDebugTrace
 {
 	enum Type : int;
@@ -60,6 +62,9 @@ public:
 	static void GetActorsFromTraceMultiBox(const UObject* WorldContextObject, const FVector& Start, const FVector& End, const FVector& HalfSize,
 		const FRotator& Orientation, const TArray<TEnumAsByte<EObjectTypeQuery>>& ObjectTypes, bool bTraceComplex, const TArray<AActor*>& ActorsToIgnore,
 		EDrawDebugTrace::Type DrawDebugType, const AActor* SelfActor, TArray<AActor*>& OutAvailableActors);
+
+	UFUNCTION(BlueprintCallable, Category="Arch|BlueprintFunctionLibrary")
+	static bool ApplyGameplayEffectSpecHandleToTarget(AActor* InInstigator, AActor* InTargetActor, const FGameplayEffectSpecHandle& InSpecHandle);
 
 private:
 	static void ComputeNormalizeAngleBetweenTwoActors(AActor* Source, AActor* Target, float& OutAngleDifference);
