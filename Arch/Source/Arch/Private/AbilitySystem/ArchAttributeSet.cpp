@@ -11,12 +11,12 @@
 #include "Components/UI/ArchUIComponentBase.h"
 #include "Interfaces/PawnUIInterface.h"
 
-#include "Debug/ArchDebugHelper.h"
-
 UArchAttributeSet::UArchAttributeSet()
 {
 	InitHealth(1.f);
 	InitMaxHealth(1.f);
+	InitMana(1.f);
+	InitMaxMana(1.f);
 	InitRage(1.f);
 	InitMaxRage(1.f);
 	InitPhysicalAttackPower(1.f);
@@ -29,6 +29,8 @@ void UArchAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
 
 	DOREPLIFETIME_CONDITION_NOTIFY(UArchAttributeSet, Health, COND_None, REPNOTIFY_Always);
 	DOREPLIFETIME_CONDITION_NOTIFY(UArchAttributeSet, MaxHealth, COND_None, REPNOTIFY_Always);
+	DOREPLIFETIME_CONDITION_NOTIFY(UArchAttributeSet, Mana, COND_None, REPNOTIFY_Always);
+	DOREPLIFETIME_CONDITION_NOTIFY(UArchAttributeSet, MaxMana, COND_None, REPNOTIFY_Always);
 	DOREPLIFETIME_CONDITION_NOTIFY(UArchAttributeSet, Rage, COND_None, REPNOTIFY_Always);
 	DOREPLIFETIME_CONDITION_NOTIFY(UArchAttributeSet, MaxRage, COND_None, REPNOTIFY_Always);
 	DOREPLIFETIME_CONDITION_NOTIFY(UArchAttributeSet, PhysicalAttackPower, COND_None, REPNOTIFY_Always);
@@ -54,10 +56,36 @@ void UArchAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallba
 		BaseUIComponent->OnHealthChanged.Broadcast(GetHealth()/GetMaxHealth());
 	}
 
+	if (Data.EvaluatedData.Attribute == GetManaAttribute())
+	{
+		const float NewMana = FMath::Clamp(GetMana(), 0.f, GetMaxMana());
+		SetMana(NewMana);
+		if (UArchHeroUIComponent* HeroUIComponent = Cast<UArchHeroUIComponent>(BaseUIComponent))
+		{
+			HeroUIComponent->OnManaChanged.Broadcast(GetMana()/GetMaxMana());
+		}
+	}
+
 	if (Data.EvaluatedData.Attribute == GetRageAttribute())
 	{
 		const float NewRage = FMath::Clamp(GetRage(), 0.f, GetMaxRage());
 		SetRage(NewRage);
+
+		if (GetRage() == GetMaxRage())
+		{
+			UArchFunctionLibrary::AddGameplayTagToActorIfNone(Data.Target.GetAvatarActor(), ArchGameplayTags::Player_Status_Rage_Full);
+		}
+		else if (GetRage() == 0.f)
+		{
+			UArchFunctionLibrary::AddGameplayTagToActorIfNone(Data.Target.GetAvatarActor(), ArchGameplayTags::Player_Status_Rage_None);
+		}
+		else
+		{
+			TArray<FGameplayTag> TagsToRemove;
+			TagsToRemove.Add(ArchGameplayTags::Player_Status_Rage_Full);
+			TagsToRemove.Add(ArchGameplayTags::Player_Status_Rage_None);
+			UArchFunctionLibrary::RemoveGameplayTagsFromActorIfFound(Data.Target.GetAvatarActor(), TagsToRemove);
+		}
 
 		if (UArchHeroUIComponent* HeroUIComponent = Cast<UArchHeroUIComponent>(BaseUIComponent))
 		{
@@ -95,6 +123,16 @@ void UArchAttributeSet::OnRep_Health(const FGameplayAttributeData& OldHealth) co
 void UArchAttributeSet::OnRep_MaxHealth(const FGameplayAttributeData& OldMaxHealth) const
 {
 	GAMEPLAYATTRIBUTE_REPNOTIFY(UArchAttributeSet, MaxHealth, OldMaxHealth)
+}
+
+void UArchAttributeSet::OnRep_Mana(const FGameplayAttributeData& OldMana) const
+{
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UArchAttributeSet, Mana, OldMana)
+}
+
+void UArchAttributeSet::OnRep_MaxMana(const FGameplayAttributeData& OldMaxMana) const
+{
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UArchAttributeSet, MaxMana, OldMaxMana)
 }
 
 void UArchAttributeSet::OnRep_Rage(const FGameplayAttributeData& OldRage) const

@@ -24,6 +24,18 @@ struct FArchHeroAbilitySet
 	bool IsValid() const;
 };
 
+USTRUCT(BlueprintType)
+struct FArchHeroSpecialAbilitySet : public FArchHeroAbilitySet
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	TSoftObjectPtr<UMaterialInstance> AbilityIconMaterial;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta=(Categories = "Player.Cooldown"))
+	FGameplayTag AbilityCooldownTag;
+};
+
 
 USTRUCT(BlueprintType)
 struct FArchWeaponData
@@ -38,6 +50,9 @@ struct FArchWeaponData
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta=(TitleProperty="InputTag"))
 	TArray<FArchHeroAbilitySet> DefaultWeaponAbilities;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta=(TitleProperty="InputTag"))
+	TArray<FArchHeroSpecialAbilitySet> SpecialWeaponAbilities;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	FScalableFloat WeaponBaseDamage;

@@ -26,6 +26,8 @@ struct FGameplayAttributeData;
 	DECLARE_FUNCTION(execOnRep_PhysicalAttackPower); \
 	DECLARE_FUNCTION(execOnRep_MaxRage); \
 	DECLARE_FUNCTION(execOnRep_Rage); \
+	DECLARE_FUNCTION(execOnRep_MaxMana); \
+	DECLARE_FUNCTION(execOnRep_Mana); \
 	DECLARE_FUNCTION(execOnRep_MaxHealth); \
 	DECLARE_FUNCTION(execOnRep_Health);
 
@@ -43,6 +45,8 @@ public: \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		Health=NETFIELD_REP_START, \
 		MaxHealth, \
+		Mana, \
+		MaxMana, \
 		Rage, \
 		MaxRage, \
 		PhysicalAttackPower, \

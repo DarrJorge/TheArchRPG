@@ -2,7 +2,6 @@
 
 
 #include "Components/Combat/CombatComponentBase.h"
-#include "Components/BoxComponent.h"
 #include "Items/Weapons/ArchWeaponBase.h"
 
 #include "Debug/ArchDebugHelper.h"
@@ -47,19 +46,25 @@ AArchWeaponBase* UCombatComponentBase::GetCharacterCurrentEquippedWeapon() const
 
 void UCombatComponentBase::ToggleWeaponCollision(bool bShouldEnable, EToggleDamageType ToggleDamageType)
 {
-	if (ToggleDamageType == EToggleDamageType::EquippedWeapon)
+	switch (ToggleDamageType)
 	{
-		AArchWeaponBase* EquippedWeapon = GetCharacterCurrentEquippedWeapon();
-		check(EquippedWeapon);
+	case EToggleDamageType::EquippedWeapon:
+		ToggleEquippedWeaponCollision(bShouldEnable);
+		break;
 
-		EquippedWeapon->SetWeaponCollision(bShouldEnable);
-		if (!bShouldEnable)
-		{
-			OverlappedActors.Empty();
-		}
+	case EToggleDamageType::LeftHand:
+		ToggleLeftUnarmedCollision(bShouldEnable);
+		break;
+
+	case EToggleDamageType::RightHand:
+		ToggleRightUnarmedCollision(bShouldEnable);
+		break;
 	}
 
-	// TODO: Handle body collision boxes
+	if (!bShouldEnable)
+	{
+		OverlappedActors.Empty();
+	}
 }
 
 float UCombatComponentBase::GetCurrentEquippedWeaponDamageAtLevel(float InLevel) const
@@ -69,8 +74,27 @@ float UCombatComponentBase::GetCurrentEquippedWeaponDamageAtLevel(float InLevel)
 
 void UCombatComponentBase::OnHitTargetActor(AActor* HitActor)
 {
+	// implementation in derived classes
 }
 
 void UCombatComponentBase::OnWeaponPulledFromTargetActor(AActor* InteractedActor)
 {
+	// implementation in derived classes
+}
+
+void UCombatComponentBase::ToggleEquippedWeaponCollision(bool bShouldEnable)
+{
+	const AArchWeaponBase* EquippedWeapon = GetCharacterCurrentEquippedWeapon();
+	if (!EquippedWeapon) return;
+	EquippedWeapon->SetWeaponCollision(bShouldEnable);
+}
+
+void UCombatComponentBase::ToggleLeftUnarmedCollision(bool bShouldEnable)
+{
+	// implementation in derived classes
+}
+
+void UCombatComponentBase::ToggleRightUnarmedCollision(bool bShouldEnable)
+{
+	// implementation in derived classes
 }

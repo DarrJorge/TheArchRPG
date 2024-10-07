@@ -10,6 +10,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FArchHeroAbilitySet;
+struct FArchHeroSpecialAbilitySet;
 struct FGameplayAbilitySpecHandle;
 struct FGameplayTag;
 #ifdef ARCH_ArchAbilitySystemComponent_generated_h

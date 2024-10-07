@@ -56,6 +56,22 @@ void EmptyLinkFunctionForGeneratedCodeArchAttributeSet() {}
 		P_THIS->OnRep_Rage(Z_Param_Out_OldRage);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(UArchAttributeSet::execOnRep_MaxMana)
+	{
+		P_GET_STRUCT_REF(FGameplayAttributeData,Z_Param_Out_OldMaxMana);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_MaxMana(Z_Param_Out_OldMaxMana);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UArchAttributeSet::execOnRep_Mana)
+	{
+		P_GET_STRUCT_REF(FGameplayAttributeData,Z_Param_Out_OldMana);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_Mana(Z_Param_Out_OldMana);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UArchAttributeSet::execOnRep_MaxHealth)
 	{
 		P_GET_STRUCT_REF(FGameplayAttributeData,Z_Param_Out_OldMaxHealth);
@@ -79,7 +95,9 @@ void EmptyLinkFunctionForGeneratedCodeArchAttributeSet() {}
 			{ "OnRep_DamageTaken", &UArchAttributeSet::execOnRep_DamageTaken },
 			{ "OnRep_DefensePower", &UArchAttributeSet::execOnRep_DefensePower },
 			{ "OnRep_Health", &UArchAttributeSet::execOnRep_Health },
+			{ "OnRep_Mana", &UArchAttributeSet::execOnRep_Mana },
 			{ "OnRep_MaxHealth", &UArchAttributeSet::execOnRep_MaxHealth },
+			{ "OnRep_MaxMana", &UArchAttributeSet::execOnRep_MaxMana },
 			{ "OnRep_MaxRage", &UArchAttributeSet::execOnRep_MaxRage },
 			{ "OnRep_PhysicalAttackPower", &UArchAttributeSet::execOnRep_PhysicalAttackPower },
 			{ "OnRep_Rage", &UArchAttributeSet::execOnRep_Rage },
@@ -212,6 +230,48 @@ void EmptyLinkFunctionForGeneratedCodeArchAttributeSet() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics
+	{
+		struct ArchAttributeSet_eventOnRep_Mana_Parms
+		{
+			FGameplayAttributeData OldMana;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_OldMana_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_OldMana;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::NewProp_OldMana_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::NewProp_OldMana = { "OldMana", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchAttributeSet_eventOnRep_Mana_Parms, OldMana), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::NewProp_OldMana_MetaData), Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::NewProp_OldMana_MetaData) }; // 2151517668
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::NewProp_OldMana,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/AbilitySystem/ArchAttributeSet.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UArchAttributeSet, nullptr, "OnRep_Mana", nullptr, nullptr, Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::PropPointers), sizeof(Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::ArchAttributeSet_eventOnRep_Mana_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x40420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::Function_MetaDataParams), Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::ArchAttributeSet_eventOnRep_Mana_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxHealth_Statics
 	{
 		struct ArchAttributeSet_eventOnRep_MaxHealth_Parms
@@ -251,6 +311,48 @@ void EmptyLinkFunctionForGeneratedCodeArchAttributeSet() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxHealth_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics
+	{
+		struct ArchAttributeSet_eventOnRep_MaxMana_Parms
+		{
+			FGameplayAttributeData OldMaxMana;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_OldMaxMana_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_OldMaxMana;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::NewProp_OldMaxMana_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::NewProp_OldMaxMana = { "OldMaxMana", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchAttributeSet_eventOnRep_MaxMana_Parms, OldMaxMana), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::NewProp_OldMaxMana_MetaData), Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::NewProp_OldMaxMana_MetaData) }; // 2151517668
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::NewProp_OldMaxMana,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/AbilitySystem/ArchAttributeSet.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UArchAttributeSet, nullptr, "OnRep_MaxMana", nullptr, nullptr, Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::PropPointers), sizeof(Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::ArchAttributeSet_eventOnRep_MaxMana_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x40420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::Function_MetaDataParams), Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::ArchAttributeSet_eventOnRep_MaxMana_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -401,6 +503,14 @@ void EmptyLinkFunctionForGeneratedCodeArchAttributeSet() {}
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_MaxHealth;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Mana_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_Mana;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_MaxMana_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_MaxMana;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Rage_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_Rage;
@@ -433,7 +543,9 @@ void EmptyLinkFunctionForGeneratedCodeArchAttributeSet() {}
 		{ &Z_Construct_UFunction_UArchAttributeSet_OnRep_DamageTaken, "OnRep_DamageTaken" }, // 3396888901
 		{ &Z_Construct_UFunction_UArchAttributeSet_OnRep_DefensePower, "OnRep_DefensePower" }, // 2362048770
 		{ &Z_Construct_UFunction_UArchAttributeSet_OnRep_Health, "OnRep_Health" }, // 3869912649
+		{ &Z_Construct_UFunction_UArchAttributeSet_OnRep_Mana, "OnRep_Mana" }, // 415387813
 		{ &Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxHealth, "OnRep_MaxHealth" }, // 697446015
+		{ &Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxMana, "OnRep_MaxMana" }, // 1741993514
 		{ &Z_Construct_UFunction_UArchAttributeSet_OnRep_MaxRage, "OnRep_MaxRage" }, // 2933358175
 		{ &Z_Construct_UFunction_UArchAttributeSet_OnRep_PhysicalAttackPower, "OnRep_PhysicalAttackPower" }, // 2815223130
 		{ &Z_Construct_UFunction_UArchAttributeSet_OnRep_Rage, "OnRep_Rage" }, // 3535287741
@@ -460,15 +572,29 @@ void EmptyLinkFunctionForGeneratedCodeArchAttributeSet() {}
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_MaxHealth = { "MaxHealth", "OnRep_MaxHealth", (EPropertyFlags)0x0010000100000034, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UArchAttributeSet, MaxHealth), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_MaxHealth_MetaData), Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_MaxHealth_MetaData) }; // 2151517668
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_Mana_MetaData[] = {
+		{ "Category", "Vital Attributes" },
+		{ "ModuleRelativePath", "Public/AbilitySystem/ArchAttributeSet.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_Mana = { "Mana", "OnRep_Mana", (EPropertyFlags)0x0010000100000034, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UArchAttributeSet, Mana), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_Mana_MetaData), Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_Mana_MetaData) }; // 2151517668
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_MaxMana_MetaData[] = {
+		{ "Category", "Vital Attributes" },
+		{ "ModuleRelativePath", "Public/AbilitySystem/ArchAttributeSet.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_MaxMana = { "MaxMana", "OnRep_MaxMana", (EPropertyFlags)0x0010000100000034, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UArchAttributeSet, MaxMana), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_MaxMana_MetaData), Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_MaxMana_MetaData) }; // 2151517668
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_Rage_MetaData[] = {
-		{ "Category", "Secondary Attributes" },
+		{ "Category", "Vital Attributes" },
 		{ "ModuleRelativePath", "Public/AbilitySystem/ArchAttributeSet.h" },
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_Rage = { "Rage", "OnRep_Rage", (EPropertyFlags)0x0010000100000034, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UArchAttributeSet, Rage), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_Rage_MetaData), Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_Rage_MetaData) }; // 2151517668
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_MaxRage_MetaData[] = {
-		{ "Category", "Secondary Attributes" },
+		{ "Category", "Vital Attributes" },
 		{ "ModuleRelativePath", "Public/AbilitySystem/ArchAttributeSet.h" },
 	};
 #endif
@@ -497,6 +623,8 @@ void EmptyLinkFunctionForGeneratedCodeArchAttributeSet() {}
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UArchAttributeSet_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_Health,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_MaxHealth,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_Mana,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_MaxMana,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_Rage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_MaxRage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UArchAttributeSet_Statics::NewProp_PhysicalAttackPower,
@@ -539,6 +667,8 @@ void EmptyLinkFunctionForGeneratedCodeArchAttributeSet() {}
 	{
 		static const FName Name_Health(TEXT("Health"));
 		static const FName Name_MaxHealth(TEXT("MaxHealth"));
+		static const FName Name_Mana(TEXT("Mana"));
+		static const FName Name_MaxMana(TEXT("MaxMana"));
 		static const FName Name_Rage(TEXT("Rage"));
 		static const FName Name_MaxRage(TEXT("MaxRage"));
 		static const FName Name_PhysicalAttackPower(TEXT("PhysicalAttackPower"));
@@ -548,6 +678,8 @@ void EmptyLinkFunctionForGeneratedCodeArchAttributeSet() {}
 		const bool bIsValid = true
 			&& Name_Health == ClassReps[(int32)ENetFields_Private::Health].Property->GetFName()
 			&& Name_MaxHealth == ClassReps[(int32)ENetFields_Private::MaxHealth].Property->GetFName()
+			&& Name_Mana == ClassReps[(int32)ENetFields_Private::Mana].Property->GetFName()
+			&& Name_MaxMana == ClassReps[(int32)ENetFields_Private::MaxMana].Property->GetFName()
 			&& Name_Rage == ClassReps[(int32)ENetFields_Private::Rage].Property->GetFName()
 			&& Name_MaxRage == ClassReps[(int32)ENetFields_Private::MaxRage].Property->GetFName()
 			&& Name_PhysicalAttackPower == ClassReps[(int32)ENetFields_Private::PhysicalAttackPower].Property->GetFName()
@@ -563,9 +695,9 @@ void EmptyLinkFunctionForGeneratedCodeArchAttributeSet() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAttributeSet_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UArchAttributeSet, UArchAttributeSet::StaticClass, TEXT("UArchAttributeSet"), &Z_Registration_Info_UClass_UArchAttributeSet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchAttributeSet), 2591989240U) },
+		{ Z_Construct_UClass_UArchAttributeSet, UArchAttributeSet::StaticClass, TEXT("UArchAttributeSet"), &Z_Registration_Info_UClass_UArchAttributeSet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchAttributeSet), 2300849612U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAttributeSet_h_768010248(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAttributeSet_h_442560042(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAttributeSet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAttributeSet_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

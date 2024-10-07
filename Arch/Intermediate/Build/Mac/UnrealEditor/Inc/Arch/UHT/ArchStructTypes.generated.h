@@ -21,7 +21,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> ARCH_API UScriptStruct* StaticStruct<struct FArchHeroAbilitySet>();
 
-#define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchTypes_ArchStructTypes_h_31_GENERATED_BODY \
+#define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchTypes_ArchStructTypes_h_30_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics; \
+	ARCH_API static class UScriptStruct* StaticStruct(); \
+	typedef FArchHeroAbilitySet Super;
+
+
+template<> ARCH_API UScriptStruct* StaticStruct<struct FArchHeroSpecialAbilitySet>();
+
+#define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchTypes_ArchStructTypes_h_43_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FArchWeaponData_Statics; \
 	ARCH_API static class UScriptStruct* StaticStruct();
 

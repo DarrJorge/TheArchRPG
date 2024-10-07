@@ -23,6 +23,14 @@ void EmptyLinkFunctionForGeneratedCodePlayerOverlayWidget() {}
 		P_THIS->OnWeaponIconChangedHandler(Z_Param_InTexture);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(UPlayerOverlayWidget::execOnManaChangedHandler)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_NewValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnManaChangedHandler(Z_Param_NewValue);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UPlayerOverlayWidget::execOnRageChangedHandler)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_NewValue);
@@ -43,6 +51,10 @@ void EmptyLinkFunctionForGeneratedCodePlayerOverlayWidget() {}
 	{
 		float NewValue;
 	};
+	struct PlayerOverlayWidget_eventOnManaChangedEvent_Parms
+	{
+		float NewValue;
+	};
 	struct PlayerOverlayWidget_eventOnRageChangedEvent_Parms
 	{
 		float NewValue;
@@ -57,6 +69,13 @@ void EmptyLinkFunctionForGeneratedCodePlayerOverlayWidget() {}
 		PlayerOverlayWidget_eventOnHealthChangedEvent_Parms Parms;
 		Parms.NewValue=NewValue;
 		ProcessEvent(FindFunctionChecked(NAME_UPlayerOverlayWidget_OnHealthChangedEvent),&Parms);
+	}
+	static FName NAME_UPlayerOverlayWidget_OnManaChangedEvent = FName(TEXT("OnManaChangedEvent"));
+	void UPlayerOverlayWidget::OnManaChangedEvent(float NewValue)
+	{
+		PlayerOverlayWidget_eventOnManaChangedEvent_Parms Parms;
+		Parms.NewValue=NewValue;
+		ProcessEvent(FindFunctionChecked(NAME_UPlayerOverlayWidget_OnManaChangedEvent),&Parms);
 	}
 	static FName NAME_UPlayerOverlayWidget_OnRageChangedEvent = FName(TEXT("OnRageChangedEvent"));
 	void UPlayerOverlayWidget::OnRageChangedEvent(float NewValue)
@@ -77,6 +96,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerOverlayWidget() {}
 		UClass* Class = UPlayerOverlayWidget::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnHealthChangedHandler", &UPlayerOverlayWidget::execOnHealthChangedHandler },
+			{ "OnManaChangedHandler", &UPlayerOverlayWidget::execOnManaChangedHandler },
 			{ "OnRageChangedHandler", &UPlayerOverlayWidget::execOnRageChangedHandler },
 			{ "OnWeaponIconChangedHandler", &UPlayerOverlayWidget::execOnWeaponIconChangedHandler },
 		};
@@ -144,6 +164,71 @@ void EmptyLinkFunctionForGeneratedCodePlayerOverlayWidget() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayerOverlayWidget_OnHealthChangedHandler_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent_Statics
+	{
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_NewValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent_Statics::NewProp_NewValue = { "NewValue", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerOverlayWidget_eventOnManaChangedEvent_Parms, NewValue), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent_Statics::NewProp_NewValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Arch|UI" },
+		{ "ModuleRelativePath", "Public/UI/Widgets/PlayerOverlayWidget.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerOverlayWidget, nullptr, "OnManaChangedEvent", nullptr, nullptr, Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent_Statics::PropPointers), sizeof(PlayerOverlayWidget_eventOnManaChangedEvent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent_Statics::PropPointers) < 2048);
+	static_assert(sizeof(PlayerOverlayWidget_eventOnManaChangedEvent_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics
+	{
+		struct PlayerOverlayWidget_eventOnManaChangedHandler_Parms
+		{
+			float NewValue;
+		};
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_NewValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::NewProp_NewValue = { "NewValue", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerOverlayWidget_eventOnManaChangedHandler_Parms, NewValue), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::NewProp_NewValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/UI/Widgets/PlayerOverlayWidget.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerOverlayWidget, nullptr, "OnManaChangedHandler", nullptr, nullptr, Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::PlayerOverlayWidget_eventOnManaChangedHandler_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::PlayerOverlayWidget_eventOnManaChangedHandler_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -308,6 +393,8 @@ void EmptyLinkFunctionForGeneratedCodePlayerOverlayWidget() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_UPlayerOverlayWidget_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UPlayerOverlayWidget_OnHealthChangedEvent, "OnHealthChangedEvent" }, // 2707875121
 		{ &Z_Construct_UFunction_UPlayerOverlayWidget_OnHealthChangedHandler, "OnHealthChangedHandler" }, // 647921409
+		{ &Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedEvent, "OnManaChangedEvent" }, // 749488461
+		{ &Z_Construct_UFunction_UPlayerOverlayWidget_OnManaChangedHandler, "OnManaChangedHandler" }, // 2949856272
 		{ &Z_Construct_UFunction_UPlayerOverlayWidget_OnRageChangedEvent, "OnRageChangedEvent" }, // 499387616
 		{ &Z_Construct_UFunction_UPlayerOverlayWidget_OnRageChangedHandler, "OnRageChangedHandler" }, // 1002322176
 		{ &Z_Construct_UFunction_UPlayerOverlayWidget_OnWeaponIconChanged, "OnWeaponIconChanged" }, // 3524869073
@@ -358,9 +445,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerOverlayWidget() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_UI_Widgets_PlayerOverlayWidget_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerOverlayWidget, UPlayerOverlayWidget::StaticClass, TEXT("UPlayerOverlayWidget"), &Z_Registration_Info_UClass_UPlayerOverlayWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerOverlayWidget), 64889965U) },
+		{ Z_Construct_UClass_UPlayerOverlayWidget, UPlayerOverlayWidget::StaticClass, TEXT("UPlayerOverlayWidget"), &Z_Registration_Info_UClass_UPlayerOverlayWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerOverlayWidget), 2512473042U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_UI_Widgets_PlayerOverlayWidget_h_4259850147(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_UI_Widgets_PlayerOverlayWidget_h_284627397(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_UI_Widgets_PlayerOverlayWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_UI_Widgets_PlayerOverlayWidget_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

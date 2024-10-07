@@ -11,11 +11,13 @@ void UPlayerOverlayWidget::HeroUIComponentInitialized(UArchHeroUIComponent* Owni
 
 	OwningHeroUIComponent->OnHealthChanged.AddDynamic(this, &UPlayerOverlayWidget::OnHealthChangedHandler);
 	OwningHeroUIComponent->OnRageChanged.AddDynamic(this, &UPlayerOverlayWidget::OnRageChangedHandler);
+	OwningHeroUIComponent->OnManaChanged.AddDynamic(this, &UPlayerOverlayWidget::OnManaChangedEvent);
 	OwningHeroUIComponent->OnEquippedWeaponChanged.AddDynamic(this, &UPlayerOverlayWidget::OnWeaponIconChangedHandler);
 
 	// set full health and rage percent in time run game
-	OnHealthChangedEvent(1.0);
-	OnRageChangedEvent(1.0);
+	OnHealthChangedEvent(1.0f);
+	OnRageChangedEvent(0.f);
+	OnManaChangedEvent(1.0f);
 }
 
 void UPlayerOverlayWidget::OnHealthChangedHandler(float NewValue)
@@ -26,6 +28,11 @@ void UPlayerOverlayWidget::OnHealthChangedHandler(float NewValue)
 void UPlayerOverlayWidget::OnRageChangedHandler(float NewValue)
 {
 	OnRageChangedEvent(NewValue);
+}
+
+void UPlayerOverlayWidget::OnManaChangedHandler(float NewValue)
+{
+	OnManaChangedEvent(NewValue);
 }
 
 void UPlayerOverlayWidget::OnWeaponIconChangedHandler(TSoftObjectPtr<UTexture2D> InTexture)

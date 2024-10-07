@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Arch/Public/ArchFunctionLibrary.h"
+#include "../../Source/Runtime/Engine/Classes/Engine/LatentActionManager.h"
 #include "GameplayEffectTypes.h"
 #include "GameplayTagContainer.h"
 #include "ScalableFloat.h"
@@ -16,16 +17,34 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 	ARCH_API UClass* Z_Construct_UClass_UArchFunctionLibrary_NoRegister();
 	ARCH_API UClass* Z_Construct_UClass_UCombatComponentBase_NoRegister();
 	ARCH_API UEnum* Z_Construct_UEnum_Arch_EArchConfirmType();
+	ARCH_API UEnum* Z_Construct_UEnum_Arch_EArchCountdownActionInput();
+	ARCH_API UEnum* Z_Construct_UEnum_Arch_EArchCountdownActionOutput();
 	ARCH_API UEnum* Z_Construct_UEnum_Arch_EArchValidType();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
+	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FLatentActionInfo();
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayEffectSpecHandle();
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FScalableFloat();
 	GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 	UPackage* Z_Construct_UPackage__Script_Arch();
 // End Cross Module References
+	DEFINE_FUNCTION(UArchFunctionLibrary::execCountDown)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_TotalTime);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_UpdateInterval);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_OutRemainingTime);
+		P_GET_ENUM(EArchCountdownActionInput,Z_Param_CountDownInput);
+		P_GET_ENUM_REF(EArchCountdownActionOutput,Z_Param_Out_CountDownOutput);
+		P_GET_STRUCT(FLatentActionInfo,Z_Param_LatentInfo);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UArchFunctionLibrary::CountDown(Z_Param_WorldContextObject,Z_Param_TotalTime,Z_Param_UpdateInterval,Z_Param_Out_OutRemainingTime,EArchCountdownActionInput(Z_Param_CountDownInput),(EArchCountdownActionOutput&)(Z_Param_Out_CountDownOutput),Z_Param_LatentInfo);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UArchFunctionLibrary::execApplyGameplayEffectSpecHandleToTarget)
 	{
 		P_GET_OBJECT(AActor,Z_Param_InInstigator);
@@ -102,6 +121,15 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 		UArchFunctionLibrary::BP_DoesActorHaveTag(Z_Param_InActor,Z_Param_TagToCheck,(EArchConfirmType&)(Z_Param_Out_OutConfirmType));
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(UArchFunctionLibrary::execRemoveGameplayTagsFromActorIfFound)
+	{
+		P_GET_OBJECT(AActor,Z_Param_InActor);
+		P_GET_TARRAY_REF(FGameplayTag,Z_Param_Out_TagsToRemove);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UArchFunctionLibrary::RemoveGameplayTagsFromActorIfFound(Z_Param_InActor,Z_Param_Out_TagsToRemove);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UArchFunctionLibrary::execRemoveGameplayTagFromActorIfFound)
 	{
 		P_GET_OBJECT(AActor,Z_Param_InActor);
@@ -129,11 +157,13 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 			{ "BP_DoesActorHaveTag", &UArchFunctionLibrary::execBP_DoesActorHaveTag },
 			{ "BP_GetPawnCombatComponentFromActorInfo", &UArchFunctionLibrary::execBP_GetPawnCombatComponentFromActorInfo },
 			{ "ComputeHitReactDirectionTag", &UArchFunctionLibrary::execComputeHitReactDirectionTag },
+			{ "CountDown", &UArchFunctionLibrary::execCountDown },
 			{ "GetRollingLocation", &UArchFunctionLibrary::execGetRollingLocation },
 			{ "GetScalableFloatValueAtLevel", &UArchFunctionLibrary::execGetScalableFloatValueAtLevel },
 			{ "IsTargetPawnHostile", &UArchFunctionLibrary::execIsTargetPawnHostile },
 			{ "IsValidBlock", &UArchFunctionLibrary::execIsValidBlock },
 			{ "RemoveGameplayTagFromActorIfFound", &UArchFunctionLibrary::execRemoveGameplayTagFromActorIfFound },
+			{ "RemoveGameplayTagsFromActorIfFound", &UArchFunctionLibrary::execRemoveGameplayTagsFromActorIfFound },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -387,6 +417,93 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics
+	{
+		struct ArchFunctionLibrary_eventCountDown_Parms
+		{
+			const UObject* WorldContextObject;
+			float TotalTime;
+			float UpdateInterval;
+			float OutRemainingTime;
+			EArchCountdownActionInput CountDownInput;
+			EArchCountdownActionOutput CountDownOutput;
+			FLatentActionInfo LatentInfo;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_WorldContextObject_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_TotalTime;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_UpdateInterval;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_OutRemainingTime;
+		static const UECodeGen_Private::FBytePropertyParams NewProp_CountDownInput_Underlying;
+		static const UECodeGen_Private::FEnumPropertyParams NewProp_CountDownInput;
+		static const UECodeGen_Private::FBytePropertyParams NewProp_CountDownOutput_Underlying;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_CountDownOutput_MetaData[];
+#endif
+		static const UECodeGen_Private::FEnumPropertyParams NewProp_CountDownOutput;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_LatentInfo;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_WorldContextObject_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventCountDown_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_WorldContextObject_MetaData), Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_WorldContextObject_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_TotalTime = { "TotalTime", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventCountDown_Parms, TotalTime), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_UpdateInterval = { "UpdateInterval", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventCountDown_Parms, UpdateInterval), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_OutRemainingTime = { "OutRemainingTime", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventCountDown_Parms, OutRemainingTime), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_CountDownInput_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_CountDownInput = { "CountDownInput", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventCountDown_Parms, CountDownInput), Z_Construct_UEnum_Arch_EArchCountdownActionInput, METADATA_PARAMS(0, nullptr) }; // 59850139
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_CountDownOutput_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_CountDownOutput_MetaData[] = {
+		{ "DisplayName", "Out" },
+	};
+#endif
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_CountDownOutput = { "CountDownOutput", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventCountDown_Parms, CountDownOutput), Z_Construct_UEnum_Arch_EArchCountdownActionOutput, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_CountDownOutput_MetaData), Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_CountDownOutput_MetaData) }; // 3259838962
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_LatentInfo = { "LatentInfo", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventCountDown_Parms, LatentInfo), Z_Construct_UScriptStruct_FLatentActionInfo, METADATA_PARAMS(0, nullptr) }; // 2674470931
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_WorldContextObject,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_TotalTime,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_UpdateInterval,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_OutRemainingTime,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_CountDownInput_Underlying,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_CountDownInput,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_CountDownOutput_Underlying,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_CountDownOutput,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::NewProp_LatentInfo,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Arch|BlueprintFunctionLibrary" },
+		{ "ExpandEnumAsExecs", "CountDownInput|CountDownOutput" },
+		{ "Latent", "" },
+		{ "LatentInfo", "LatentInfo" },
+		{ "ModuleRelativePath", "Public/ArchFunctionLibrary.h" },
+		{ "TotalTime", "1.0" },
+		{ "UpdateInterval", "0.1" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UArchFunctionLibrary, nullptr, "CountDown", nullptr, nullptr, Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::PropPointers), sizeof(Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::ArchFunctionLibrary_eventCountDown_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::Function_MetaDataParams), Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::ArchFunctionLibrary_eventCountDown_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UArchFunctionLibrary_CountDown()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchFunctionLibrary_CountDown_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UArchFunctionLibrary_GetRollingLocation_Statics
 	{
 		struct ArchFunctionLibrary_eventGetRollingLocation_Parms
@@ -630,6 +747,56 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics
+	{
+		struct ArchFunctionLibrary_eventRemoveGameplayTagsFromActorIfFound_Parms
+		{
+			AActor* InActor;
+			TArray<FGameplayTag> TagsToRemove;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_InActor;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_TagsToRemove_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_TagsToRemove_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_TagsToRemove;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::NewProp_InActor = { "InActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventRemoveGameplayTagsFromActorIfFound_Parms, InActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::NewProp_TagsToRemove_Inner = { "TagsToRemove", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 2083603574
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::NewProp_TagsToRemove_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::NewProp_TagsToRemove = { "TagsToRemove", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventRemoveGameplayTagsFromActorIfFound_Parms, TagsToRemove), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::NewProp_TagsToRemove_MetaData), Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::NewProp_TagsToRemove_MetaData) }; // 2083603574
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::NewProp_InActor,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::NewProp_TagsToRemove_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::NewProp_TagsToRemove,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Arch|BlueprintFunctionLibrary" },
+		{ "ModuleRelativePath", "Public/ArchFunctionLibrary.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UArchFunctionLibrary, nullptr, "RemoveGameplayTagsFromActorIfFound", nullptr, nullptr, Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::PropPointers), sizeof(Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::ArchFunctionLibrary_eventRemoveGameplayTagsFromActorIfFound_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::Function_MetaDataParams), Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::ArchFunctionLibrary_eventRemoveGameplayTagsFromActorIfFound_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UArchFunctionLibrary);
 	UClass* Z_Construct_UClass_UArchFunctionLibrary_NoRegister()
 	{
@@ -656,11 +823,13 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_BP_DoesActorHaveTag, "BP_DoesActorHaveTag" }, // 3648760990
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_BP_GetPawnCombatComponentFromActorInfo, "BP_GetPawnCombatComponentFromActorInfo" }, // 2941388908
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_ComputeHitReactDirectionTag, "ComputeHitReactDirectionTag" }, // 3594461624
+		{ &Z_Construct_UFunction_UArchFunctionLibrary_CountDown, "CountDown" }, // 4127116964
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_GetRollingLocation, "GetRollingLocation" }, // 3215945004
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_GetScalableFloatValueAtLevel, "GetScalableFloatValueAtLevel" }, // 3692080335
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile, "IsTargetPawnHostile" }, // 2736353021
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_IsValidBlock, "IsValidBlock" }, // 2341234815
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagFromActorIfFound, "RemoveGameplayTagFromActorIfFound" }, // 436120141
+		{ &Z_Construct_UFunction_UArchFunctionLibrary_RemoveGameplayTagsFromActorIfFound, "RemoveGameplayTagsFromActorIfFound" }, // 3003612425
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UArchFunctionLibrary_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -707,9 +876,9 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UArchFunctionLibrary, UArchFunctionLibrary::StaticClass, TEXT("UArchFunctionLibrary"), &Z_Registration_Info_UClass_UArchFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchFunctionLibrary), 630926610U) },
+		{ Z_Construct_UClass_UArchFunctionLibrary, UArchFunctionLibrary::StaticClass, TEXT("UArchFunctionLibrary"), &Z_Registration_Info_UClass_UArchFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchFunctionLibrary), 2360606968U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_3053453927(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_3986326240(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

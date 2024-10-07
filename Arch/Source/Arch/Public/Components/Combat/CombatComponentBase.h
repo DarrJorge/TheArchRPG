@@ -35,11 +35,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Arch|Combat")
 	void ToggleWeaponCollision(bool bShouldEnable, EToggleDamageType ToggleDamageType = EToggleDamageType::EquippedWeapon);
 	
-
 	UFUNCTION(BlueprintCallable, Category="Arch|Combat")
 	float GetCurrentEquippedWeaponDamageAtLevel(float InLevel) const;
 	
-
 	UPROPERTY(BlueprintReadWrite, Category="Arch|Combat")
 	FGameplayTag CurrentEquippedWeaponTag;
 
@@ -49,6 +47,10 @@ public:
 
 protected:
 	TArray<AActor*> OverlappedActors;
+
+	virtual void ToggleEquippedWeaponCollision(bool bShouldEnable);
+	virtual void ToggleLeftUnarmedCollision(bool bShouldEnable);
+	virtual void ToggleRightUnarmedCollision(bool bShouldEnable);
 	
 private:
 	TMap<FGameplayTag, AArchWeaponBase*> CharacterCarriedWeaponMap;

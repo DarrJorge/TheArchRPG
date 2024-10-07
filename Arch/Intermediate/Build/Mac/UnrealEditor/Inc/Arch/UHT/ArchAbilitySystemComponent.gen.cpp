@@ -15,6 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 	ARCH_API UClass* Z_Construct_UClass_UArchAbilitySystemComponent();
 	ARCH_API UClass* Z_Construct_UClass_UArchAbilitySystemComponent_NoRegister();
 	ARCH_API UScriptStruct* Z_Construct_UScriptStruct_FArchHeroAbilitySet();
+	ARCH_API UScriptStruct* Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent();
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayAbilitySpecHandle();
 	GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
@@ -39,11 +40,12 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 	DEFINE_FUNCTION(UArchAbilitySystemComponent::execGrantCharacterWeaponAbilities)
 	{
 		P_GET_TARRAY_REF(FArchHeroAbilitySet,Z_Param_Out_InDefaultWeaponAbilities);
+		P_GET_TARRAY_REF(FArchHeroSpecialAbilitySet,Z_Param_Out_InSpecialWeaponAbilities);
 		P_GET_PROPERTY(FIntProperty,Z_Param_InLevel);
 		P_GET_TARRAY_REF(FGameplayAbilitySpecHandle,Z_Param_Out_OutGrantedAbilitySpecHandles);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->GrantCharacterWeaponAbilities(Z_Param_Out_InDefaultWeaponAbilities,Z_Param_InLevel,Z_Param_Out_OutGrantedAbilitySpecHandles);
+		P_THIS->GrantCharacterWeaponAbilities(Z_Param_Out_InDefaultWeaponAbilities,Z_Param_Out_InSpecialWeaponAbilities,Z_Param_InLevel,Z_Param_Out_OutGrantedAbilitySpecHandles);
 		P_NATIVE_END;
 	}
 	void UArchAbilitySystemComponent::StaticRegisterNativesUArchAbilitySystemComponent()
@@ -61,6 +63,7 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 		struct ArchAbilitySystemComponent_eventGrantCharacterWeaponAbilities_Parms
 		{
 			TArray<FArchHeroAbilitySet> InDefaultWeaponAbilities;
+			TArray<FArchHeroSpecialAbilitySet> InSpecialWeaponAbilities;
 			int32 InLevel;
 			TArray<FGameplayAbilitySpecHandle> OutGrantedAbilitySpecHandles;
 		};
@@ -69,6 +72,11 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_InDefaultWeaponAbilities_MetaData[];
 #endif
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_InDefaultWeaponAbilities;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_InSpecialWeaponAbilities_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_InSpecialWeaponAbilities_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_InSpecialWeaponAbilities;
 		static const UECodeGen_Private::FIntPropertyParams NewProp_InLevel;
 		static const UECodeGen_Private::FStructPropertyParams NewProp_OutGrantedAbilitySpecHandles_Inner;
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_OutGrantedAbilitySpecHandles;
@@ -85,12 +93,21 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InDefaultWeaponAbilities = { "InDefaultWeaponAbilities", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchAbilitySystemComponent_eventGrantCharacterWeaponAbilities_Parms, InDefaultWeaponAbilities), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InDefaultWeaponAbilities_MetaData), Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InDefaultWeaponAbilities_MetaData) }; // 1356227677
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InSpecialWeaponAbilities_Inner = { "InSpecialWeaponAbilities", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet, METADATA_PARAMS(0, nullptr) }; // 3826855879
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InSpecialWeaponAbilities_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InSpecialWeaponAbilities = { "InSpecialWeaponAbilities", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchAbilitySystemComponent_eventGrantCharacterWeaponAbilities_Parms, InSpecialWeaponAbilities), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InSpecialWeaponAbilities_MetaData), Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InSpecialWeaponAbilities_MetaData) }; // 3826855879
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InLevel = { "InLevel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchAbilitySystemComponent_eventGrantCharacterWeaponAbilities_Parms, InLevel), METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_OutGrantedAbilitySpecHandles_Inner = { "OutGrantedAbilitySpecHandles", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FGameplayAbilitySpecHandle, METADATA_PARAMS(0, nullptr) }; // 839298412
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_OutGrantedAbilitySpecHandles = { "OutGrantedAbilitySpecHandles", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchAbilitySystemComponent_eventGrantCharacterWeaponAbilities_Parms, OutGrantedAbilitySpecHandles), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 839298412
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InDefaultWeaponAbilities_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InDefaultWeaponAbilities,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InSpecialWeaponAbilities_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InSpecialWeaponAbilities,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_InLevel,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_OutGrantedAbilitySpecHandles_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities_Statics::NewProp_OutGrantedAbilitySpecHandles,
@@ -225,7 +242,7 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UArchAbilitySystemComponent_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_UArchAbilitySystemComponent_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities, "GrantCharacterWeaponAbilities" }, // 3649410399
+		{ &Z_Construct_UFunction_UArchAbilitySystemComponent_GrantCharacterWeaponAbilities, "GrantCharacterWeaponAbilities" }, // 2986549461
 		{ &Z_Construct_UFunction_UArchAbilitySystemComponent_RemoveGrantedCharacterWeaponAbilities, "RemoveGrantedCharacterWeaponAbilities" }, // 3011072408
 		{ &Z_Construct_UFunction_UArchAbilitySystemComponent_TryActivateAbilityByTag, "TryActivateAbilityByTag" }, // 689944091
 	};
@@ -275,9 +292,9 @@ void EmptyLinkFunctionForGeneratedCodeArchAbilitySystemComponent() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UArchAbilitySystemComponent, UArchAbilitySystemComponent::StaticClass, TEXT("UArchAbilitySystemComponent"), &Z_Registration_Info_UClass_UArchAbilitySystemComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchAbilitySystemComponent), 860642593U) },
+		{ Z_Construct_UClass_UArchAbilitySystemComponent, UArchAbilitySystemComponent::StaticClass, TEXT("UArchAbilitySystemComponent"), &Z_Registration_Info_UClass_UArchAbilitySystemComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchAbilitySystemComponent), 550436703U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_1607654946(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_4169161570(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_ArchAbilitySystemComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

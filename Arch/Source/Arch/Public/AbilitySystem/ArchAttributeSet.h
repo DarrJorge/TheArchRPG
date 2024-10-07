@@ -34,21 +34,40 @@ public:
 	FGameplayAttributeData MaxHealth;
 	ATTRIBUTE_ACCESSORS(UArchAttributeSet, MaxHealth);
 
+	UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_Mana, Category="Vital Attributes")
+	FGameplayAttributeData Mana;
+	ATTRIBUTE_ACCESSORS(UArchAttributeSet, Mana);
+
+	UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_MaxMana, Category="Vital Attributes")
+	FGameplayAttributeData MaxMana;
+	ATTRIBUTE_ACCESSORS(UArchAttributeSet, MaxMana);
+
+	UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_Rage, Category="Vital Attributes")
+	FGameplayAttributeData Rage;
+	ATTRIBUTE_ACCESSORS(UArchAttributeSet, Rage);
+
+	UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_MaxRage, Category="Vital Attributes")
+	FGameplayAttributeData MaxRage;
+	ATTRIBUTE_ACCESSORS(UArchAttributeSet, MaxRage);
+
 	UFUNCTION()
 	void OnRep_Health(const FGameplayAttributeData& OldHealth) const;
 	
 	UFUNCTION()
 	void OnRep_MaxHealth(const FGameplayAttributeData& OldMaxHealth) const;
 
+	UFUNCTION()
+	void OnRep_Mana(const FGameplayAttributeData& OldMana) const;
 	
+	UFUNCTION()
+	void OnRep_MaxMana(const FGameplayAttributeData& OldMaxMana) const;
+	
+	UFUNCTION()
+	void OnRep_Rage(const FGameplayAttributeData& OldRage) const;
 
-	UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_Rage, Category="Secondary Attributes")
-	FGameplayAttributeData Rage;
-	ATTRIBUTE_ACCESSORS(UArchAttributeSet, Rage);
+	UFUNCTION()
+	void OnRep_MaxRage(const FGameplayAttributeData& OldMaxRage) const;
 
-	UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_MaxRage, Category="Secondary Attributes")
-	FGameplayAttributeData MaxRage;
-	ATTRIBUTE_ACCESSORS(UArchAttributeSet, MaxRage);
 
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_PhysicalAttackPower, Category="Secondary Attributes")
 	FGameplayAttributeData PhysicalAttackPower;
@@ -61,12 +80,7 @@ public:
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_DamageTaken, Category="Secondary Attributes")
 	FGameplayAttributeData DamageTaken;
 	ATTRIBUTE_ACCESSORS(UArchAttributeSet, DamageTaken);
-
-	UFUNCTION()
-	void OnRep_Rage(const FGameplayAttributeData& OldRage) const;
-
-	UFUNCTION()
-	void OnRep_MaxRage(const FGameplayAttributeData& OldMaxRage) const;
+	
 
 	UFUNCTION()
 	void OnRep_PhysicalAttackPower(const FGameplayAttributeData& OldPhysicalAttackPower) const;

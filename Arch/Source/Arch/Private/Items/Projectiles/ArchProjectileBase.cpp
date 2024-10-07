@@ -90,6 +90,22 @@ void AArchProjectileBase::OnProjectileHit(UPrimitiveComponent* HitComponent, AAc
 void AArchProjectileBase::OnProjectileBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	if (OverlappedActors.Contains(OtherActor)) return;
+
+	OverlappedActors.AddUnique(OtherActor);
+
+	if (APawn* HitPawn = Cast<APawn>(OtherActor))
+	{
+		if (UArchFunctionLibrary::IsTargetPawnHostile(GetInstigator(), HitPawn))
+		{
+			FGameplayEventData PayloadData;
+			PayloadData.Instigator = GetInstigator();
+			PayloadData.Target = HitPawn;
+			
+			ApplyProjectileDamage(HitPawn, PayloadData);
+		}
+	}
+	
 }
 
 void AArchProjectileBase::ApplyProjectileDamage(APawn* HitPawn, const FGameplayEventData& InPayload)

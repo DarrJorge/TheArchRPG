@@ -21,7 +21,8 @@ public class Arch : ModuleRules
 			"Niagara",
 			"AnimGraphRuntime",
 			"MotionWarping",
-			"ExtendEditorLibrary"
+			"ExtendEditorLibrary",
+			"NavigationSystem"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

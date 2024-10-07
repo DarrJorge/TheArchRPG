@@ -43,4 +43,32 @@ enum class EArchSuccessType : uint8;
 template<> struct TIsUEnumClass<EArchSuccessType> { enum { Value = true }; };
 template<> ARCH_API UEnum* StaticEnum<EArchSuccessType>();
 
+#define FOREACH_ENUM_EARCHDECORATOROPERATIONTYPE(op) \
+	op(EArchDecoratorOperationType::IsLessThan) \
+	op(EArchDecoratorOperationType::IsLessThanOrEqualTo) \
+	op(EArchDecoratorOperationType::IsEqualTo) \
+	op(EArchDecoratorOperationType::IsGreaterOrEqualTo) \
+	op(EArchDecoratorOperationType::IsGreaterThan) 
+
+enum class EArchDecoratorOperationType : uint8;
+template<> struct TIsUEnumClass<EArchDecoratorOperationType> { enum { Value = true }; };
+template<> ARCH_API UEnum* StaticEnum<EArchDecoratorOperationType>();
+
+#define FOREACH_ENUM_EARCHCOUNTDOWNACTIONINPUT(op) \
+	op(EArchCountdownActionInput::Start) \
+	op(EArchCountdownActionInput::Cancel) 
+
+enum class EArchCountdownActionInput : uint8;
+template<> struct TIsUEnumClass<EArchCountdownActionInput> { enum { Value = true }; };
+template<> ARCH_API UEnum* StaticEnum<EArchCountdownActionInput>();
+
+#define FOREACH_ENUM_EARCHCOUNTDOWNACTIONOUTPUT(op) \
+	op(EArchCountdownActionOutput::Updated) \
+	op(EArchCountdownActionOutput::Completed) \
+	op(EArchCountdownActionOutput::Cancelled) 
+
+enum class EArchCountdownActionOutput : uint8;
+template<> struct TIsUEnumClass<EArchCountdownActionOutput> { enum { Value = true }; };
+template<> ARCH_API UEnum* StaticEnum<EArchCountdownActionOutput>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

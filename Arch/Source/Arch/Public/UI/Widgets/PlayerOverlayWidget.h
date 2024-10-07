@@ -17,6 +17,9 @@ protected:
 
 	UFUNCTION(BlueprintImplementableEvent, Category="Arch|UI")
 	void OnRageChangedEvent(float NewValue);
+	
+	UFUNCTION(BlueprintImplementableEvent, Category="Arch|UI")
+	void OnManaChangedEvent(float NewValue);
 
 	UFUNCTION(BlueprintImplementableEvent, Category="Arch|UI")
 	void OnWeaponIconChanged(const TSoftObjectPtr<UTexture2D>& NewTexture);
@@ -29,6 +32,9 @@ private:
 
 	UFUNCTION()
 	void OnRageChangedHandler(float NewValue);
+
+	UFUNCTION()
+	void OnManaChangedHandler(float NewValue);
 
 	UFUNCTION()
 	void OnWeaponIconChangedHandler(TSoftObjectPtr<UTexture2D> InTexture);

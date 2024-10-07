@@ -23,6 +23,16 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroGameplayAbility() {}
 	GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 	UPackage* Z_Construct_UPackage__Script_Arch();
 // End Cross Module References
+	DEFINE_FUNCTION(UArchHeroGameplayAbility::execGetAbilityRemainCooldownByTag)
+	{
+		P_GET_STRUCT(FGameplayTag,Z_Param_InCooldownTag);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_TotalCooldownTime);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_RemainingCooldownTime);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->GetAbilityRemainCooldownByTag(Z_Param_InCooldownTag,Z_Param_Out_TotalCooldownTime,Z_Param_Out_RemainingCooldownTime);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UArchHeroGameplayAbility::execMakeDamageEffectSpecHandle)
 	{
 		P_GET_OBJECT(UClass,Z_Param_EffectClass);
@@ -59,12 +69,65 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroGameplayAbility() {}
 	{
 		UClass* Class = UArchHeroGameplayAbility::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetAbilityRemainCooldownByTag", &UArchHeroGameplayAbility::execGetAbilityRemainCooldownByTag },
 			{ "GetHeroCharacterFromActorInfo", &UArchHeroGameplayAbility::execGetHeroCharacterFromActorInfo },
 			{ "GetHeroCombatComponentFromActorInfo", &UArchHeroGameplayAbility::execGetHeroCombatComponentFromActorInfo },
 			{ "GetHeroControllerFromActorInfo", &UArchHeroGameplayAbility::execGetHeroControllerFromActorInfo },
 			{ "MakeDamageEffectSpecHandle", &UArchHeroGameplayAbility::execMakeDamageEffectSpecHandle },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics
+	{
+		struct ArchHeroGameplayAbility_eventGetAbilityRemainCooldownByTag_Parms
+		{
+			FGameplayTag InCooldownTag;
+			float TotalCooldownTime;
+			float RemainingCooldownTime;
+			bool ReturnValue;
+		};
+		static const UECodeGen_Private::FStructPropertyParams NewProp_InCooldownTag;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_TotalCooldownTime;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_RemainingCooldownTime;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::NewProp_InCooldownTag = { "InCooldownTag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchHeroGameplayAbility_eventGetAbilityRemainCooldownByTag_Parms, InCooldownTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 2083603574
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::NewProp_TotalCooldownTime = { "TotalCooldownTime", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchHeroGameplayAbility_eventGetAbilityRemainCooldownByTag_Parms, TotalCooldownTime), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::NewProp_RemainingCooldownTime = { "RemainingCooldownTime", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchHeroGameplayAbility_eventGetAbilityRemainCooldownByTag_Parms, RemainingCooldownTime), METADATA_PARAMS(0, nullptr) };
+	void Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((ArchHeroGameplayAbility_eventGetAbilityRemainCooldownByTag_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ArchHeroGameplayAbility_eventGetAbilityRemainCooldownByTag_Parms), &Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::NewProp_InCooldownTag,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::NewProp_TotalCooldownTime,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::NewProp_RemainingCooldownTime,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Arch|Ability" },
+		{ "ModuleRelativePath", "Public/AbilitySystem/Abilities/ArchHeroGameplayAbility.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UArchHeroGameplayAbility, nullptr, "GetAbilityRemainCooldownByTag", nullptr, nullptr, Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::PropPointers), sizeof(Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::ArchHeroGameplayAbility_eventGetAbilityRemainCooldownByTag_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::Function_MetaDataParams), Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::ArchHeroGameplayAbility_eventGetAbilityRemainCooldownByTag_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics
 	{
@@ -251,6 +314,7 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroGameplayAbility() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UArchHeroGameplayAbility_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_UArchHeroGameplayAbility_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UArchHeroGameplayAbility_GetAbilityRemainCooldownByTag, "GetAbilityRemainCooldownByTag" }, // 1391323673
 		{ &Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroCharacterFromActorInfo, "GetHeroCharacterFromActorInfo" }, // 690084308
 		{ &Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroCombatComponentFromActorInfo, "GetHeroCombatComponentFromActorInfo" }, // 333524871
 		{ &Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroControllerFromActorInfo, "GetHeroControllerFromActorInfo" }, // 3177349038
@@ -301,9 +365,9 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroGameplayAbility() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UArchHeroGameplayAbility, UArchHeroGameplayAbility::StaticClass, TEXT("UArchHeroGameplayAbility"), &Z_Registration_Info_UClass_UArchHeroGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchHeroGameplayAbility), 3260039204U) },
+		{ Z_Construct_UClass_UArchHeroGameplayAbility, UArchHeroGameplayAbility::StaticClass, TEXT("UArchHeroGameplayAbility"), &Z_Registration_Info_UClass_UArchHeroGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchHeroGameplayAbility), 3697385788U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_494911193(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_2088992321(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

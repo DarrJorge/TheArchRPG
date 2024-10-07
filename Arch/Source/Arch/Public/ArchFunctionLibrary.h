@@ -34,6 +34,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Arch|BlueprintFunctionLibrary")
 	static void RemoveGameplayTagFromActorIfFound(AActor* InActor, FGameplayTag TagToRemove);
 
+	UFUNCTION(BlueprintCallable, Category="Arch|BlueprintFunctionLibrary")
+	static void RemoveGameplayTagsFromActorIfFound(AActor* InActor, const TArray<FGameplayTag>& TagsToRemove);
+
 	static bool NativeActorHasTag(AActor* InActor, FGameplayTag TagToCheck);
 
 	UFUNCTION(BlueprintCallable, Category="Arch|BlueprintFunctionLibrary", meta=(DisplayName="Does Actor Have Tag", ExpandEnumAsExecs="OutConfirmType"))
@@ -65,6 +68,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category="Arch|BlueprintFunctionLibrary")
 	static bool ApplyGameplayEffectSpecHandleToTarget(AActor* InInstigator, AActor* InTargetActor, const FGameplayEffectSpecHandle& InSpecHandle);
+
+	UFUNCTION(BlueprintCallable, Category="Arch|BlueprintFunctionLibrary", meta=(Latent, WorldContext = "WorldContextObject", LatentInfo="LatentInfo", ExpandEnumAsExecs="CountDownInput|CountDownOutput", TotalTime="1.0", UpdateInterval="0.1"))
+	static void CountDown(const UObject* WorldContextObject, float TotalTime, float UpdateInterval, float& OutRemainingTime,
+		EArchCountdownActionInput CountDownInput, UPARAM(DisplayName="Out") EArchCountdownActionOutput& CountDownOutput, FLatentActionInfo LatentInfo);
 
 private:
 	static void ComputeNormalizeAngleBetweenTwoActors(AActor* Source, AActor* Target, float& OutAngleDifference);

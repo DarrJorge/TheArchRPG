@@ -29,6 +29,9 @@ public:
 	FGameplayEffectSpecHandle MakeDamageEffectSpecHandle(TSubclassOf<UGameplayEffect> EffectClass, float WeaponBaseDamage,
 		FGameplayTag AttackTag, int32 UsedComboCount);
 
+	UFUNCTION(BlueprintCallable, Category="Arch|Ability")
+	bool GetAbilityRemainCooldownByTag(FGameplayTag InCooldownTag, float& TotalCooldownTime, float& RemainingCooldownTime);
+
 private:
 	TWeakObjectPtr<AArchHeroCharacter> CachedHeroCharacter;
 	TWeakObjectPtr<AArchPlayerController> CachedHeroController;

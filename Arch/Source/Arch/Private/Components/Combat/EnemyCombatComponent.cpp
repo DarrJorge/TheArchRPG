@@ -5,6 +5,8 @@
 #include "AbilitySystemBlueprintLibrary.h"
 #include "ArchFunctionLibrary.h"
 #include "ArchGameplayTags.h"
+#include "Characters/ArchEnemyCharacter.h"
+#include "Components/BoxComponent.h"
 
 void UEnemyCombatComponent::OnHitTargetActor(AActor* HitActor)
 {
@@ -34,4 +36,26 @@ void UEnemyCombatComponent::OnHitTargetActor(AActor* HitActor)
 		TargetActor,
 		EventTag,
 		PayloadData);
+}
+
+void UEnemyCombatComponent::ToggleLeftUnarmedCollision(bool bShouldEnable)
+{
+	const auto OwnerCharacter = GetOwningPawn<AArchEnemyCharacter>();
+	if (!OwnerCharacter) return;
+
+	const auto LeftHandCollisionBox = OwnerCharacter->GetLeftHandCollisionBox();
+	if (!LeftHandCollisionBox) return;
+
+	LeftHandCollisionBox->SetCollisionEnabled(bShouldEnable ? ECollisionEnabled::QueryOnly : ECollisionEnabled::NoCollision);
+}
+
+void UEnemyCombatComponent::ToggleRightUnarmedCollision(bool bShouldEnable)
+{
+	const auto OwnerCharacter = GetOwningPawn<AArchEnemyCharacter>();
+	if (!OwnerCharacter) return;
+
+	const auto RightHandCollisionBox = OwnerCharacter->GetRightHandCollisionBox();
+	if (!RightHandCollisionBox) return;
+
+	RightHandCollisionBox->SetCollisionEnabled(bShouldEnable ? ECollisionEnabled::QueryOnly : ECollisionEnabled::NoCollision);
 }

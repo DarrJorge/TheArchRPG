@@ -12,10 +12,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
 class APawn;
 class UCombatComponentBase;
+class UObject;
 enum class EArchConfirmType : uint8;
+enum class EArchCountdownActionInput : uint8;
+enum class EArchCountdownActionOutput : uint8;
 enum class EArchValidType : uint8;
 struct FGameplayEffectSpecHandle;
 struct FGameplayTag;
+struct FLatentActionInfo;
 struct FScalableFloat;
 #ifdef ARCH_ArchFunctionLibrary_generated_h
 #error "ArchFunctionLibrary.generated.h already included, missing '#pragma once' in ArchFunctionLibrary.h"
@@ -27,6 +31,7 @@ struct FScalableFloat;
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_26_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execCountDown); \
 	DECLARE_FUNCTION(execApplyGameplayEffectSpecHandleToTarget); \
 	DECLARE_FUNCTION(execIsValidBlock); \
 	DECLARE_FUNCTION(execComputeHitReactDirectionTag); \
@@ -35,6 +40,7 @@ struct FScalableFloat;
 	DECLARE_FUNCTION(execIsTargetPawnHostile); \
 	DECLARE_FUNCTION(execBP_GetPawnCombatComponentFromActorInfo); \
 	DECLARE_FUNCTION(execBP_DoesActorHaveTag); \
+	DECLARE_FUNCTION(execRemoveGameplayTagsFromActorIfFound); \
 	DECLARE_FUNCTION(execRemoveGameplayTagFromActorIfFound); \
 	DECLARE_FUNCTION(execAddGameplayTagToActorIfNone);
 

@@ -14,8 +14,10 @@ void EmptyLinkFunctionForGeneratedCodeArchStructTypes() {}
 	ARCH_API UClass* Z_Construct_UClass_UArchGameplayAbility_NoRegister();
 	ARCH_API UClass* Z_Construct_UClass_UArchHeroLinkedAnimLayer_NoRegister();
 	ARCH_API UScriptStruct* Z_Construct_UScriptStruct_FArchHeroAbilitySet();
+	ARCH_API UScriptStruct* Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet();
 	ARCH_API UScriptStruct* Z_Construct_UScriptStruct_FArchWeaponData();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	ENGINE_API UClass* Z_Construct_UClass_UMaterialInstance_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FScalableFloat();
@@ -103,6 +105,90 @@ template<> ARCH_API UScriptStruct* StaticStruct<FArchHeroAbilitySet>()
 		}
 		return Z_Registration_Info_UScriptStruct_ArchHeroAbilitySet.InnerSingleton;
 	}
+
+static_assert(std::is_polymorphic<FArchHeroSpecialAbilitySet>() == std::is_polymorphic<FArchHeroAbilitySet>(), "USTRUCT FArchHeroSpecialAbilitySet cannot be polymorphic unless super FArchHeroAbilitySet is polymorphic");
+
+	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ArchHeroSpecialAbilitySet;
+class UScriptStruct* FArchHeroSpecialAbilitySet::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_ArchHeroSpecialAbilitySet.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_ArchHeroSpecialAbilitySet.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet, (UObject*)Z_Construct_UPackage__Script_Arch(), TEXT("ArchHeroSpecialAbilitySet"));
+	}
+	return Z_Registration_Info_UScriptStruct_ArchHeroSpecialAbilitySet.OuterSingleton;
+}
+template<> ARCH_API UScriptStruct* StaticStruct<FArchHeroSpecialAbilitySet>()
+{
+	return FArchHeroSpecialAbilitySet::StaticStruct();
+}
+	struct Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_AbilityIconMaterial_MetaData[];
+#endif
+		static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_AbilityIconMaterial;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_AbilityCooldownTag_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_AbilityCooldownTag;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UECodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/ArchTypes/ArchStructTypes.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FArchHeroSpecialAbilitySet>();
+	}
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::NewProp_AbilityIconMaterial_MetaData[] = {
+		{ "Category", "ArchHeroSpecialAbilitySet" },
+		{ "ModuleRelativePath", "Public/ArchTypes/ArchStructTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::NewProp_AbilityIconMaterial = { "AbilityIconMaterial", nullptr, (EPropertyFlags)0x0014000000010015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FArchHeroSpecialAbilitySet, AbilityIconMaterial), Z_Construct_UClass_UMaterialInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::NewProp_AbilityIconMaterial_MetaData), Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::NewProp_AbilityIconMaterial_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::NewProp_AbilityCooldownTag_MetaData[] = {
+		{ "Categories", "Player.Cooldown" },
+		{ "Category", "ArchHeroSpecialAbilitySet" },
+		{ "ModuleRelativePath", "Public/ArchTypes/ArchStructTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::NewProp_AbilityCooldownTag = { "AbilityCooldownTag", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FArchHeroSpecialAbilitySet, AbilityCooldownTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::NewProp_AbilityCooldownTag_MetaData), Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::NewProp_AbilityCooldownTag_MetaData) }; // 2083603574
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::NewProp_AbilityIconMaterial,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::NewProp_AbilityCooldownTag,
+	};
+	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_Arch,
+		Z_Construct_UScriptStruct_FArchHeroAbilitySet,
+		&NewStructOps,
+		"ArchHeroSpecialAbilitySet",
+		Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::PropPointers),
+		sizeof(FArchHeroSpecialAbilitySet),
+		alignof(FArchHeroSpecialAbilitySet),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::Struct_MetaDataParams)
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::PropPointers) < 2048);
+	UScriptStruct* Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet()
+	{
+		if (!Z_Registration_Info_UScriptStruct_ArchHeroSpecialAbilitySet.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_ArchHeroSpecialAbilitySet.InnerSingleton, Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::ReturnStructParams);
+		}
+		return Z_Registration_Info_UScriptStruct_ArchHeroSpecialAbilitySet.InnerSingleton;
+	}
 	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ArchWeaponData;
 class UScriptStruct* FArchWeaponData::StaticStruct()
 {
@@ -135,6 +221,11 @@ template<> ARCH_API UScriptStruct* StaticStruct<FArchWeaponData>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DefaultWeaponAbilities_MetaData[];
 #endif
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_DefaultWeaponAbilities;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_SpecialWeaponAbilities_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpecialWeaponAbilities_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_SpecialWeaponAbilities;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_WeaponBaseDamage_MetaData[];
 #endif
@@ -179,6 +270,15 @@ template<> ARCH_API UScriptStruct* StaticStruct<FArchWeaponData>()
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_DefaultWeaponAbilities = { "DefaultWeaponAbilities", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FArchWeaponData, DefaultWeaponAbilities), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_DefaultWeaponAbilities_MetaData), Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_DefaultWeaponAbilities_MetaData) }; // 1356227677
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_SpecialWeaponAbilities_Inner = { "SpecialWeaponAbilities", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet, METADATA_PARAMS(0, nullptr) }; // 3826855879
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_SpecialWeaponAbilities_MetaData[] = {
+		{ "Category", "ArchWeaponData" },
+		{ "ModuleRelativePath", "Public/ArchTypes/ArchStructTypes.h" },
+		{ "TitleProperty", "InputTag" },
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_SpecialWeaponAbilities = { "SpecialWeaponAbilities", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FArchWeaponData, SpecialWeaponAbilities), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_SpecialWeaponAbilities_MetaData), Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_SpecialWeaponAbilities_MetaData) }; // 3826855879
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_WeaponBaseDamage_MetaData[] = {
 		{ "Category", "ArchWeaponData" },
@@ -198,6 +298,8 @@ template<> ARCH_API UScriptStruct* StaticStruct<FArchWeaponData>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_WeaponMappingContext,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_DefaultWeaponAbilities_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_DefaultWeaponAbilities,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_SpecialWeaponAbilities_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_SpecialWeaponAbilities,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_WeaponBaseDamage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewProp_WeaponIconTexture,
 	};
@@ -229,9 +331,10 @@ template<> ARCH_API UScriptStruct* StaticStruct<FArchWeaponData>()
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchTypes_ArchStructTypes_h_Statics::ScriptStructInfo[] = {
 		{ FArchHeroAbilitySet::StaticStruct, Z_Construct_UScriptStruct_FArchHeroAbilitySet_Statics::NewStructOps, TEXT("ArchHeroAbilitySet"), &Z_Registration_Info_UScriptStruct_ArchHeroAbilitySet, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FArchHeroAbilitySet), 1356227677U) },
-		{ FArchWeaponData::StaticStruct, Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewStructOps, TEXT("ArchWeaponData"), &Z_Registration_Info_UScriptStruct_ArchWeaponData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FArchWeaponData), 2679449712U) },
+		{ FArchHeroSpecialAbilitySet::StaticStruct, Z_Construct_UScriptStruct_FArchHeroSpecialAbilitySet_Statics::NewStructOps, TEXT("ArchHeroSpecialAbilitySet"), &Z_Registration_Info_UScriptStruct_ArchHeroSpecialAbilitySet, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FArchHeroSpecialAbilitySet), 3826855879U) },
+		{ FArchWeaponData::StaticStruct, Z_Construct_UScriptStruct_FArchWeaponData_Statics::NewStructOps, TEXT("ArchWeaponData"), &Z_Registration_Info_UScriptStruct_ArchWeaponData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FArchWeaponData), 891825158U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchTypes_ArchStructTypes_h_2770726186(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchTypes_ArchStructTypes_h_941639358(TEXT("/Script/Arch"),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchTypes_ArchStructTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchTypes_ArchStructTypes_h_Statics::ScriptStructInfo),
 		nullptr, 0);

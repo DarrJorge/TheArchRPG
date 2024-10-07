@@ -17,12 +17,13 @@ public:
 	void OnAbilityInputReleased(const FGameplayTag& InInputTag);
 
 	UFUNCTION(BlueprintCallable, Category="Arch|Ability", meta=(InLevel="1"))
-	void GrantCharacterWeaponAbilities(const TArray<FArchHeroAbilitySet>& InDefaultWeaponAbilities, int32 InLevel,
-		TArray<FGameplayAbilitySpecHandle>& OutGrantedAbilitySpecHandles);
+	void GrantCharacterWeaponAbilities(const TArray<FArchHeroAbilitySet>& InDefaultWeaponAbilities, const TArray<FArchHeroSpecialAbilitySet>& InSpecialWeaponAbilities,
+		int32 InLevel, TArray<FGameplayAbilitySpecHandle>& OutGrantedAbilitySpecHandles);
 
 	UFUNCTION(BlueprintCallable, Category="Arch|Ability")
 	void RemoveGrantedCharacterWeaponAbilities(UPARAM(ref) TArray<FGameplayAbilitySpecHandle>& InGrantedAbilitySpecHandles);
 	
 	UFUNCTION(BlueprintCallable, Category="Arch|Ability")
 	bool TryActivateAbilityByTag(const FGameplayTag& InAbilityTag);
+	
 };

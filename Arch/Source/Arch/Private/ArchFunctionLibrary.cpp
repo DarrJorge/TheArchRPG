@@ -9,6 +9,7 @@
 #include "GenericTeamAgentInterface.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "ArchTypes/ArchCountDownAction.h"
 
 #include "Debug/ArchDebugHelper.h"
 
@@ -37,6 +38,21 @@ void UArchFunctionLibrary::RemoveGameplayTagFromActorIfFound(AActor* InActor, FG
 	if (ArchASC->HasMatchingGameplayTag(TagToRemove))
 	{
 		ArchASC->RemoveLooseGameplayTag(TagToRemove);
+	}
+}
+
+void UArchFunctionLibrary::RemoveGameplayTagsFromActorIfFound(AActor* InActor, const TArray<FGameplayTag>& TagsToRemove)
+{
+	if (TagsToRemove.IsEmpty()) return;
+
+	UArchAbilitySystemComponent* ArchASC = NativeGetArchASCFromActor(InActor);
+
+	for (FGameplayTag Tag : TagsToRemove)
+	{
+		if (ArchASC->HasMatchingGameplayTag(Tag))
+		{
+			ArchASC->RemoveLooseGameplayTag(Tag);
+		}
 	}
 }
 
@@ -178,4 +194,31 @@ bool UArchFunctionLibrary::ApplyGameplayEffectSpecHandleToTarget(AActor* InInsti
 	UArchAbilitySystemComponent* TargetASC = NativeGetArchASCFromActor(InTargetActor);
 	const FActiveGameplayEffectHandle ActiveEffectHandle = SourceASC->ApplyGameplayEffectSpecToTarget(*InSpecHandle.Data, TargetASC);
 	return ActiveEffectHandle.WasSuccessfullyApplied();
+}
+
+void UArchFunctionLibrary::CountDown(const UObject* WorldContextObject, float TotalTime, float UpdateInterval,
+	float& OutRemainingTime, EArchCountdownActionInput CountDownInput,  UPARAM(DisplayName="Out") EArchCountdownActionOutput& CountDownOutput,
+	FLatentActionInfo LatentInfo)
+{
+	if (!GEngine) return;
+	
+	UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull);
+	if (!World) return;
+
+	FLatentActionManager& LatentActionManager = World->GetLatentActionManager();
+	FArchCountDownAction* FoundAction = LatentActionManager.FindExistingAction<FArchCountDownAction>(LatentInfo.CallbackTarget, LatentInfo.UUID);
+
+	if (CountDownInput == EArchCountdownActionInput::Start && !FoundAction)
+	{
+		LatentActionManager.AddNewAction(
+			LatentInfo.CallbackTarget,
+			LatentInfo.UUID,
+			new FArchCountDownAction(TotalTime, UpdateInterval, OutRemainingTime, CountDownOutput, LatentInfo)
+			);
+	}
+
+	if (CountDownInput == EArchCountdownActionInput::Cancel && FoundAction)
+	{
+		FoundAction->CancelAction();
+	}
 }

@@ -21,6 +21,10 @@ namespace ArchGameplayTags
 
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_Toggleable);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_Toggleable_TargetLock);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_Toggleable_Rage);
+
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_SpecialWeaponAbility_Light);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_SpecialWeaponAbility_Heavy);
 
 	/** Items Tags **/
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Item_Weapon_Axe);
@@ -35,11 +39,24 @@ namespace ArchGameplayTags
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Roll);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Block);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_TargetLock);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Rage);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_SpecialWeaponAbility_Light);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_SpecialWeaponAbility_Heavy);
+
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Cooldown_SpecialWeaponAbility_Light);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Cooldown_SpecialWeaponAbility_Heavy);
 
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Status_JumpToFinisher);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Status_Rolling);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Status_Blocking);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Status_TargetLock);
+	
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Status_Rage_None);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Status_Rage_Full);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Status_Rage_Activating);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Status_Rage_Active);
+
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Event_ActivateRage);
 	
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_SetByCaller_AttackType_Light);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_SetByCaller_AttackType_Heavy);
@@ -49,8 +66,10 @@ namespace ArchGameplayTags
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Weapon_Melee);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Weapon_Range);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Strafing);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Summon);
 
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Status_Unblockable);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Event_SummonEnemies);
 	
 	/** Game Events Tags **/
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Event_Montage_Equip_Axe);
@@ -77,5 +96,6 @@ namespace ArchGameplayTags
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Status_HitReact_Left);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Status_HitReact_Right);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Status_HitReact_Back);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Status_Invincible);
 	
 }

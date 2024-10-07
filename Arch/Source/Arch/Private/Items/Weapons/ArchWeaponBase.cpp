@@ -2,11 +2,9 @@
 
 
 #include "Items/Weapons/ArchWeaponBase.h"
-
 #include "ArchFunctionLibrary.h"
 #include "Components/BoxComponent.h"
 
-#include "Debug/ArchDebugHelper.h"
 
 AArchWeaponBase::AArchWeaponBase() : Super()
 {

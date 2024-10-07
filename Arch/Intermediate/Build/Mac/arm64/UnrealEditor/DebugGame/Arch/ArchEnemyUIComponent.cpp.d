@@ -3851,6 +3851,124 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/ArchEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.NonOptimized.Cpp20.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/ArchEditor/DebugGame/UnrealEd/SharedDefinitions.UnrealEd.NonOptimized.Cpp20.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/UnrealEdSharedPCH.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Messaging/Public/IMessageContext.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/CoreUObject/Public/AssetRegistry/ARFilter.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Public/BlueprintNodeSignature.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Classes/K2Node.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Public/BlueprintActionFilter.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Public/BlueprintGraphModule.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Classes/BlueprintNodeBinder.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/CoreUObject/Public/UObject/WeakFieldPtr.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/BlueprintGraph/UHT/K2Node.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Classes/EdGraphSchema_K2.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/BlueprintGraph/UHT/EdGraphSchema_K2.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_EditablePinBase.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/BlueprintGraph/UHT/K2Node_EditablePinBase.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/GameplayTasks/Classes/GameplayTaskOwnerInterface.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/GameplayTasks/Public/GameplayTaskTypes.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTasks/UHT/GameplayTaskOwnerInterface.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/GameplayTasks/Classes/GameplayTask.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/CoreUObject/Public/UObject/WeakInterfacePtr.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/GameplayTasks/UHT/GameplayTask.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/NavigationSystem/Public/NavFilters/NavigationQueryFilter.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/NavigationSystem/Public/NavAreas/NavArea.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/AI/Navigation/NavAreaBase.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NavAreaBase.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/NavigationSystem/UHT/NavArea.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/NavigationSystem/UHT/NavigationQueryFilter.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/AssetThumbnail.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/TickableEditorObject.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Editor.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Editor/EditorEngine.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/TypedElementFramework/Public/Elements/Framework/TypedElementHandle.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/TypedElementFramework/Public/Elements/Framework/TypedElementData.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/TypedElementFramework/Public/Elements/Framework/TypedElementId.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/TypedElementFramework/Public/Elements/Framework/TypedElementLimits.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/TypedElementFramework/UHT/TypedElementHandle.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/TargetPlatform/Public/Interfaces/ITargetPlatform.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/TargetPlatform/Public/Interfaces/ITargetDevice.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/TargetPlatform/Public/Interfaces/TargetDeviceId.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/TargetPlatform/Public/Interfaces/ITargetDeviceSocket.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/TargetPlatform/Public/Interfaces/ITargetPlatformManagerModule.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/PlayInEditorDataTypes.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/PlayInEditorDataTypes.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/EditorSubsystem/Public/EditorSubsystem.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/EditorSubsystem/UHT/EditorSubsystem.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Editor/AssetReferenceFilter.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/EditorEngine.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Editor/UnrealEdTypes.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/UnrealEdTypes.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Subsystems/ImportSubsystem.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/ImportSubsystem.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/EditorComponents.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/EditorUndoClient.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/EditorViewportClient.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/EditorFramework/Public/UnrealWidgetFwd.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Factories/Factory.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/Factory.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/GraphEditor.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/ScopedTransaction.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Settings/EditorLoadingSavingSettings.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/EditorLoadingSavingSettings.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Settings/LevelEditorPlaySettings.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Settings/LevelEditorPlayNetworkEmulationSettings.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/PropertyEditor/Public/IPropertyTypeCustomization.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/PropertyEditor/Public/PropertyHandle.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/PropertyEditor/Public/PropertyEditorModule.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/PropertyEditor/Public/IDetailsView.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/PropertyEditor/Public/PropertyEditorDelegates.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/PropertyEditor/Public/DetailsViewArgs.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/LevelEditorPlayNetworkEmulationSettings.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuContext.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuContext.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/LevelEditorPlaySettings.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/Settings/LevelEditorViewportSettings.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Viewports.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/LevelEditorViewportSettings.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Toolkits/AssetEditorToolkit.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/EditorFramework/Public/Toolkits/IToolkit.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/EditorFramework/Public/Toolkits/IToolkitHost.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Toolkits/BaseToolkit.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/WidgetRegistration/Public/ToolkitBuilder.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/WidgetRegistration/Public/FToolkitWidgetStyle.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/SlateCore/Public/Styling/StyleColors.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/SlateCore/UHT/StyleColors.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/WidgetRegistration/UHT/FToolkitWidgetStyle.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Slate/Public/Framework/MultiBox/SToolBarButtonBlock.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/WidgetRegistration/Public/ToolElementRegistry.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/WidgetRegistration/Public/ToolkitBuilderConfig.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/WidgetRegistration/UHT/ToolkitBuilderConfig.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenus.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/IToolMenusModule.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenu.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuOwner.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuOwner.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuDelegates.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuMisc.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuMisc.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuDelegates.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuSection.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuEntry.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuEntry.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuSection.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Slate/Public/Framework/MultiBox/ToolMenuBase.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Core/Public/Misc/NamePermissionList.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/Slate/UHT/ToolMenuBase.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenu.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/ToolMenus/Public/ToolMenuEntryScript.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenuEntryScript.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/ToolMenus/UHT/ToolMenus.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/EditorFramework/Public/Tools/Modes.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/UnrealEdMisc.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Subsystems/AssetEditorSubsystem.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Developer/AssetTools/Public/AssetTypeActivationOpenedMethod.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/AssetTools/UHT/AssetTypeActivationOpenedMethod.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/MRUFavoritesList.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/MRUList.h \
+  /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/../Intermediate/Build/Mac/UnrealEditor/Inc/UnrealEd/UHT/AssetEditorSubsystem.generated.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Private/Components/UI/ArchEnemyUIComponent.cpp \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/arm64/UnrealEditor/DebugGame/Arch/Definitions.Arch.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/Components/UI/ArchEnemyUIComponent.h \
@@ -3862,4 +3980,69 @@
   Runtime/CoreUObject/Public/UObject/ObjectMacros.h \
   Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
   /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchUIComponentBase.generated.h \
-  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchEnemyUIComponent.generated.h
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchEnemyUIComponent.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Source/Arch/Public/UI/Widgets/ArchUserWidget.h \
+  Runtime/UMG/Public/Blueprint/UserWidget.h \
+  Runtime/UMG/Public/Blueprint/WidgetChild.h \
+  Runtime/CoreUObject/Public/UObject/Object.h \
+  Runtime/CoreUObject/Public/UObject/WeakObjectPtr.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/WidgetChild.generated.h \
+  Runtime/CoreUObject/Public/UObject/ObjectSaveContext.h \
+  Runtime/Core/Public/Containers/UnrealString.h \
+  Runtime/Core/Public/HAL/Platform.h \
+  Runtime/CoreUObject/Public/UObject/ObjectSaveOverride.h \
+  Runtime/Core/Public/Containers/Array.h \
+  Runtime/CoreUObject/Public/UObject/FieldPath.h \
+  Runtime/SlateCore/Public/Styling/SlateColor.h \
+  Runtime/SlateCore/Public/Layout/Geometry.h \
+  Runtime/SlateCore/Public/Input/CursorReply.h \
+  Runtime/SlateCore/Public/Input/Events.h \
+  Runtime/SlateCore/Public/Input/Reply.h \
+  Runtime/SlateCore/Public/Widgets/SWidget.h \
+  Runtime/SlateCore/Public/Layout/Margin.h \
+  Runtime/UMG/Public/Components/SlateWrapperTypes.h \
+  Runtime/Core/Public/Misc/Attribute.h \
+  Runtime/Slate/Public/Widgets/Input/IVirtualKeyboardEntry.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/SlateWrapperTypes.generated.h \
+  Runtime/UMG/Public/Components/Widget.h \
+  Runtime/FieldNotification/Public/FieldNotificationDeclaration.h \
+  Runtime/FieldNotification/Public/FieldNotificationId.h \
+  Runtime/FieldNotification/Public/IFieldNotificationClassDescriptor.h \
+  Runtime/FieldNotification/Public/INotifyFieldValueChanged.h \
+  Runtime/CoreUObject/Public/UObject/Interface.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/FieldNotification/UHT/INotifyFieldValueChanged.generated.h \
+  Runtime/CoreUObject/Public/Templates/SubclassOf.h \
+  Runtime/SlateCore/Public/Layout/Visibility.h \
+  Runtime/SlateCore/Public/Types/SlateStructs.h \
+  Runtime/UMG/Public/Components/Visual.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/Visual.generated.h \
+  Runtime/SlateCore/Public/Styling/SlateBrush.h \
+  Runtime/CoreUObject/Public/UObject/TextProperty.h \
+  Runtime/UMG/Public/Slate/WidgetTransform.h \
+  Runtime/Core/Public/Math/TransformCalculus2D.h \
+  Runtime/SlateCore/Public/Rendering/SlateRenderTransform.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/WidgetTransform.generated.h \
+  Runtime/CoreUObject/Public/UObject/UObjectThreadContext.h \
+  Runtime/Engine/Classes/GameFramework/PlayerController.h \
+  Runtime/UMG/Public/Blueprint/WidgetNavigation.h \
+  Runtime/SlateCore/Public/Types/NavigationMetaData.h \
+  Runtime/SlateCore/Public/Types/SlateEnums.h \
+  Runtime/SlateCore/Public/Input/NavigationReply.h \
+  Runtime/SlateCore/Public/Types/ISlateMetaData.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/WidgetNavigation.generated.h \
+  Runtime/SlateCore/Public/Widgets/WidgetPixelSnapping.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/Widget.generated.h \
+  Runtime/UMG/Public/Components/NamedSlotInterface.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/NamedSlotInterface.generated.h \
+  Runtime/Engine/Classes/Engine/World.h \
+  Runtime/Engine/Classes/Engine/LocalPlayer.h \
+  Runtime/Slate/Public/Widgets/Layout/Anchors.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Slate/UHT/Anchors.generated.h \
+  Runtime/Core/Public/Logging/MessageLog.h \
+  Runtime/Core/Public/Stats/Stats.h Runtime/Engine/Public/EngineStats.h \
+  Runtime/SlateCore/Public/SlateGlobals.h \
+  Runtime/UMG/Public/Animation/WidgetAnimationEvents.h \
+  Runtime/Core/Public/Delegates/DelegateCombinations.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/WidgetAnimationEvents.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/UMG/UHT/UserWidget.generated.h \
+  /Users/darr_jorge/Projects/Unreal/TheArchRPG/Arch/Intermediate/Build/Mac/UnrealEditor/Inc/Arch/UHT/ArchUserWidget.generated.h

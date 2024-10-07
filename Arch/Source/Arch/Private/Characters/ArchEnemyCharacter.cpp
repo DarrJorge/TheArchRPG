@@ -3,6 +3,8 @@
 
 #include "Characters/ArchEnemyCharacter.h"
 
+#include "ArchFunctionLibrary.h"
+#include "Components/BoxComponent.h"
 #include "Components/WidgetComponent.h"
 #include "Components/Combat/EnemyCombatComponent.h"
 #include "Components/UI/ArchEnemyUIComponent.h"
@@ -30,6 +32,16 @@ AArchEnemyCharacter::AArchEnemyCharacter()
 	
 	HealthWidgetComponent = CreateDefaultSubobject<UWidgetComponent>("HealthWidgetComponent");
 	HealthWidgetComponent->SetupAttachment(GetMesh());
+
+	LeftHandCollisionBox = CreateDefaultSubobject<UBoxComponent>("LeftHandCollisionBox");
+	LeftHandCollisionBox->SetupAttachment(GetMesh());
+	LeftHandCollisionBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	LeftHandCollisionBox->OnComponentBeginOverlap.AddUniqueDynamic(this, &AArchEnemyCharacter::OnUnarmedCollisionBeginOverlap);
+
+	RightHandCollisionBox = CreateDefaultSubobject<UBoxComponent>("RightHandCollisionBox");
+	RightHandCollisionBox->SetupAttachment(GetMesh());
+	RightHandCollisionBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	RightHandCollisionBox->OnComponentBeginOverlap.AddUniqueDynamic(this, &AArchEnemyCharacter::OnUnarmedCollisionBeginOverlap);
 }
 
 void AArchEnemyCharacter::BeginPlay()
@@ -47,6 +59,34 @@ void AArchEnemyCharacter::PossessedBy(AController* NewController)
 	Super::PossessedBy(NewController);
 	InitStartUpData();
 }
+
+void AArchEnemyCharacter::OnUnarmedCollisionBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	APawn* HitPawn = Cast<APawn>(OtherActor);
+	if (!HitPawn || !UArchFunctionLibrary::IsTargetPawnHostile(this, HitPawn))
+	{
+		return;
+	}
+	EnemyCombatComponent->OnHitTargetActor(HitPawn);
+}
+
+#if WITH_EDITOR	
+void AArchEnemyCharacter::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
+{
+	Super::PostEditChangeProperty(PropertyChangedEvent);
+
+	if (PropertyChangedEvent.GetMemberPropertyName() == GET_MEMBER_NAME_CHECKED(ThisClass, LeftHandAttachBoneName))
+	{
+		LeftHandCollisionBox->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, LeftHandAttachBoneName);
+	}
+
+	if (PropertyChangedEvent.GetMemberPropertyName() == GET_MEMBER_NAME_CHECKED(ThisClass, RightHandAttachBoneName))
+	{
+		RightHandCollisionBox->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, RightHandAttachBoneName);
+	}
+}
+#endif
 
 void AArchEnemyCharacter::InitStartUpData()
 {

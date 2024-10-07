@@ -5,6 +5,7 @@
 #include "ArchGameplayTags.h"
 #include "AbilitySystem/Abilities/ArchGameplayAbility.h"
 
+
 void UArchAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag& InInputTag)
 {
 	if (!InInputTag.IsValid()) return;
@@ -13,15 +14,14 @@ void UArchAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag& InIn
 	{
 		if (!AbilitySpec.DynamicAbilityTags.HasTagExact(InInputTag)) continue;
 
-		if (InInputTag.MatchesTag(ArchGameplayTags::InputTag_Toggleable))
+		if (InInputTag.MatchesTag(ArchGameplayTags::InputTag_Toggleable) && AbilitySpec.IsActive())
 		{
-			if (AbilitySpec.IsActive())
-			{
-				CancelAbilityHandle(AbilitySpec.Handle);
-				continue;
-			}
+			CancelAbilityHandle(AbilitySpec.Handle);
 		}
-		TryActivateAbility(AbilitySpec.Handle);
+		else
+		{
+			TryActivateAbility(AbilitySpec.Handle);
+		}
 	}
 }
 
@@ -42,11 +42,24 @@ void UArchAbilitySystemComponent::OnAbilityInputReleased(const FGameplayTag& InI
 }
 
 void UArchAbilitySystemComponent::GrantCharacterWeaponAbilities(const TArray<FArchHeroAbilitySet>& InDefaultWeaponAbilities,
-	int32 InLevel, TArray<FGameplayAbilitySpecHandle>& OutGrantedAbilitySpecHandles)
+	const TArray<FArchHeroSpecialAbilitySet>& InSpecialWeaponAbilities, int32 InLevel,
+	TArray<FGameplayAbilitySpecHandle>& OutGrantedAbilitySpecHandles)
 {
 	if (InDefaultWeaponAbilities.IsEmpty()) return;
 
 	for (const FArchHeroAbilitySet& AbilitySet : InDefaultWeaponAbilities)
+	{
+		if (!AbilitySet.IsValid()) continue;
+
+		FGameplayAbilitySpec AbilitySpec(AbilitySet.AbilityToGrant);
+		AbilitySpec.SourceObject = GetAvatarActor();
+		AbilitySpec.Level = InLevel;
+		AbilitySpec.DynamicAbilityTags.AddTag(AbilitySet.InputTag);
+		
+		OutGrantedAbilitySpecHandles.AddUnique(GiveAbility(AbilitySpec));
+	}
+
+	for (const FArchHeroSpecialAbilitySet& AbilitySet : InSpecialWeaponAbilities)
 	{
 		if (!AbilitySet.IsValid()) continue;
 

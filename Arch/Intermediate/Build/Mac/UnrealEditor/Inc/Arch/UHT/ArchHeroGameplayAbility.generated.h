@@ -25,6 +25,7 @@ struct FGameplayTag;
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_16_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetAbilityRemainCooldownByTag); \
 	DECLARE_FUNCTION(execMakeDamageEffectSpecHandle); \
 	DECLARE_FUNCTION(execGetHeroCombatComponentFromActorInfo); \
 	DECLARE_FUNCTION(execGetHeroControllerFromActorInfo); \

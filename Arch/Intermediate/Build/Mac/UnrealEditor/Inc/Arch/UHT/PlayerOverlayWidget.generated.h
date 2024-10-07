@@ -21,6 +21,7 @@ class UTexture2D;
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_UI_Widgets_PlayerOverlayWidget_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnWeaponIconChangedHandler); \
+	DECLARE_FUNCTION(execOnManaChangedHandler); \
 	DECLARE_FUNCTION(execOnRageChangedHandler); \
 	DECLARE_FUNCTION(execOnHealthChangedHandler);
 
