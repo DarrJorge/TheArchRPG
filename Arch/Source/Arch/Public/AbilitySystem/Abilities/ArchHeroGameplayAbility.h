@@ -6,6 +6,7 @@
 #include "AbilitySystem/Abilities/ArchGameplayAbility.h"
 #include "ArchHeroGameplayAbility.generated.h"
 
+class UArchHeroUIComponent;
 class UHeroCombatComponent;
 class AArchHeroCharacter;
 class AArchPlayerController;
@@ -24,6 +25,9 @@ public:
 
 	UFUNCTION(BlueprintPure, Category="Arch|Ability")
 	UHeroCombatComponent* GetHeroCombatComponentFromActorInfo();
+
+	UFUNCTION(BlueprintPure, Category="Arch|Ability")
+	UArchHeroUIComponent* GetHeroUIComponentFromActorInfo();
 
 	UFUNCTION(BlueprintPure, Category="Arch|Ability")
 	FGameplayEffectSpecHandle MakeDamageEffectSpecHandle(TSubclassOf<UGameplayEffect> EffectClass, float WeaponBaseDamage,

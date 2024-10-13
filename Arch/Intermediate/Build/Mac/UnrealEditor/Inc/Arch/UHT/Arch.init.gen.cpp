@@ -12,6 +12,7 @@ void EmptyLinkFunctionForGeneratedCodeArch_init() {}
 	ARCH_API UFunction* Z_Construct_UDelegateFunction_Arch_OnAbilityTaskTickDelegate__DelegateSignature();
 	ARCH_API UFunction* Z_Construct_UDelegateFunction_Arch_OnEquippedWeaponChanged__DelegateSignature();
 	ARCH_API UFunction* Z_Construct_UDelegateFunction_Arch_OnPercentChangedDelegate__DelegateSignature();
+	ARCH_API UFunction* Z_Construct_UDelegateFunction_Arch_OnPickUpItemInteracted__DelegateSignature();
 	ARCH_API UFunction* Z_Construct_UDelegateFunction_Arch_WaitSpawnAlliesDelegate__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_Arch;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_Arch()
@@ -24,6 +25,7 @@ void EmptyLinkFunctionForGeneratedCodeArch_init() {}
 				(UObject* (*)())Z_Construct_UDelegateFunction_Arch_OnAbilityTaskTickDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_Arch_OnEquippedWeaponChanged__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_Arch_OnPercentChangedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_Arch_OnPickUpItemInteracted__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_Arch_WaitSpawnAlliesDelegate__DelegateSignature,
 			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
@@ -31,13 +33,13 @@ void EmptyLinkFunctionForGeneratedCodeArch_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x29C1E400,
-				0xB8C526AA,
+				0x6FAE9F6C,
+				0x0CBB4F6C,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Arch.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Arch.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Arch(Z_Construct_UPackage__Script_Arch, TEXT("/Script/Arch"), Z_Registration_Info_UPackage__Script_Arch, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x29C1E400, 0xB8C526AA));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Arch(Z_Construct_UPackage__Script_Arch, TEXT("/Script/Arch"), Z_Registration_Info_UPackage__Script_Arch, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x6FAE9F6C, 0x0CBB4F6C));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

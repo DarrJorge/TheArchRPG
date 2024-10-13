@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Arch/Public/AbilitySystem/Abilities/ArchGameplayAbility.h"
+#include "../../Source/Runtime/Engine/Classes/Engine/HitResult.h"
 #include "ActiveGameplayEffectHandle.h"
 #include "GameplayEffectTypes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
@@ -18,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeArchGameplayAbility() {}
 	ARCH_API UEnum* Z_Construct_UEnum_Arch_EArchAbilityActivationPolicy();
 	ARCH_API UEnum* Z_Construct_UEnum_Arch_EArchSuccessType();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayAbility();
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FActiveGameplayEffectHandle();
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayEffectSpecHandle();
@@ -76,6 +78,15 @@ void EmptyLinkFunctionForGeneratedCodeArchGameplayAbility() {}
 		}
 		return Z_Registration_Info_UEnum_EArchAbilityActivationPolicy.InnerSingleton;
 	}
+	DEFINE_FUNCTION(UArchGameplayAbility::execApplyEffectSpecHandleToHitResults)
+	{
+		P_GET_STRUCT_REF(FGameplayEffectSpecHandle,Z_Param_Out_SpecHandle);
+		P_GET_TARRAY_REF(FHitResult,Z_Param_Out_HitResults);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ApplyEffectSpecHandleToHitResults(Z_Param_Out_SpecHandle,Z_Param_Out_HitResults);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UArchGameplayAbility::execBP_ApplyEffectSpecHandleToTarget)
 	{
 		P_GET_OBJECT(AActor,Z_Param_TargetActor);
@@ -104,11 +115,70 @@ void EmptyLinkFunctionForGeneratedCodeArchGameplayAbility() {}
 	{
 		UClass* Class = UArchGameplayAbility::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "ApplyEffectSpecHandleToHitResults", &UArchGameplayAbility::execApplyEffectSpecHandleToHitResults },
 			{ "BP_ApplyEffectSpecHandleToTarget", &UArchGameplayAbility::execBP_ApplyEffectSpecHandleToTarget },
 			{ "GetArchAbilitySystemComponentFromActorInfo", &UArchGameplayAbility::execGetArchAbilitySystemComponentFromActorInfo },
 			{ "GetCombatComponentBaseFromActorInfo", &UArchGameplayAbility::execGetCombatComponentBaseFromActorInfo },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics
+	{
+		struct ArchGameplayAbility_eventApplyEffectSpecHandleToHitResults_Parms
+		{
+			FGameplayEffectSpecHandle SpecHandle;
+			TArray<FHitResult> HitResults;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpecHandle_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_SpecHandle;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_HitResults_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_HitResults_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_HitResults;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::NewProp_SpecHandle_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::NewProp_SpecHandle = { "SpecHandle", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchGameplayAbility_eventApplyEffectSpecHandleToHitResults_Parms, SpecHandle), Z_Construct_UScriptStruct_FGameplayEffectSpecHandle, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::NewProp_SpecHandle_MetaData), Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::NewProp_SpecHandle_MetaData) }; // 2882128022
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::NewProp_HitResults_Inner = { "HitResults", nullptr, (EPropertyFlags)0x0000008000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(0, nullptr) }; // 1891709922
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::NewProp_HitResults_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::NewProp_HitResults = { "HitResults", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchGameplayAbility_eventApplyEffectSpecHandleToHitResults_Parms, HitResults), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::NewProp_HitResults_MetaData), Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::NewProp_HitResults_MetaData) }; // 1891709922
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::NewProp_SpecHandle,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::NewProp_HitResults_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::NewProp_HitResults,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Arch|Ability" },
+		{ "ModuleRelativePath", "Public/AbilitySystem/Abilities/ArchGameplayAbility.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UArchGameplayAbility, nullptr, "ApplyEffectSpecHandleToHitResults", nullptr, nullptr, Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::PropPointers), sizeof(Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::ArchGameplayAbility_eventApplyEffectSpecHandleToHitResults_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::Function_MetaDataParams), Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::ArchGameplayAbility_eventApplyEffectSpecHandleToHitResults_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_UArchGameplayAbility_BP_ApplyEffectSpecHandleToTarget_Statics
 	{
@@ -283,6 +353,7 @@ void EmptyLinkFunctionForGeneratedCodeArchGameplayAbility() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UArchGameplayAbility_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_UArchGameplayAbility_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UArchGameplayAbility_ApplyEffectSpecHandleToHitResults, "ApplyEffectSpecHandleToHitResults" }, // 1373197429
 		{ &Z_Construct_UFunction_UArchGameplayAbility_BP_ApplyEffectSpecHandleToTarget, "BP_ApplyEffectSpecHandleToTarget" }, // 1373283229
 		{ &Z_Construct_UFunction_UArchGameplayAbility_GetArchAbilitySystemComponentFromActorInfo, "GetArchAbilitySystemComponentFromActorInfo" }, // 4274797000
 		{ &Z_Construct_UFunction_UArchGameplayAbility_GetCombatComponentBaseFromActorInfo, "GetCombatComponentBaseFromActorInfo" }, // 1824281351
@@ -349,9 +420,9 @@ void EmptyLinkFunctionForGeneratedCodeArchGameplayAbility() {}
 		{ EArchAbilityActivationPolicy_StaticEnum, TEXT("EArchAbilityActivationPolicy"), &Z_Registration_Info_UEnum_EArchAbilityActivationPolicy, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4013725859U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UArchGameplayAbility, UArchGameplayAbility::StaticClass, TEXT("UArchGameplayAbility"), &Z_Registration_Info_UClass_UArchGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchGameplayAbility), 882318592U) },
+		{ Z_Construct_UClass_UArchGameplayAbility, UArchGameplayAbility::StaticClass, TEXT("UArchGameplayAbility"), &Z_Registration_Info_UClass_UArchGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchGameplayAbility), 6410994U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_3477885573(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_410700340(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_Statics::EnumInfo));

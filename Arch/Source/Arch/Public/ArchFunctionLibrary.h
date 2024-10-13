@@ -62,6 +62,7 @@ public:
 	UFUNCTION(BlueprintPure, Category="Arch|BlueprintFunctionLibrary")
 	static bool IsValidBlock(AActor* Attacker, AActor* Victim);
 
+	UFUNCTION(BlueprintCallable, Category="Arch|BlueprintFunctionLibrary")
 	static void GetActorsFromTraceMultiBox(const UObject* WorldContextObject, const FVector& Start, const FVector& End, const FVector& HalfSize,
 		const FRotator& Orientation, const TArray<TEnumAsByte<EObjectTypeQuery>>& ObjectTypes, bool bTraceComplex, const TArray<AActor*>& ActorsToIgnore,
 		EDrawDebugTrace::Type DrawDebugType, const AActor* SelfActor, TArray<AActor*>& OutAvailableActors);

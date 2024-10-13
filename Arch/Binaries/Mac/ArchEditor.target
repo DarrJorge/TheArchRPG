@@ -1782,6 +1782,14 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Animation/MotionWarping/Binaries/Mac/UnrealEditor-MotionWarping.dylib",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Animation/MotionWarping/Binaries/Mac/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Bridge/Binaries/Mac/UnrealEditor-Bridge.dylib",
 			"Type": "DynamicLibrary"
 		},
@@ -3379,6 +3387,14 @@
 		},
 		{
 			"Path": "$(ProjectDir)/Binaries/Mac/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/ExtendEditorLibrary/Binaries/Mac/UnrealEditor-ExtendEditorLibrary.dylib",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/ExtendEditorLibrary/Binaries/Mac/UnrealEditor.modules",
 			"Type": "RequiredResource"
 		}
 	],
@@ -20408,6 +20424,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Animation/MotionWarping/MotionWarping.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Bridge/Bridge.uplugin",
 			"Type": "UFS"
 		},
@@ -20977,6 +20997,10 @@
 		},
 		{
 			"Path": "$(ProjectDir)/Arch.uproject",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/ExtendEditorLibrary/ExtendEditorLibrary.uplugin",
 			"Type": "UFS"
 		}
 	],

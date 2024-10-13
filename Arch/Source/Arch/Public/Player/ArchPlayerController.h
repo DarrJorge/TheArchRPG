@@ -7,6 +7,7 @@
 #include "GenericTeamAgentInterface.h"
 #include "ArchPlayerController.generated.h"
 
+class UInputAction;
 
 UCLASS()
 class ARCH_API AArchPlayerController : public APlayerController, public IGenericTeamAgentInterface
@@ -17,8 +18,13 @@ public:
 	AArchPlayerController();
 	
 	virtual FGenericTeamId GetGenericTeamId() const override;
+	bool TryGetInputActionDisplayName(const UInputAction* Action, FText& InputKeyName) const;
+
+protected:
+	UFUNCTION(BlueprintCallable)
+	void SetIsUseGamepad(bool bUsingGamepad);
 
 private:
 	FGenericTeamId HeroTeamId;
-	
+	bool bGamepadIsActive;
 };

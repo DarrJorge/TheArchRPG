@@ -21,10 +21,13 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 	ARCH_API UEnum* Z_Construct_UEnum_Arch_EArchCountdownActionOutput();
 	ARCH_API UEnum* Z_Construct_UEnum_Arch_EArchValidType();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
+	ENGINE_API UEnum* Z_Construct_UEnum_Engine_EDrawDebugTrace();
+	ENGINE_API UEnum* Z_Construct_UEnum_Engine_EObjectTypeQuery();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FLatentActionInfo();
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayEffectSpecHandle();
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FScalableFloat();
@@ -53,6 +56,24 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(bool*)Z_Param__Result=UArchFunctionLibrary::ApplyGameplayEffectSpecHandleToTarget(Z_Param_InInstigator,Z_Param_InTargetActor,Z_Param_Out_InSpecHandle);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UArchFunctionLibrary::execGetActorsFromTraceMultiBox)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_Start);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_End);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfSize);
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_Orientation);
+		P_GET_TARRAY_REF(TEnumAsByte<EObjectTypeQuery>,Z_Param_Out_ObjectTypes);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_OBJECT(AActor,Z_Param_SelfActor);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_OutAvailableActors);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UArchFunctionLibrary::GetActorsFromTraceMultiBox(Z_Param_WorldContextObject,Z_Param_Out_Start,Z_Param_Out_End,Z_Param_Out_HalfSize,Z_Param_Out_Orientation,Z_Param_Out_ObjectTypes,Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_SelfActor,Z_Param_Out_OutAvailableActors);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UArchFunctionLibrary::execIsValidBlock)
@@ -158,6 +179,7 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 			{ "BP_GetPawnCombatComponentFromActorInfo", &UArchFunctionLibrary::execBP_GetPawnCombatComponentFromActorInfo },
 			{ "ComputeHitReactDirectionTag", &UArchFunctionLibrary::execComputeHitReactDirectionTag },
 			{ "CountDown", &UArchFunctionLibrary::execCountDown },
+			{ "GetActorsFromTraceMultiBox", &UArchFunctionLibrary::execGetActorsFromTraceMultiBox },
 			{ "GetRollingLocation", &UArchFunctionLibrary::execGetRollingLocation },
 			{ "GetScalableFloatValueAtLevel", &UArchFunctionLibrary::execGetScalableFloatValueAtLevel },
 			{ "IsTargetPawnHostile", &UArchFunctionLibrary::execIsTargetPawnHostile },
@@ -504,6 +526,159 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics
+	{
+		struct ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms
+		{
+			const UObject* WorldContextObject;
+			FVector Start;
+			FVector End;
+			FVector HalfSize;
+			FRotator Orientation;
+			TArray<TEnumAsByte<EObjectTypeQuery> > ObjectTypes;
+			bool bTraceComplex;
+			TArray<AActor*> ActorsToIgnore;
+			TEnumAsByte<EDrawDebugTrace::Type> DrawDebugType;
+			const AActor* SelfActor;
+			TArray<AActor*> OutAvailableActors;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_WorldContextObject_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Start_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_Start;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_End_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_End;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_HalfSize_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_HalfSize;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Orientation_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_Orientation;
+		static const UECodeGen_Private::FBytePropertyParams NewProp_ObjectTypes_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ObjectTypes_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_ObjectTypes;
+		static void NewProp_bTraceComplex_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bTraceComplex;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ActorsToIgnore_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ActorsToIgnore_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_ActorsToIgnore;
+		static const UECodeGen_Private::FBytePropertyParams NewProp_DrawDebugType;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SelfActor_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_SelfActor;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_OutAvailableActors_Inner;
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_OutAvailableActors;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_WorldContextObject_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_WorldContextObject_MetaData), Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_WorldContextObject_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_Start_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_Start = { "Start", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms, Start), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_Start_MetaData), Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_Start_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_End_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_End = { "End", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms, End), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_End_MetaData), Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_End_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_HalfSize_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_HalfSize = { "HalfSize", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms, HalfSize), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_HalfSize_MetaData), Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_HalfSize_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_Orientation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_Orientation = { "Orientation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms, Orientation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_Orientation_MetaData), Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_Orientation_MetaData) };
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ObjectTypes_Inner = { "ObjectTypes", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(0, nullptr) }; // 3930035403
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ObjectTypes_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms, ObjectTypes), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ObjectTypes_MetaData), Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ObjectTypes_MetaData) }; // 3930035403
+	void Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
+	{
+		((ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms*)Obj)->bTraceComplex = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_bTraceComplex = { "bTraceComplex", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms), &Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_bTraceComplex_SetBit, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ActorsToIgnore_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ActorsToIgnore_MetaData), Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ActorsToIgnore_MetaData) };
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_DrawDebugType = { "DrawDebugType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms, DrawDebugType), Z_Construct_UEnum_Engine_EDrawDebugTrace, METADATA_PARAMS(0, nullptr) }; // 739760662
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_SelfActor_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_SelfActor = { "SelfActor", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms, SelfActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_SelfActor_MetaData), Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_SelfActor_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_OutAvailableActors_Inner = { "OutAvailableActors", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_OutAvailableActors = { "OutAvailableActors", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms, OutAvailableActors), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_WorldContextObject,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_Start,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_End,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_HalfSize,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_Orientation,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ObjectTypes_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ObjectTypes,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_bTraceComplex,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ActorsToIgnore_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_ActorsToIgnore,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_DrawDebugType,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_SelfActor,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_OutAvailableActors_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::NewProp_OutAvailableActors,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Arch|BlueprintFunctionLibrary" },
+		{ "ModuleRelativePath", "Public/ArchFunctionLibrary.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UArchFunctionLibrary, nullptr, "GetActorsFromTraceMultiBox", nullptr, nullptr, Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::PropPointers), sizeof(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::Function_MetaDataParams), Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::ArchFunctionLibrary_eventGetActorsFromTraceMultiBox_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UArchFunctionLibrary_GetRollingLocation_Statics
 	{
 		struct ArchFunctionLibrary_eventGetRollingLocation_Parms
@@ -824,6 +999,7 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_BP_GetPawnCombatComponentFromActorInfo, "BP_GetPawnCombatComponentFromActorInfo" }, // 2941388908
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_ComputeHitReactDirectionTag, "ComputeHitReactDirectionTag" }, // 3594461624
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_CountDown, "CountDown" }, // 4127116964
+		{ &Z_Construct_UFunction_UArchFunctionLibrary_GetActorsFromTraceMultiBox, "GetActorsFromTraceMultiBox" }, // 4101237975
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_GetRollingLocation, "GetRollingLocation" }, // 3215945004
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_GetScalableFloatValueAtLevel, "GetScalableFloatValueAtLevel" }, // 3692080335
 		{ &Z_Construct_UFunction_UArchFunctionLibrary_IsTargetPawnHostile, "IsTargetPawnHostile" }, // 2736353021
@@ -876,9 +1052,9 @@ void EmptyLinkFunctionForGeneratedCodeArchFunctionLibrary() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UArchFunctionLibrary, UArchFunctionLibrary::StaticClass, TEXT("UArchFunctionLibrary"), &Z_Registration_Info_UClass_UArchFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchFunctionLibrary), 2360606968U) },
+		{ Z_Construct_UClass_UArchFunctionLibrary, UArchFunctionLibrary::StaticClass, TEXT("UArchFunctionLibrary"), &Z_Registration_Info_UClass_UArchFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchFunctionLibrary), 4214779758U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_3986326240(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_122624229(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_ArchFunctionLibrary_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

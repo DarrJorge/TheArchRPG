@@ -76,6 +76,9 @@ void AArchHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 
 			ArchInputComponent->BindNativeInputAction(InputConfigDataAsset, ArchGameplayTags::InputTag_SwitchTarget,
 				ETriggerEvent::Completed, this, &AArchHeroCharacter::InputSwitchTargetCompleted);
+
+			ArchInputComponent->BindNativeInputAction(InputConfigDataAsset, ArchGameplayTags::InputTag_PickUp,
+				ETriggerEvent::Started, this, &AArchHeroCharacter::InputPickupStarted);
 		}
 	}
 }
@@ -151,4 +154,12 @@ void AArchHeroCharacter::InputSwitchTargetCompleted(const FInputActionValue& Val
 		: ArchGameplayTags::Event_Combat_SwitchTarget_Left;
 	
 	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(this, EventTag, FGameplayEventData());
+}
+
+void AArchHeroCharacter::InputPickupStarted(const FInputActionValue& Value)
+{
+	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
+		this,
+		ArchGameplayTags::Player_Event_ConsumeItems,
+		FGameplayEventData());
 }

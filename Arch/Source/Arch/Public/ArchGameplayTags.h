@@ -25,6 +25,8 @@ namespace ArchGameplayTags
 
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_SpecialWeaponAbility_Light);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_SpecialWeaponAbility_Heavy);
+	
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_PickUp);
 
 	/** Items Tags **/
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Item_Weapon_Axe);
@@ -40,6 +42,7 @@ namespace ArchGameplayTags
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Block);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_TargetLock);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_Rage);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_PickUp);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_SpecialWeaponAbility_Light);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_SpecialWeaponAbility_Heavy);
 
@@ -57,6 +60,8 @@ namespace ArchGameplayTags
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Status_Rage_Active);
 
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Event_ActivateRage);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Event_AOE);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Event_ConsumeItems);
 	
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_SetByCaller_AttackType_Light);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_SetByCaller_AttackType_Heavy);
@@ -67,6 +72,7 @@ namespace ArchGameplayTags
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Weapon_Range);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Strafing);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_Summon);
+	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Combat_SpawnAward);
 
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Status_Unblockable);
 	ARCH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Event_SummonEnemies);

@@ -43,6 +43,8 @@ protected:
 	FActiveGameplayEffectHandle BP_ApplyEffectSpecHandleToTarget(AActor* TargetActor, const FGameplayEffectSpecHandle& SpecHandle,
 		EArchSuccessType& OutSuccessType);
 
-	FGameplayEffectSpecHandle ApplySetByCallerMagnitudeByTag(const UGameplayAbility* Ability, TSubclassOf<UGameplayEffect> EffectClass,
-		float Damage);
+	FGameplayEffectSpecHandle ApplySetByCallerMagnitudeByTag(const UGameplayAbility* Ability, TSubclassOf<UGameplayEffect> EffectClass, float Damage);
+
+	UFUNCTION(BlueprintCallable, Category="Arch|Ability")
+	void ApplyEffectSpecHandleToHitResults(const FGameplayEffectSpecHandle& SpecHandle, const TArray<FHitResult>& HitResults);
 };

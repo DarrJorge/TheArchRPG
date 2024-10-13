@@ -10,6 +10,7 @@
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnEquippedWeaponChanged, TSoftObjectPtr<UTexture2D>, WeaponIcon);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnAbilityIconSlotUpdated, FGameplayTag, AbilityInputTag, TSoftObjectPtr<UMaterialInstance>, AbilityIconMaterial);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnAbilityCooldownBegin, FGameplayTag, AbilityInputTag, float, TotalCooldownTime, float, RemainingCooldownTime);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnPickUpItemInteracted, bool, bShouldDisplayInputKeyWidget, FText, InputKeyText);
 
 UCLASS()
 class ARCH_API UArchHeroUIComponent : public UArchUIComponentBase
@@ -31,4 +32,7 @@ public:
 
 	UPROPERTY(BlueprintCallable, BlueprintAssignable)
 	FOnAbilityCooldownBegin OnAbilityCooldownBegin;
+
+	UPROPERTY(BlueprintCallable, BlueprintAssignable)
+	FOnPickUpItemInteracted OnPickUpItemInteracted;
 };

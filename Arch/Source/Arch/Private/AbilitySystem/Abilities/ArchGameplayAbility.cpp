@@ -4,6 +4,7 @@
 #include "AbilitySystem/Abilities/ArchGameplayAbility.h"
 #include "AbilitySystemComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
+#include "ArchFunctionLibrary.h"
 #include "ArchGameplayTags.h"
 #include "AbilitySystem/ArchAbilitySystemComponent.h"
 #include "Components/Combat/CombatComponentBase.h"
@@ -82,4 +83,33 @@ FGameplayEffectSpecHandle UArchGameplayAbility::ApplySetByCallerMagnitudeByTag(c
 	EffectSpecHandle.Data->SetSetByCallerMagnitude(ArchGameplayTags::Shared_SetByCaller_BaseDamage, Damage);
 
 	return EffectSpecHandle;
+}
+
+void UArchGameplayAbility::ApplyEffectSpecHandleToHitResults(const FGameplayEffectSpecHandle& SpecHandle, const TArray<FHitResult>& HitResults)
+{
+	APawn* OwningPawn = Cast<APawn>(GetAvatarActorFromActorInfo());
+	if (HitResults.IsEmpty() || !OwningPawn) return;
+
+	for (const FHitResult& Hit : HitResults)
+	{
+		APawn* HitPawn = Cast<APawn>(Hit.GetActor());
+		if (!HitPawn) continue;
+
+		if (UArchFunctionLibrary::IsTargetPawnHostile(OwningPawn, HitPawn))
+		{
+			FActiveGameplayEffectHandle ActiveEffectHandle = NativeApplyEffectSpecHandleToTarget(HitPawn, SpecHandle);
+
+			if (ActiveEffectHandle.WasSuccessfullyApplied())
+			{
+				FGameplayEventData Data;
+				Data.Instigator = OwningPawn;
+				Data.Target = HitPawn;
+
+				UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
+					HitPawn,
+					ArchGameplayTags::Event_Effect_HitReact,
+					Data);
+			}
+		}
+	}
 }

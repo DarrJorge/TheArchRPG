@@ -15,6 +15,7 @@ class UCombatComponentBase;
 enum class EArchSuccessType : uint8;
 struct FActiveGameplayEffectHandle;
 struct FGameplayEffectSpecHandle;
+struct FHitResult;
 #ifdef ARCH_ArchGameplayAbility_generated_h
 #error "ArchGameplayAbility.generated.h already included, missing '#pragma once' in ArchGameplayAbility.h"
 #endif
@@ -25,6 +26,7 @@ struct FGameplayEffectSpecHandle;
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_23_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchGameplayAbility_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execApplyEffectSpecHandleToHitResults); \
 	DECLARE_FUNCTION(execBP_ApplyEffectSpecHandleToTarget); \
 	DECLARE_FUNCTION(execGetArchAbilitySystemComponentFromActorInfo); \
 	DECLARE_FUNCTION(execGetCombatComponentBaseFromActorInfo);

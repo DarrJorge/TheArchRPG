@@ -2,10 +2,9 @@
 
 
 #include "AbilitySystem/Abilities/ArchHeroGameplayAbility.h"
-
-#include "ArchGameplayTags.h"
 #include "AbilitySystem/ArchAbilitySystemComponent.h"
 #include "Characters/ArchHeroCharacter.h"
+#include "Components/UI/ArchHeroUIComponent.h"
 #include "Player/ArchPlayerController.h"
 
 AArchHeroCharacter* UArchHeroGameplayAbility::GetHeroCharacterFromActorInfo()
@@ -31,18 +30,20 @@ UHeroCombatComponent* UArchHeroGameplayAbility::GetHeroCombatComponentFromActorI
 	return GetHeroCharacterFromActorInfo()->GetHeroCombatComponent();
 }
 
+UArchHeroUIComponent* UArchHeroGameplayAbility::GetHeroUIComponentFromActorInfo()
+{
+	return Cast<UArchHeroUIComponent>(GetHeroCharacterFromActorInfo()->GetUIComponentBase());
+}
+
 FGameplayEffectSpecHandle UArchHeroGameplayAbility::MakeDamageEffectSpecHandle(TSubclassOf<UGameplayEffect> EffectClass,
-	float WeaponBaseDamage, FGameplayTag AttackTag, int32 UsedComboCount)
+                                                                               float WeaponBaseDamage, FGameplayTag AttackTag, int32 UsedComboCount)
 {
 	auto EffectSpecHandle = ApplySetByCallerMagnitudeByTag(this, EffectClass, WeaponBaseDamage);
 
 	if (AttackTag.IsValid())
 	{
-		EffectSpecHandle.Data->SetSetByCallerMagnitude(
-			AttackTag,
-			UsedComboCount);
+		EffectSpecHandle.Data->SetSetByCallerMagnitude(AttackTag, UsedComboCount);
 	}
-	
 	return EffectSpecHandle;
 }
 

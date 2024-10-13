@@ -33,6 +33,7 @@ struct FScalableFloat;
  \
 	DECLARE_FUNCTION(execCountDown); \
 	DECLARE_FUNCTION(execApplyGameplayEffectSpecHandleToTarget); \
+	DECLARE_FUNCTION(execGetActorsFromTraceMultiBox); \
 	DECLARE_FUNCTION(execIsValidBlock); \
 	DECLARE_FUNCTION(execComputeHitReactDirectionTag); \
 	DECLARE_FUNCTION(execGetRollingLocation); \

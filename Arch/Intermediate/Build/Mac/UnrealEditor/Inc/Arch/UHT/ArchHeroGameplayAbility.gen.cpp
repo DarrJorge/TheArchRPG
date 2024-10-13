@@ -16,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroGameplayAbility() {}
 	ARCH_API UClass* Z_Construct_UClass_UArchGameplayAbility();
 	ARCH_API UClass* Z_Construct_UClass_UArchHeroGameplayAbility();
 	ARCH_API UClass* Z_Construct_UClass_UArchHeroGameplayAbility_NoRegister();
+	ARCH_API UClass* Z_Construct_UClass_UArchHeroUIComponent_NoRegister();
 	ARCH_API UClass* Z_Construct_UClass_UHeroCombatComponent_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
@@ -42,6 +43,13 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroGameplayAbility() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(FGameplayEffectSpecHandle*)Z_Param__Result=P_THIS->MakeDamageEffectSpecHandle(Z_Param_EffectClass,Z_Param_WeaponBaseDamage,Z_Param_AttackTag,Z_Param_UsedComboCount);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UArchHeroGameplayAbility::execGetHeroUIComponentFromActorInfo)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UArchHeroUIComponent**)Z_Param__Result=P_THIS->GetHeroUIComponentFromActorInfo();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UArchHeroGameplayAbility::execGetHeroCombatComponentFromActorInfo)
@@ -73,6 +81,7 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroGameplayAbility() {}
 			{ "GetHeroCharacterFromActorInfo", &UArchHeroGameplayAbility::execGetHeroCharacterFromActorInfo },
 			{ "GetHeroCombatComponentFromActorInfo", &UArchHeroGameplayAbility::execGetHeroCombatComponentFromActorInfo },
 			{ "GetHeroControllerFromActorInfo", &UArchHeroGameplayAbility::execGetHeroControllerFromActorInfo },
+			{ "GetHeroUIComponentFromActorInfo", &UArchHeroGameplayAbility::execGetHeroUIComponentFromActorInfo },
 			{ "MakeDamageEffectSpecHandle", &UArchHeroGameplayAbility::execMakeDamageEffectSpecHandle },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -242,6 +251,49 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroGameplayAbility() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics
+	{
+		struct ArchHeroGameplayAbility_eventGetHeroUIComponentFromActorInfo_Parms
+		{
+			UArchHeroUIComponent* ReturnValue;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ArchHeroGameplayAbility_eventGetHeroUIComponentFromActorInfo_Parms, ReturnValue), Z_Construct_UClass_UArchHeroUIComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::NewProp_ReturnValue_MetaData), Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::NewProp_ReturnValue_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Arch|Ability" },
+		{ "ModuleRelativePath", "Public/AbilitySystem/Abilities/ArchHeroGameplayAbility.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UArchHeroGameplayAbility, nullptr, "GetHeroUIComponentFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::ArchHeroGameplayAbility_eventGetHeroUIComponentFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::ArchHeroGameplayAbility_eventGetHeroUIComponentFromActorInfo_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UArchHeroGameplayAbility_MakeDamageEffectSpecHandle_Statics
 	{
 		struct ArchHeroGameplayAbility_eventMakeDamageEffectSpecHandle_Parms
@@ -318,6 +370,7 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroGameplayAbility() {}
 		{ &Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroCharacterFromActorInfo, "GetHeroCharacterFromActorInfo" }, // 690084308
 		{ &Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroCombatComponentFromActorInfo, "GetHeroCombatComponentFromActorInfo" }, // 333524871
 		{ &Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroControllerFromActorInfo, "GetHeroControllerFromActorInfo" }, // 3177349038
+		{ &Z_Construct_UFunction_UArchHeroGameplayAbility_GetHeroUIComponentFromActorInfo, "GetHeroUIComponentFromActorInfo" }, // 3188690339
 		{ &Z_Construct_UFunction_UArchHeroGameplayAbility_MakeDamageEffectSpecHandle, "MakeDamageEffectSpecHandle" }, // 2676604472
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UArchHeroGameplayAbility_Statics::FuncInfo) < 2048);
@@ -365,9 +418,9 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroGameplayAbility() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UArchHeroGameplayAbility, UArchHeroGameplayAbility::StaticClass, TEXT("UArchHeroGameplayAbility"), &Z_Registration_Info_UClass_UArchHeroGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchHeroGameplayAbility), 3697385788U) },
+		{ Z_Construct_UClass_UArchHeroGameplayAbility, UArchHeroGameplayAbility::StaticClass, TEXT("UArchHeroGameplayAbility"), &Z_Registration_Info_UClass_UArchHeroGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UArchHeroGameplayAbility), 626792685U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_2088992321(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_4062943540(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_AbilitySystem_Abilities_ArchHeroGameplayAbility_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

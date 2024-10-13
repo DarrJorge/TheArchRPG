@@ -15,6 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroCharacter() {}
 	ARCH_API UClass* Z_Construct_UClass_UArchHeroUIComponent_NoRegister();
 	ARCH_API UClass* Z_Construct_UClass_UDataAsset_InputConfig_NoRegister();
 	ARCH_API UClass* Z_Construct_UClass_UHeroCombatComponent_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Arch();
@@ -53,6 +54,10 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_InputConfigDataAsset_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_InputConfigDataAsset;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SwitchDirection_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_SwitchDirection;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -109,12 +114,19 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroCharacter() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_InputConfigDataAsset = { "InputConfigDataAsset", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchHeroCharacter, InputConfigDataAsset), Z_Construct_UClass_UDataAsset_InputConfig_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_InputConfigDataAsset_MetaData), Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_InputConfigDataAsset_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_SwitchDirection_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Characters/ArchHeroCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_SwitchDirection = { "SwitchDirection", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchHeroCharacter, SwitchDirection), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_SwitchDirection_MetaData), Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_SwitchDirection_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AArchHeroCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_CameraBoom,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_Camera,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_HeroCombatComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_HeroUIComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_InputConfigDataAsset,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchHeroCharacter_Statics::NewProp_SwitchDirection,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AArchHeroCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AArchHeroCharacter>::IsAbstract,
@@ -154,9 +166,9 @@ void EmptyLinkFunctionForGeneratedCodeArchHeroCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchHeroCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AArchHeroCharacter, AArchHeroCharacter::StaticClass, TEXT("AArchHeroCharacter"), &Z_Registration_Info_UClass_AArchHeroCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchHeroCharacter), 1203429192U) },
+		{ Z_Construct_UClass_AArchHeroCharacter, AArchHeroCharacter::StaticClass, TEXT("AArchHeroCharacter"), &Z_Registration_Info_UClass_AArchHeroCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchHeroCharacter), 2546298051U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchHeroCharacter_h_274669672(TEXT("/Script/Arch"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchHeroCharacter_h_2630646421(TEXT("/Script/Arch"),
 		Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchHeroCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_darr_jorge_Projects_Unreal_TheArchRPG_Arch_Source_Arch_Public_Characters_ArchHeroCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
